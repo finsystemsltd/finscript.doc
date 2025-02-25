@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum OrderState | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum OrderState | FinScript ">
+      
+      <meta name="description" content="Order state">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.OrderState">
+
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_OrderState" data-uid="FinSysPlatform.Domain.Market.OrderState" class="text-break">
+Enum OrderState  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderState.cs#lines-48"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Order state</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum OrderState</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderStateExtensions.html#FinSysPlatform_Domain_Market_OrderStateExtensions_IsActive_FinSysPlatform_Domain_Market_OrderState_">OrderStateExtensions.IsActive(OrderState)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderStateExtensions.html#FinSysPlatform_Domain_Market_OrderStateExtensions_IsTerminated_FinSysPlatform_Domain_Market_OrderState_">OrderStateExtensions.IsTerminated(OrderState)</a>
+  </div>
+  </dd></dl>
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="FinSysPlatform_Domain_Market_OrderState_Accepted"><code>Accepted = 2</code></dt>
+  
+  <dd><p>Order confirmation received from broker</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_OrderState_CancelAccepted"><code>CancelAccepted = 11</code></dt>
+  
+  <dd><p>Order cancellation is sent to broker and order is being cancelled on broker's side (but has not cancelled yet)</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_OrderState_CancelSubmitted"><code>CancelSubmitted = 10</code></dt>
+  
+  <dd><p>Order cancellation submitted to the connectivity provider/exchange</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_OrderState_Cancelled"><code>Cancelled = 5</code></dt>
+  <dd><p>Order cancellation confirmed cancelled by exchange</p>
+<p>This is terminal state of the order (no new states possible after this state)
+<a class="xref" href="FinSysPlatform.Domain.Market.OrderStateExtensions.html#FinSysPlatform_Domain_Market_OrderStateExtensions_IsTerminated_FinSysPlatform_Domain_Market_OrderState_">IsTerminated(OrderState)</a></p>
+</dd>
+  
+    <dt id="FinSysPlatform_Domain_Market_OrderState_ChangeAccepted"><code>ChangeAccepted = 9</code></dt>
+  
+  <dd><p>Order modification accepted to broker and order is being changed on broker's side</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_OrderState_ChangeSubmitted"><code>ChangeSubmitted = 8</code></dt>
+  
+  <dd><p>Order modification submitted to broker</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_OrderState_Filled"><code>Filled = 7</code></dt>
+  <dd><p>Order completely filled
+Usually, this state succeeds <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Working">Working</a> or <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_PartiallyFilled">PartiallyFilled</a> states</p>
+<p>This is terminal state of the order (no new states possible after this state)
+<a class="xref" href="FinSysPlatform.Domain.Market.OrderStateExtensions.html#FinSysPlatform_Domain_Market_OrderStateExtensions_IsTerminated_FinSysPlatform_Domain_Market_OrderState_">IsTerminated(OrderState)</a></p>
+</dd>
+  
+    <dt id="FinSysPlatform_Domain_Market_OrderState_New"><code>New = 0</code></dt>
+  
+  <dd><p>Order information created on local computer</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_OrderState_PartiallyFilled"><code>PartiallyFilled = 6</code></dt>
+  
+  <dd><p>Order partially filled
+Usually, this state succeeds <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Working">Working</a> state</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_OrderState_Rejected"><code>Rejected = 3</code></dt>
+  <dd><p>Order rejected locally or by broker
+Usually, this state succeeds <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_New">New</a> or <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Submitted">Submitted</a> states</p>
+<p>This is terminal state of the order (no new states possible after this state)
+<a class="xref" href="FinSysPlatform.Domain.Market.OrderStateExtensions.html#FinSysPlatform_Domain_Market_OrderStateExtensions_IsTerminated_FinSysPlatform_Domain_Market_OrderState_">IsTerminated(OrderState)</a></p>
+</dd>
+  
+    <dt id="FinSysPlatform_Domain_Market_OrderState_Submitted"><code>Submitted = 1</code></dt>
+  
+  <dd><p>Order submitted to broker. As soon as broker processes the order, the state will change to <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Accepted">Accepted</a> or <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Rejected">Rejected</a> or some other state</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_OrderState_Unknown"><code>Unknown = 99</code></dt>
+  <dd><p>Unknown order state (if cannot be determined from current information from broker)</p>
+<p>Since this state is considered as undetermined, it is  supposed to be terminal (no new states possible after this state)
+<a class="xref" href="FinSysPlatform.Domain.Market.OrderStateExtensions.html#FinSysPlatform_Domain_Market_OrderStateExtensions_IsTerminated_FinSysPlatform_Domain_Market_OrderState_">IsTerminated(OrderState)</a></p>
+</dd>
+  
+    <dt id="FinSysPlatform_Domain_Market_OrderState_Working"><code>Working = 4</code></dt>
+  
+  <dd><p>Order confirmation received by exchange and order is being executed</p>
+</dd>
+  </dl>
+
+
+  <h2 id="FinSysPlatform_Domain_Market_OrderState_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Usually lifetime of order looks this way:</p>
+<ol>
+<li>If order was successfully filled:
+<a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_New">New</a> -&gt;  <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Submitted">Submitted</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Accepted">Accepted</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Working">Working</a> (for pending orders) -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_PartiallyFilled">PartiallyFilled</a> (may be skipped)  -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Filled">Filled</a></li>
+<li>If order was rejected on client side
+<a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_New">New</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Rejected">Rejected</a></li>
+<li>If order was rejected on broker side
+<a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_New">New</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Submitted">Submitted</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Rejected">Rejected</a></li>
+<li>If order was cancelled (by user or automatically)
+<a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_New">New</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Submitted">Submitted</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Working">Working</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Cancelled">Cancelled</a></li>
+<li>If working order was cancelled by user
+<a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Working">Working</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_CancelSubmitted">CancelSubmitted</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_CancelAccepted">CancelAccepted</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Cancelled">Cancelled</a></li>
+<li>If working order was changed by user
+<a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Working">Working</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_ChangeSubmitted">ChangeSubmitted</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_ChangeAccepted">ChangeAccepted</a> -&gt; <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Working">Working</a></li>
+</ol>
+<p>For information. FIX API defines next order states (see <a href="https://www.fixtrading.org/online-specification/order-state-changes/">https://www.fixtrading.org/online-specification/order-state-changes/</a>):
+0 = New. Equals to <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_New">New</a>
+1 = Partially filled. Equals to <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_PartiallyFilled">PartiallyFilled</a>
+2 = Filled. Equals to <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Filled">Filled</a>
+3 = Done for day. Similar to <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Cancelled">Cancelled</a>
+4 = Canceled. Equals to <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Cancelled">Cancelled</a>
+5 = Replaced(Removed/Replaced).
+6 = Pending Cancel(e.g.result of Order Cancel Request). Equals to <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_CancelAccepted">CancelAccepted</a>
+7 = Stopped. Presumably equals <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Cancelled">Cancelled</a>
+8 = Rejected. Equals to <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Rejected">Rejected</a>
+9 = Suspended.
+A = Pending New
+B = Calculated
+C = Expired. Similar to <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Cancelled">Cancelled</a>
+D = Accepted for bidding
+E = Pending Replace(e.g.result of Order Cancel/Replace Request). Similar to <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_ChangeAccepted">ChangeAccepted</a></p>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderState.cs#lines-48" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace FinSysPlatform.Domain.Market | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace FinSysPlatform.Domain.Market | FinScript ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market">
+
+  <h1 id="FinSysPlatform_Domain_Market" data-uid="FinSysPlatform.Domain.Market" class="text-break">Namespace FinSysPlatform.Domain.Market</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.AggregatedPosition.html">AggregatedPosition</a></dt>
+      <dd><p>Calculated position (usually netting position from multiple positions)</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.AggregatedPositionExtensions.html">AggregatedPositionExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.AggregatedPosition.html">AggregatedPosition</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.BalanceItem.html">BalanceItem</a></dt>
+      <dd><p>Contains information about account balance in specified currency.
+Used in <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_Balances">Balances</a> collection only when broker supports <a class="xref" href="FinSysPlatform.Domain.Market.BrokerageCapability.html#FinSysPlatform_Domain_Market_BrokerageCapability_MultipleBalances">MultipleBalances</a>
+All fields are read-only and can be set only by Broker</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Bar.EqualityComparerByTime.html">Bar.EqualityComparerByTime</a></dt>
+      <dd><p>Utility class to implement bar comparison by <a class="xref" href="FinSysPlatform.Domain.Market.Bar.html#FinSysPlatform_Domain_Market_Bar_Time">Time</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.BidAskPriceExtensions.html">BidAskPriceExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.BidAskPrice.html">BidAskPrice</a> type</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.CfdInstrumentDefinitionCreator.html">CfdInstrumentDefinitionCreator</a></dt>
+      <dd><p>Instrument definition for <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Cfd">Cfd</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.CryptoInstrumentDefinitionCreator.html">CryptoInstrumentDefinitionCreator</a></dt>
+      <dd><p>Instrument definition for <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Crypto">Crypto</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.CurrencyHelper.html">CurrencyHelper</a></dt>
+      <dd><p>Helper function to work with <a class="xref" href="FinSysPlatform.Domain.Market.Currency.html">Currency</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.CurrencySymbolAttribute.html">CurrencySymbolAttribute</a></dt>
+      <dd><p>Currency symbol
+<a href="https://www.compart.com/en/unicode/category/Sc">https://www.compart.com/en/unicode/category/Sc</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.DaySessions.html">DaySessions</a></dt>
+      <dd><p>A collection of sessions <a class="xref" href="FinSysPlatform.Domain.Market.Session.html">Session</a> inside a day
+The simplest case is the day contains a single session, for example, 09:00 - 17:00
+Another well-common case is the instrument may be available across day border, for example, 00:00 - 04:00 and then 16:00-24:00
+And rare cases, when an instrument is available in some small periods, for example: 00:00 - 04:00, 07:00-12:00, 13:00-15:00, 16:00-24:00</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Deal.html">Deal</a></dt>
+      <dd><p>Extends standard <a class="xref" href="FinSysPlatform.Domain.Market.Deal.html#FinSysPlatform_Domain_Market_Deal_Execution">Execution</a> with additional properties: entry, exit etc, which
+characterize it as an item of the whole trade chain</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Dividend.html">Dividend</a></dt>
+      <dd><p>Dividend definition</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.EntryExecutionPart.html">EntryExecutionPart</a></dt>
+      <dd><p>An execution part to describe entry of the trade <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html">Trade</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Execution.html">Execution</a></dt>
+      <dd><p>Represents a read-only interface that exposes information regarding an execution (filled order) resulting from an
+order and is passed as a parameter in the OnExecutionUpdate() method.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ExecutionPart.html">ExecutionPart</a></dt>
+      <dd><p>The part of <a class="xref" href="FinSysPlatform.Domain.Market.Execution.html">Execution</a> which describes either entry or exit or something like that</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ExecutionProperties.html">ExecutionProperties</a></dt>
+      <dd><p>Writable implementation of <a class="xref" href="FinSysPlatform.Domain.Market.IExecutionProperties.html">IExecutionProperties</a>
+Properties can be initialized either via parameterized constructor or via direct assigning</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ExitExecutionPart.html">ExitExecutionPart</a></dt>
+      <dd><p>An execution part to describe exit of the trade <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html">Trade</a> or deal <a class="xref" href="FinSysPlatform.Domain.Market.Deal.html">Deal</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ForexInstrumentDefinitionCreator.html">ForexInstrumentDefinitionCreator</a></dt>
+      <dd><p>Instrument definition for <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Forex">Forex</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.FutureInstrumentDefinitionCreator.html">FutureInstrumentDefinitionCreator</a></dt>
+      <dd><p>Instrument definition for <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Future">Future</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Holiday.html">Holiday</a></dt>
+      <dd><p>Definition of holiday - the  day which falls outside of the regular trading schedule.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IAccountHistoricalDataItemExtensions.html">IAccountHistoricalDataItemExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.IAccountHistoricalDataItem.html">IAccountHistoricalDataItem</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IBasicTradePropertiesExtensions.html">IBasicTradePropertiesExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.IBasicTradeProperties.html">IBasicTradeProperties</a> type</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IBrokerAccountDataExtensions.html">IBrokerAccountDataExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.IBrokerAccountData.html">IBrokerAccountData</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IExecutionPropertiesExtensions.html">IExecutionPropertiesExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.IExecutionProperties.html">IExecutionProperties</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParametersExtensions.html">IOrderBasicParametersExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IOrderLifeTimeParametersExtensions.html">IOrderLifeTimeParametersExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.IOrderLifeTimeParameters.html">IOrderLifeTimeParameters</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IOrderSubmissionParametersExtensions.html">IOrderSubmissionParametersExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.IOrderSubmissionParameters.html">IOrderSubmissionParameters</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IPositionPropertiesExtensions.html">IPositionPropertiesExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.IPositionProperties.html">IPositionProperties</a> type</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ITimedEntityEnumerableExtensions.html">ITimedEntityEnumerableExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.ITimedEntity.html">ITimedEntity</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ITradePropertiesExtension.html">ITradePropertiesExtension</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.ITradeProperties.html">ITradeProperties</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ITradeQuantityProviderExtensions.html">ITradeQuantityProviderExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.ITradeQuantityProvider.html">ITradeQuantityProvider</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+      <dd><p>A tradable symbol.  Based on InstrumentDefinition and additionally defines properties for current instrument.
+For example, ES Futures is an instrument definition (abstract), ES Future Jun21'19 is a real instrument based on ES Futures definitions</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentByKeyEqualityComparer.html">InstrumentByKeyEqualityComparer</a></dt>
+      <dd><p>Implements equality comparison via <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsSameKey_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">IsSameKey(Instrument, Instrument?)</a> comparison method</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html">InstrumentDefinition</a></dt>
+      <dd><p>A constant instrument's configuration settings
+This is the part of <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a>. Many instruments may have the same instrument definition. For example, future contracts refer to the same instrument definition and differ only by expiration date (<a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_Expiry">Expiry</a>)</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinitionCreator.html">InstrumentDefinitionCreator</a></dt>
+      <dd><p>A solution to create a hierarchy of instrument definitions depending on <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinitionCreator.html#FinSysPlatform_Domain_Market_InstrumentDefinitionCreator_InstrumentType">InstrumentType</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html">InstrumentExtensions</a></dt>
+      <dd><p>Extenstion method foe <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentKey.ObjectSerializer.html">InstrumentKey.ObjectSerializer</a></dt>
+      <dd><p>Serializer</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentParameters.html">InstrumentParameters</a></dt>
+      <dd><p>Parameters to initialize instrument</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentUpdater.html">InstrumentUpdater</a></dt>
+      <dd><p>Modification of <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a> is extracted to separate class to hide modifications from public methods</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IntradayTimeRange.html">IntradayTimeRange</a></dt>
+      <dd><p>Defines 2 times inside a day (Hours:Minutes): the begin and the end of time range
+It is defined as a record to support equality by content</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.LocalInstrument.html">LocalInstrument</a></dt>
+      <dd><p>An extended version of <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a> with guaranteed <a class="xref" href="FinSysPlatform.Domain.Market.LocalInstrument.html#FinSysPlatform_Domain_Market_LocalInstrument_PersistentId">PersistentId</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketConstants.html">MarketConstants</a></dt>
+      <dd><p>A set of market constants</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketData.html">MarketData</a></dt>
+      <dd><p>Represents a change in level one market data and is passed as a parameter in the OnMarketData() method.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDataExtensions.html">MarketDataExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.TradeData.html">TradeData</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html">MarketDepth</a></dt>
+      <dd><p>MarketDepth can be used to access snapshot market depth and for subscribing to market depth events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.MarketDepthRowToFill.html">MarketDepth.MarketDepthRowToFill</a></dt>
+      <dd><p>A filled market try, with source row and quantity to be filled</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.MergedMarketDepthRow.html">MarketDepth.MergedMarketDepthRow</a></dt>
+      <dd><p>Merged bid and ask rows for the specified price</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketPositionExtensions.html">MarketPositionExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html">MarketPosition</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketPriceTypeExtensions.html">MarketPriceTypeExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.MarketPriceType.html">MarketPriceType</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketPrices.html">MarketPrices</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Messages.html">Messages</a></dt>
+      <dd><p>Standard messages</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MetalInstrumentDefinitionCreator.html">MetalInstrumentDefinitionCreator</a></dt>
+      <dd><p>Instrument definition for <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Forex">Forex</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Ohlc.EqualityComparerByTime.html">Ohlc.EqualityComparerByTime</a></dt>
+      <dd><p>Utility class to implement Ohlc comparison by <a class="xref" href="FinSysPlatform.Domain.Market.Ohlc.html#FinSysPlatform_Domain_Market_Ohlc_Time">Time</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></dt>
+      <dd><p>Represents a read only interface that exposes information regarding an order.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderBasicParameters.html">OrderBasicParameters</a></dt>
+      <dd><p>This class is used for passing parameters at order submission/&gt;</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html">OrderExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderLifeTimeParameters.html">OrderLifeTimeParameters</a></dt>
+      <dd><p>Implementation of <a class="xref" href="FinSysPlatform.Domain.Market.IOrderLifeTimeParameters.html">IOrderLifeTimeParameters</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderModificationParameters.html">OrderModificationParameters</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="FinSysPlatform.Domain.Market.IOrderModificationParameters.html">IOrderModificationParameters</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderParametersExtension.html">OrderParametersExtension</a></dt>
+      <dd><p>Extension for order parameters</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderParametersHelper.html">OrderParametersHelper</a></dt>
+      <dd><p>A helper class for work with standard order parameters</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderProperties.html">OrderProperties</a></dt>
+      <dd><p>The container to store all properties of <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a>
+Unlike <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a> and <a class="xref" href="FinSysPlatform.Domain.Market.IOrderProperties.html">IOrderProperties</a> this class is not immutable and allows to change its properties after creation
+Usually, this class is used to prepare all parameters and then pass it to order constructor <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order__ctor_FinSysPlatform_Domain_Market_IOrderProperties_">Order(IOrderProperties)</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderStateExtensions.html">OrderStateExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html">OrderState</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderSubmissionParameters.html">OrderSubmissionParameters</a></dt>
+      <dd><p>This class is used for passing parameters at order submission/&gt;</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.PointValue.html">PointValue</a></dt>
+      <dd><p>Information about point value (a cost of one point of instrument)
+The basic part of this information is <a class="xref" href="FinSysPlatform.Domain.Market.PointValue.html#FinSysPlatform_Domain_Market_PointValue_Value">Value</a> - a number that defines the cost
+But additionally (and this is very important) point value is calculated in some currency</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.PointValueUpdater.html">PointValueUpdater</a></dt>
+      <dd><p>Modification of <a class="xref" href="FinSysPlatform.Domain.Market.PointValue.html">PointValue</a> is extracted to separate class to hide modifications from public methods</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></dt>
+      <dd><p>Current open position for specific instrument</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.PositionExtensions.html">PositionExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.PositionProperties.html">PositionProperties</a></dt>
+      <dd><p>The container to store all properties of <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a>
+Unlike <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a> and <a class="xref" href="FinSysPlatform.Domain.Market.IPositionProperties.html">IPositionProperties</a> this class is not immutable and allows to change its properties after creation
+Usually, this class is used to prepare all parameters and then pass it to position constructor <a class="xref" href="FinSysPlatform.Domain.Market.Position.html#FinSysPlatform_Domain_Market_Position__ctor_FinSysPlatform_Domain_Market_IPositionProperties_">Position(IPositionProperties)</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Price.html">Price</a></dt>
+      <dd><p>Meta information about price entity</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.PriceMoveDirectionExtensions.html">PriceMoveDirectionExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.TrendDirection.html">TrendDirection</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.PriceOffsetUnitExtension.html">PriceOffsetUnitExtension</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.PriceOffsetUnit.html">PriceOffsetUnit</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ProfitCalculator.html">ProfitCalculator</a></dt>
+      <dd><p>Helper to calculate position profit</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.QuantityExtensions.html">QuantityExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.QuantityHelper.html">QuantityHelper</a></dt>
+      <dd><p>Helper methods for <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.RangeExtensions.html">RangeExtensions</a></dt>
+      <dd><p>Extension methods for <span class="xref">FinSysPlatform.NetExtension.Misc.Range&lt;T&gt;</span></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Rollover.html">Rollover</a></dt>
+      <dd><p>Rollover for derivatives like features, options etc
+See <a href="https://www.investopedia.com/terms/r/rollover.asp">https://www.investopedia.com/terms/r/rollover.asp</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Session.html">Session</a></dt>
+      <dd><p>Defines trade session</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantityExtensions.html">SignedQuantityExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Split.html">Split</a></dt>
+      <dd><p>Defines a split (usually for stocks)</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.StandardBarBuilder.html">StandardBarBuilder</a></dt>
+      <dd><p>Builds standard bars (<a class="xref" href="FinSysPlatform.Domain.Market.StandardBarBuilder.html#FinSysPlatform_Domain_Market_StandardBarBuilder_Timeframe">Timeframe</a>) from incoming ticks</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.StockInstrumentDefinitionCreator.html">StockInstrumentDefinitionCreator</a></dt>
+      <dd><p>Instrument definition for <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Stock">Stock</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.StopLimitOrder.html">StopLimitOrder</a></dt>
+      <dd><p>Stop/limit (stop loss/take profit) attached to position</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.StopLimitOrderSubmissionParameters.html">StopLimitOrderSubmissionParameters</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="FinSysPlatform.Domain.Market.IStopLossTakeProfitSubmissionParameters.html">IStopLossTakeProfitSubmissionParameters</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Symbols.html">Symbols</a></dt>
+      <dd><p>Symbols</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TimeResolution.html">TimeResolution</a></dt>
+      <dd><p>Defines <a class="xref" href="FinSysPlatform.Domain.Market.Timeframe.html">Timeframe</a> and period (resolution)</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TimeResolutionExtensions.html">TimeResolutionExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.TimeResolution.html">TimeResolution</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TimedValue-1.html">TimedValue&lt;T&gt;</a></dt>
+      <dd><p>Universal structure to store value associated with time</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TimeframeExtensions.html">TimeframeExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.Timeframe.html">Timeframe</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Titles.html">Titles</a></dt>
+      <dd><p>A set of common used strings to unify naming</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Trade.html">Trade</a></dt>
+      <dd><p>Represents entry+exit pair. Depending on broker, this pair can be virtual (calculated from real executions)
+For example, netting accounts afford to add new portions to existing position and close position partially etc.
+So, for netting account deal can consist of several entries and one exit
+For hedging accounts usually entry+exit pair usually represents real trade
+Attention: deal is always calculated from exit. Deal can have multiply entries (for netting accounts) but always has one exit</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TradeActionExtensions.html">TradeActionExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.TradeActionExtensions.html">TradeActionExtensions</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TradeData.html">TradeData</a></dt>
+      <dd><p>Contains information about a trade from the end of the exchange. For the exchange, any trade executed between to persons is a fact of exchanging a specified amount
+of instrument at specified price. Exchange-side trade info does not contain information about action (<a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html">TradeAction</a>) because one participant of the trade
+bought the volume  and another one - sold it.
+<a class="xref" href="FinSysPlatform.Domain.Market.Execution.html">Execution</a> to describe the fact of buying/selling from the trader's end
+<a class="xref" href="FinSysPlatform.Domain.Market.Trade.html">Trade</a> to describe the trade from the trader's end (it has a direction: buy or sell)</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TradeProperties.html">TradeProperties</a></dt>
+      <dd><p>Default writable implementation of <a class="xref" href="FinSysPlatform.Domain.Market.ITradeProperties.html">ITradeProperties</a>
+Usually, it is used to initialize <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html">Trade</a> via its constructor <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade__ctor_FinSysPlatform_Domain_Market_ITradeProperties_">Trade(ITradeProperties)</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TradingHours.html">TradingHours</a></dt>
+      <dd><p>Represents the Trading Hours information. Usually, trading hours relate to the <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a>. Trading hours are defined by the exchange (<a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_Exchange">Exchange</a>)
+<seealso ref="https://www.investopedia.com/terms/t/tradingsession.asp"></seealso></p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Bar.html">Bar</a></dt>
+      <dd><p>Standard bar representation, which includes Time, OHLC + volume
+Bar is immutable object. Once created it cannot be changed.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.DayOfWeekSet.html">DayOfWeekSet</a></dt>
+      <dd><p>Immutable object to keep true/false values for each day of week</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+      <dd><p>Stores date and time value and its time zone. It allows to identify the time globally, all round the world. Globally coordinated time allows to
+use times across the time zones. For example, the expiration time for the order can be set in local time zone, whereas the server works with times of EST zone, and this will not be a problem because
+the time will be automatically converted to the target time zone
+See more details about globally coordinated time: <see ref="https://docs.microsoft.com/en-us/dotnet/standard/datetime/choosing-between-datetime"></see></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentKey.html">InstrumentKey</a></dt>
+      <dd><p>Natural unique key of the instrument</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDataUpdate.html">MarketDataUpdate</a></dt>
+      <dd><p>An information about market data row update (change)</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDataValue.html">MarketDataValue</a></dt>
+      <dd><p>Defines a market value unit: price (<a class="xref" href="FinSysPlatform.Domain.Market.MarketDataValue.html#FinSysPlatform_Domain_Market_MarketDataValue_Price">Price</a>) and volume (<a class="xref" href="FinSysPlatform.Domain.Market.MarketDataValue.html#FinSysPlatform_Domain_Market_MarketDataValue_Volume">Volume</a>
+Also, it defines the type of market price: Bid, Ask or Trade (<a class="xref" href="FinSysPlatform.Domain.Market.MarketDataValue.html#FinSysPlatform_Domain_Market_MarketDataValue_Type">Type</a>)</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html">MarketDepthRow</a></dt>
+      <dd><p>One row of the market depth</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Ohlc.html">Ohlc</a></dt>
+      <dd><p>Standard Ohlc representation, which includes Time
+Ohlc is immutable object. Once created it cannot be changed.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.PointSize.html">PointSize</a></dt>
+      <dd><p>Defines the point size for instrument
+<a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_PointSize">PointSize</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+      <dd><p>An entity to define trade quantity</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.RequestPeriod.html">RequestPeriod</a></dt>
+      <dd><p>Defines a period to request data (usually bars or ticks from local storage or data server</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+      <dd><p>An entity to provide trade quantity (<a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a>) and trade direction (<a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html">TradeAction</a>) using positive values for buy and negative values for sell</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Tick.html">Tick</a></dt>
+      <dd><p>Tick (quote) of price. Each tick has: time, price and volume</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TimeHoursMinutes.html">TimeHoursMinutes</a></dt>
+      <dd><p>Defines Hours and Minutes inside a day</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IAccountHistoricalData.html">IAccountHistoricalData</a></dt>
+      <dd><p>A collection of <a class="xref" href="FinSysPlatform.Domain.Market.IAccountHistoricalDataItem.html">IAccountHistoricalDataItem</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IAccountHistoricalDataItem.html">IAccountHistoricalDataItem</a></dt>
+      <dd><p>Account parameters: balance, equity, margin</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IAccountImplementor.html">IAccountImplementor</a></dt>
+      <dd><p>Account contains of many parts: brokerage, data feed, news etc. Each part is based on this interface</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IBasicTradeProperties.html">IBasicTradeProperties</a></dt>
+      <dd><p>Represents a read-only interface that exposes a basic information regarding a trade <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html">Trade</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IBrokerAccountData.html">IBrokerAccountData</a></dt>
+      <dd><p>Current broker account data
+<a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_AccountData">AccountData</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IBrokerageProviderProvider.html">IBrokerageProviderProvider</a></dt>
+      <dd><p>Provider of <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ICommission.html">ICommission</a></dt>
+      <dd><p>Declares the rules of commission paid</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IExecutionProperties.html">IExecutionProperties</a></dt>
+      <dd><p>Represents a read-only interface that exposes information regarding an execution (filled order) resulting from an
+order and is passed as a parameter in the OnExecutionUpdate() method.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentAssigner.html">IInstrumentAssigner</a></dt>
+      <dd><p>An extenstion interface to mark a type supports instrument assignment</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentProvider.html">IInstrumentProvider</a></dt>
+      <dd><p>Provider of <a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentProvider.html#FinSysPlatform_Domain_Market_IInstrumentProvider_Instrument">Instrument</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.INameProvider.html">INameProvider</a></dt>
+      <dd><p>Name providers</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.INullableInstrumentProvider.html">INullableInstrumentProvider</a></dt>
+      <dd><p>Extension of <a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentProvider.html">IInstrumentProvider</a> which allows to check first if instrument was set</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+      <dd><p>Basic parameters of order</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IOrderLifeTimeParameters.html">IOrderLifeTimeParameters</a></dt>
+      <dd><p>Describes lifetime parameters of the order</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IOrderModificationParameters.html">IOrderModificationParameters</a></dt>
+      <dd><p>Basic parameters of orders which are needed to submit order
+<a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IOrderProperties.html">IOrderProperties</a></dt>
+      <dd><p>Describes all order properties</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IOrderSubmissionParameters.html">IOrderSubmissionParameters</a></dt>
+      <dd><p>Basic parameters of orders which are needed to submit order
+<a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IPositionProperties.html">IPositionProperties</a></dt>
+      <dd><p>Describes basic position properties</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IPositionValues.html">IPositionValues</a></dt>
+      <dd><p>Minimum information about position</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html">IProfitProvider</a></dt>
+      <dd><p>This interface can be applied to any entity that has a profit
+<a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentProvider.html">IInstrumentProvider</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.ITradeQuantityProvider.html">ITradeQuantityProvider</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IQuantityProvider.html">IQuantityProvider</a></dt>
+      <dd><p>A provider of <a class="xref" href="FinSysPlatform.Domain.Market.IQuantityProvider.html#FinSysPlatform_Domain_Market_IQuantityProvider_Quantity">Quantity</a> which has a direction (<a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html">TradeAction</a>)
+A couple of these parameters is equal to <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.IStopLossTakeProfitSubmissionParameters.html">IStopLossTakeProfitSubmissionParameters</a></dt>
+      <dd><p>Information about stop order (also known as stop loss) and limit orders (also known as take profit) attached to position</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ITimeZoneProvider.html">ITimeZoneProvider</a></dt>
+      <dd><p>Provides an information about working time zone</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ITimedEntity.html">ITimedEntity</a></dt>
+      <dd><p>Basic entity which has time property</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ITradeEntryPart.html">ITradeEntryPart</a></dt>
+      <dd><p>An execution part to describe entry of the trade <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html">Trade</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ITradeProperties.html">ITradeProperties</a></dt>
+      <dd><p>Represents a read-only interface that exposes information regarding a trade <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html">Trade</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ITradeQuantityProvider.html">ITradeQuantityProvider</a></dt>
+      <dd><p>A provider of <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a> which has a direction (<a class="xref" href="FinSysPlatform.Domain.Market.ITradeQuantityProvider.html#FinSysPlatform_Domain_Market_ITradeQuantityProvider_TradeAction">TradeAction</a>)
+A couple of these parameters is equal to <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.BidAskPrice.html">BidAskPrice</a></dt>
+      <dd><p>Types of market price</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.BrokerageCapability.html">BrokerageCapability</a></dt>
+      <dd><p>Possible capabilities of <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_Capabilities">Capabilities</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Currency.html">Currency</a></dt>
+      <dd><p>Known currencies</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.FundamentalDataType.html">FundamentalDataType</a></dt>
+      <dd><p>A collection of fundamental data values</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.InitiatorType.html">InitiatorType</a></dt>
+      <dd><p>Order initiation type</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html">InstrumentType</a></dt>
+      <dd><p>Type of instrument</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDataUpdateAction.html">MarketDataUpdateAction</a></dt>
+      <dd><p>Type of Market Data update action.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html">MarketPosition</a></dt>
+      <dd><p>Possible directions for <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketPriceType.html">MarketPriceType</a></dt>
+      <dd><p>Types of market price</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Operation.html">Operation</a></dt>
+      <dd><p>A common-use sense enumeration to mark item as added, modified or removed</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OptionClass.html">OptionClass</a></dt>
+      <dd><p>The classification of <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Option">Option</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OptionRight.html">OptionRight</a></dt>
+      <dd><p>Option right</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderPositionImpact.html">OrderPositionImpact</a></dt>
+      <dd><p>Defines the rules to a new apply order to the current existing position</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html">OrderState</a></dt>
+      <dd><p>Order state</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html">OrderType</a></dt>
+      <dd><p>Type of order</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.PositionAccountingType.html">PositionAccountingType</a></dt>
+      <dd><p>Two position accounting mode are supported in the trading platform: Netting and Hedging. The system used depends on the account and is set by the broker
+See for details <a href="https://www.mql5.com/en/articles/2299">https://www.mql5.com/en/articles/2299</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.PriceOffsetUnit.html">PriceOffsetUnit</a></dt>
+      <dd><p>Price offset unit. Usually is used for setting Take profit and Stop loss
+For example: Stop Loss value=10, unit=Points</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.ProfitCalculationUnit.html">ProfitCalculationUnit</a></dt>
+      <dd><p>Defines methods of profit calculation</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.RequestPeriodType.html">RequestPeriodType</a></dt>
+      <dd><p>Defines the method to describe period of bars to request
+<a class="xref" href="FinSysPlatform.Domain.Market.RequestPeriod.html">RequestPeriod</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TimeInForce.html">TimeInForce</a></dt>
+      <dd><p>Time in force types</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.Timeframe.html">Timeframe</a></dt>
+      <dd><p>Timeframe</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html">TradeAction</a></dt>
+      <dd><p>The type of trade operation
+<a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_TradeAction">TradeAction</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.TrendDirection.html">TrendDirection</a></dt>
+      <dd><p>The 3-state direction to indicate vertical direction, usually of price or some indicator value
+For 2-state direction see <a class="xref" href="FinSysPlatform.Domain.Market.UpDownDirection.html">UpDownDirection</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinSysPlatform.Domain.Market.UpDownDirection.html">UpDownDirection</a></dt>
+      <dd><p>This is a common-use enum with descriptions, which can be used in inheritors for indicating up/down direction</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

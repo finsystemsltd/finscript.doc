@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct SignedQuantity | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct SignedQuantity | FinScript ">
+      
+      <meta name="description" content="An entity to provide trade quantity () and trade direction () using positive values for buy and negative values for sell">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.SignedQuantity">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_SignedQuantity" data-uid="FinSysPlatform.Domain.Market.SignedQuantity" class="text-break">
+Struct SignedQuantity  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>An entity to provide trade quantity (<a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a>) and trade direction (<a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html">TradeAction</a>) using positive values for buy and negative values for sell</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TypeConverter(typeof(SignedQuantity.TypeConverter))]
+[ObjectSerializer(typeof(SignedQuantity.ObjectSerializer))]
+public readonly struct SignedQuantity : IEquatable&lt;SignedQuantity&gt;, IEquatable&lt;int&gt;, IEquatable&lt;double&gt;, IEquatable&lt;decimal&gt;, IComparable, IComparable&lt;SignedQuantity&gt;, IComparable&lt;int&gt;, IComparable&lt;double&gt;, IComparable&lt;decimal&gt;, IComparable&lt;Quantity&gt;, IFormattable</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1">IComparable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1">IComparable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1">IComparable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1">IComparable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1">IComparable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity__ctor_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity__ctor_System_Decimal_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.#ctor(System.Decimal)">
+  SignedQuantity(decimal)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates signed quantity instance from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a> value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SignedQuantity(decimal value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity__ctor_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity__ctor_System_Double_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.#ctor(System.Double)">
+  SignedQuantity(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SignedQuantity(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity__ctor_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity__ctor_System_Int32_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.#ctor(System.Int32)">
+  SignedQuantity(int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SignedQuantity(int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_Abs_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.Abs*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_Abs" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.Abs">
+  Abs
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-352"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns absolute value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quantity Abs { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_AsDecimal_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.AsDecimal*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_AsDecimal" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.AsDecimal">
+  AsDecimal
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-423"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns quantity as double number</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public decimal AsDecimal { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_AsDouble_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.AsDouble*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_AsDouble" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.AsDouble">
+  AsDouble
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-428"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns quantity as double number</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double AsDouble { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_HasValue_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.HasValue*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_HasValue" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.HasValue">
+  HasValue
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-418"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opposite to <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html#FinSysPlatform_Domain_Market_SignedQuantity_IsZero">IsZero</a>: returns true if quantity is not zero, otherwise returns false</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_IsNaN_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.IsNaN*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_IsNaN" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.IsNaN">
+  IsNaN
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-413"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if value is not a valid number</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNaN { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_IsNegative_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.IsNegative*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_IsNegative" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.IsNegative">
+  IsNegative
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-408"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True if value is less than 0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNegative { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_IsPositive_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.IsPositive*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_IsPositive" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.IsPositive">
+  IsPositive
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-403"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True if value is greater than 0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPositive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_IsZero_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.IsZero*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_IsZero" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.IsZero">
+  IsZero
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-398"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if value is 0
+Same to checking <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html#FinSysPlatform_Domain_Market_SignedQuantity_MarketPosition">MarketPosition</a> for equal to <a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html#FinSysPlatform_Domain_Market_MarketPosition_Flat">Flat</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsZero { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_MarketPosition_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.MarketPosition*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_MarketPosition" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.MarketPosition">
+  MarketPosition
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-381"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a market position. For positive quantity it means <a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html#FinSysPlatform_Domain_Market_MarketPosition_Buy">Buy</a>, for negative quantity it means <a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html#FinSysPlatform_Domain_Market_MarketPosition_Sell">Sell</a>,
+for zero quantity it means <a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html#FinSysPlatform_Domain_Market_MarketPosition_Flat">Flat</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketPosition MarketPosition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html">MarketPosition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_NaN_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.NaN*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_NaN" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.NaN">
+  NaN
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-439"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Not a quantity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity NaN { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_Sign_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.Sign*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_Sign" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.Sign">
+  Sign
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-362"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a sign of quantity:
++1 means <a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html#FinSysPlatform_Domain_Market_MarketPosition_Buy">Buy</a>
+-1 means <a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html#FinSysPlatform_Domain_Market_MarketPosition_Sell">Sell</a>
+0 means <a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html#FinSysPlatform_Domain_Market_MarketPosition_Flat">Flat</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html#FinSysPlatform_Domain_Market_SignedQuantity_MarketPosition">MarketPosition</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html#FinSysPlatform_Domain_Market_SignedQuantity_IsZero">IsZero</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sign { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_Zero_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.Zero*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_Zero" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.Zero">
+  Zero
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-434"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Zero quantity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity Zero { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_CompareTo_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.CompareTo*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_CompareTo_FinSysPlatform_Domain_Market_Quantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.CompareTo(FinSysPlatform.Domain.Market.Quantity)">
+  CompareTo(Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-345"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(Quantity other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd><p>An object to compare with this instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A value that indicates the relative order of the objects being compared. The return value has these meanings:</p>
+ <table><thead><tr><th class="term"> Value</th><th class="description"> Meaning</th></tr></thead><tbody><tr><td class="term"> Less than zero</td><td class="description"> This instance precedes <code class="paramref">other</code> in the sort order.</td></tr><tr><td class="term"> Zero</td><td class="description"> This instance occurs in the same position in the sort order as <code class="paramref">other</code>.</td></tr><tr><td class="term"> Greater than zero</td><td class="description"> This instance follows <code class="paramref">other</code> in the sort order.</td></tr></tbody></table>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_CompareTo_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.CompareTo*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_CompareTo_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.CompareTo(FinSysPlatform.Domain.Market.SignedQuantity)">
+  CompareTo(SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(SignedQuantity other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>An object to compare with this instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A value that indicates the relative order of the objects being compared. The return value has these meanings:</p>
+ <table><thead><tr><th class="term"> Value</th><th class="description"> Meaning</th></tr></thead><tbody><tr><td class="term"> Less than zero</td><td class="description"> This instance precedes <code class="paramref">other</code> in the sort order.</td></tr><tr><td class="term"> Zero</td><td class="description"> This instance occurs in the same position in the sort order as <code class="paramref">other</code>.</td></tr><tr><td class="term"> Greater than zero</td><td class="description"> This instance follows <code class="paramref">other</code> in the sort order.</td></tr></tbody></table>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_CompareTo_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.CompareTo*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_CompareTo_System_Decimal_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.CompareTo(System.Decimal)">
+  CompareTo(decimal)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-338"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(decimal other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>An object to compare with this instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A value that indicates the relative order of the objects being compared. The return value has these meanings:</p>
+ <table><thead><tr><th class="term"> Value</th><th class="description"> Meaning</th></tr></thead><tbody><tr><td class="term"> Less than zero</td><td class="description"> This instance precedes <code class="paramref">other</code> in the sort order.</td></tr><tr><td class="term"> Zero</td><td class="description"> This instance occurs in the same position in the sort order as <code class="paramref">other</code>.</td></tr><tr><td class="term"> Greater than zero</td><td class="description"> This instance follows <code class="paramref">other</code> in the sort order.</td></tr></tbody></table>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_CompareTo_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.CompareTo*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_CompareTo_System_Double_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.CompareTo(System.Double)">
+  CompareTo(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-331"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(double other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>An object to compare with this instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A value that indicates the relative order of the objects being compared. The return value has these meanings:</p>
+ <table><thead><tr><th class="term"> Value</th><th class="description"> Meaning</th></tr></thead><tbody><tr><td class="term"> Less than zero</td><td class="description"> This instance precedes <code class="paramref">other</code> in the sort order.</td></tr><tr><td class="term"> Zero</td><td class="description"> This instance occurs in the same position in the sort order as <code class="paramref">other</code>.</td></tr><tr><td class="term"> Greater than zero</td><td class="description"> This instance follows <code class="paramref">other</code> in the sort order.</td></tr></tbody></table>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_CompareTo_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.CompareTo*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_CompareTo_System_Int32_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.CompareTo(System.Int32)">
+  CompareTo(int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-324"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(int other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An object to compare with this instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A value that indicates the relative order of the objects being compared. The return value has these meanings:</p>
+ <table><thead><tr><th class="term"> Value</th><th class="description"> Meaning</th></tr></thead><tbody><tr><td class="term"> Less than zero</td><td class="description"> This instance precedes <code class="paramref">other</code> in the sort order.</td></tr><tr><td class="term"> Zero</td><td class="description"> This instance occurs in the same position in the sort order as <code class="paramref">other</code>.</td></tr><tr><td class="term"> Greater than zero</td><td class="description"> This instance follows <code class="paramref">other</code> in the sort order.</td></tr></tbody></table>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_Equals_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.Equals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_Equals_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.Equals(FinSysPlatform.Domain.Market.SignedQuantity)">
+  Equals(SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(SignedQuantity other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>An object to compare with this object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_Equals_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.Equals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_Equals_System_Object_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_GetHashCode_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.GetHashCode*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_GetHashCode" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_ToQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.ToQuantity*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_ToQuantity" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.ToQuantity">
+  ToQuantity()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-370"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the current instance to <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a>
+The current value cannot be negative (<a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html#FinSysPlatform_Domain_Market_SignedQuantity_IsNegative">IsNegative</a>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quantity ToQuantity()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.overflowexception">OverflowException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_ToString_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_ToString" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified type name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_ToString_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_ToString_System_IFormatProvider_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.ToString(System.IFormatProvider)">
+  ToString(IFormatProvider)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a value to string with specified format provider</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString(IFormatProvider formatProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>formatProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_ToString_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_ToString_System_String_System_IFormatProvider_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.ToString(System.String,System.IFormatProvider)">
+  ToString(string?, IFormatProvider?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats the value of the current instance using the specified format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString(string? format, IFormatProvider? formatProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The format to use.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic) to use the default format defined for the type of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a> implementation.</p>
+</dd>
+    <dt><code>formatProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd><p>The provider to use to format the value.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic) to obtain the numeric format information from the current locale setting of the operating system.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value of the current instance in the specified format.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Addition_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Addition*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Addition_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Addition(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator +(SignedQuantity, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-620"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator &quot;+&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator +(SignedQuantity a, SignedQuantity b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator /(SignedQuantity, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-605"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scale operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator /(SignedQuantity quantity, SignedQuantity scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>A positive or zero scale</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_FinSysPlatform_Domain_Market_SignedQuantity_System_Decimal_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division(FinSysPlatform.Domain.Market.SignedQuantity,System.Decimal)">
+  operator /(SignedQuantity, decimal)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-581"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scale operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator /(SignedQuantity quantity, decimal scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>A positive or zero scale</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_FinSysPlatform_Domain_Market_SignedQuantity_System_Double_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division(FinSysPlatform.Domain.Market.SignedQuantity,System.Double)">
+  operator /(SignedQuantity, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-557"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scale operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator /(SignedQuantity quantity, double scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>A positive or zero scale</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_FinSysPlatform_Domain_Market_SignedQuantity_System_Int32_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division(FinSysPlatform.Domain.Market.SignedQuantity,System.Int32)">
+  operator /(SignedQuantity, int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-545"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scale operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator /(SignedQuantity quantity, int scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A positive or zero scale</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_System_Decimal_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division(System.Decimal,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator /(decimal, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-594"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Division operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static decimal operator /(decimal a, SignedQuantity b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Division_System_Double_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Division(System.Double,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator /(double, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-570"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Division operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double operator /(double a, SignedQuantity b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Equality_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Equality*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Equality_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Equality(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator ==(SignedQuantity, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Equality operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(SignedQuantity left, SignedQuantity right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_GreaterThan_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_GreaterThan*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_GreaterThan_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_Quantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_GreaterThan(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.Quantity)">
+  operator &gt;(SignedQuantity, Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;(SignedQuantity left, Quantity right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_GreaterThan_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_GreaterThan*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_GreaterThan_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_GreaterThan(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator &gt;(SignedQuantity, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;(SignedQuantity left, SignedQuantity right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_GreaterThanOrEqual_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_GreaterThanOrEqual*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_GreaterThanOrEqual_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_Quantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_GreaterThanOrEqual(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.Quantity)">
+  operator &gt;=(SignedQuantity, Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Greater or Equal</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;=(SignedQuantity left, Quantity right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_GreaterThanOrEqual_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_GreaterThanOrEqual*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_GreaterThanOrEqual_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_GreaterThanOrEqual(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator &gt;=(SignedQuantity, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Greater or Equal</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;=(SignedQuantity left, SignedQuantity right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Inequality_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Inequality*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Inequality_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Inequality(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator !=(SignedQuantity, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Non-equality operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(SignedQuantity left, SignedQuantity right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_LessThan_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_LessThan*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_LessThan_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_Quantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_LessThan(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.Quantity)">
+  operator &lt;(SignedQuantity, Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Less</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;(SignedQuantity left, Quantity right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_LessThan_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_LessThan*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_LessThan_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_LessThan(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator &lt;(SignedQuantity, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Less</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;(SignedQuantity left, SignedQuantity right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_LessThanOrEqual_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_LessThanOrEqual*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_LessThanOrEqual_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_Quantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_LessThanOrEqual(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.Quantity)">
+  operator &lt;=(SignedQuantity, Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Less or Equal</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;=(SignedQuantity left, Quantity right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_LessThanOrEqual_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_LessThanOrEqual*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_LessThanOrEqual_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_LessThanOrEqual(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator &lt;=(SignedQuantity, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Less or Equal</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;=(SignedQuantity left, SignedQuantity right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator *(SignedQuantity, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-525"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplication operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator *(SignedQuantity quantity, SignedQuantity scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>A positive or zero scale</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>A scaled quantity</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_FinSysPlatform_Domain_Market_SignedQuantity_System_Decimal_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply(FinSysPlatform.Domain.Market.SignedQuantity,System.Decimal)">
+  operator *(SignedQuantity, decimal)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-501"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scale operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator *(SignedQuantity quantity, decimal scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>A positive or zero scale</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>A scaled quantity</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_FinSysPlatform_Domain_Market_SignedQuantity_System_Double_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply(FinSysPlatform.Domain.Market.SignedQuantity,System.Double)">
+  operator *(SignedQuantity, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-477"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scale operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator *(SignedQuantity quantity, double scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>A positive or zero scale</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>A scaled quantity</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_FinSysPlatform_Domain_Market_SignedQuantity_System_Int32_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply(FinSysPlatform.Domain.Market.SignedQuantity,System.Int32)">
+  operator *(SignedQuantity, int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-453"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scale operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator *(SignedQuantity quantity, int scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A positive or zero scale</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>A scaled quantity</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_System_Decimal_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply(System.Decimal,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator *(decimal, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-513"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scale operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator *(decimal scale, SignedQuantity quantity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>A positive or zero scale</p>
+</dd>
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>A scaled quantity</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_System_Double_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply(System.Double,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator *(double, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-489"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scale operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator *(double scale, SignedQuantity quantity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>A positive or zero scale</p>
+</dd>
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Multiply_System_Int32_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Multiply(System.Int32,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator *(int, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-465"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scale operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator *(int scale, SignedQuantity quantity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A positive or zero scale</p>
+</dd>
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>A scaled quantity</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Subtraction_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Subtraction*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Subtraction_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_Quantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Subtraction(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.Quantity)">
+  operator -(SignedQuantity, Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-636"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator &quot;-&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator -(SignedQuantity a, Quantity b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_Subtraction_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Subtraction*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_Subtraction_FinSysPlatform_Domain_Market_SignedQuantity_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_Subtraction(FinSysPlatform.Domain.Market.SignedQuantity,FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator -(SignedQuantity, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-628"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator &quot;-&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator -(SignedQuantity a, SignedQuantity b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_UnaryNegation_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_UnaryNegation*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_UnaryNegation_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_UnaryNegation(FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator -(SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-652"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unary operator &quot;-&quot;
+Returns inverted signed quantity, for example, it current quantity is 100 Long (+100), the method will return 100 Short (-100)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator -(SignedQuantity a)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_SignedQuantity_op_UnaryPlus_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_UnaryPlus*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_SignedQuantity_op_UnaryPlus_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.SignedQuantity.op_UnaryPlus(FinSysPlatform.Domain.Market.SignedQuantity)">
+  operator +(SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-644"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unary operator &quot;+&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity operator +(SignedQuantity a)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/SignedQuantity.cs#lines-14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

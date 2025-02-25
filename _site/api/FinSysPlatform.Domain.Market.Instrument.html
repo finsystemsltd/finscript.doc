@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Instrument | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Instrument | FinScript ">
+      
+      <meta name="description" content="A tradable symbol.  Based on InstrumentDefinition and additionally defines properties for current instrument. For example, ES Futures is an instrument definition (abstract), ES Future Jun21&#39;19 is a real instrument based on ES Futures definitions">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.Instrument">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_Instrument" data-uid="FinSysPlatform.Domain.Market.Instrument" class="text-break">
+Class Instrument  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-35"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A tradable symbol.  Based on InstrumentDefinition and additionally defines properties for current instrument.
+For example, ES Futures is an instrument definition (abstract), ES Future Jun21'19 is a real instrument based on ES Futures definitions</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TypeConverter(typeof(Instrument.TypeConverter))]
+[ObjectSerializer(typeof(Instrument.ObjectSerializer))]
+[PublicAPI]
+public class Instrument : ITimeZoneProvider</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Instrument</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.ITimeZoneProvider.html">ITimeZoneProvider</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.LocalInstrument.html">LocalInstrument</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_GetSiblings_FinSysPlatform_Domain_Market_Instrument_System_Collections_Generic_IEnumerable_FinSysPlatform_Domain_Market_Instrument__System_Boolean_">InstrumentExtensions.GetSiblings(Instrument, IEnumerable&lt;Instrument&gt;, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsSameKey_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">InstrumentExtensions.IsSameKey(Instrument, Instrument?)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsThis_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">InstrumentExtensions.IsThis(Instrument?, Instrument?)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="FinSysPlatform_Domain_Market_Instrument_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Unlike the most other market instances, Instrument does not provide equality implementation, because there are several ways of comparing entities:
+1. By key (<a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsSameKey_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">IsSameKey(Instrument, Instrument?)</a>)
+2. By parameters (<a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_ParametersEqual_FinSysPlatform_Domain_Market_Instrument_System_Boolean_">ParametersEqual(Instrument, bool)</a>). Here are 2 variants as well:
+a. with updateable parameters
+b. without updateable parameters
+3. By instance refs, <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsThis_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">IsThis(Instrument?, Instrument?)</a></p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument__ctor_" data-uid="FinSysPlatform.Domain.Market.Instrument.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument__ctor_FinSysPlatform_Domain_Market_CfdInstrumentDefinitionCreator_System_String_System_String_" data-uid="FinSysPlatform.Domain.Market.Instrument.#ctor(FinSysPlatform.Domain.Market.CfdInstrumentDefinitionCreator,System.String,System.String)">
+  Instrument(CfdInstrumentDefinitionCreator, string?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instrument(CfdInstrumentDefinitionCreator definitionCreator, string? symbol = null, string? exchange = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definitionCreator</code> <a class="xref" href="FinSysPlatform.Domain.Market.CfdInstrumentDefinitionCreator.html">CfdInstrumentDefinitionCreator</a></dt>
+    <dd></dd>
+    <dt><code>symbol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exchange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument__ctor_" data-uid="FinSysPlatform.Domain.Market.Instrument.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument__ctor_FinSysPlatform_Domain_Market_CryptoInstrumentDefinitionCreator_System_String_System_String_" data-uid="FinSysPlatform.Domain.Market.Instrument.#ctor(FinSysPlatform.Domain.Market.CryptoInstrumentDefinitionCreator,System.String,System.String)">
+  Instrument(CryptoInstrumentDefinitionCreator, string?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instrument(CryptoInstrumentDefinitionCreator definitionCreator, string? symbol = null, string? exchange = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definitionCreator</code> <a class="xref" href="FinSysPlatform.Domain.Market.CryptoInstrumentDefinitionCreator.html">CryptoInstrumentDefinitionCreator</a></dt>
+    <dd></dd>
+    <dt><code>symbol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exchange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument__ctor_" data-uid="FinSysPlatform.Domain.Market.Instrument.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument__ctor_FinSysPlatform_Domain_Market_ForexInstrumentDefinitionCreator_System_String_System_String_" data-uid="FinSysPlatform.Domain.Market.Instrument.#ctor(FinSysPlatform.Domain.Market.ForexInstrumentDefinitionCreator,System.String,System.String)">
+  Instrument(ForexInstrumentDefinitionCreator, string?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instrument(ForexInstrumentDefinitionCreator definitionCreator, string? symbol = null, string? exchange = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definitionCreator</code> <a class="xref" href="FinSysPlatform.Domain.Market.ForexInstrumentDefinitionCreator.html">ForexInstrumentDefinitionCreator</a></dt>
+    <dd></dd>
+    <dt><code>symbol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exchange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument__ctor_" data-uid="FinSysPlatform.Domain.Market.Instrument.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument__ctor_FinSysPlatform_Domain_Market_InstrumentDefinition_FinSysPlatform_Domain_Market_InstrumentParameters_System_String_System_String_" data-uid="FinSysPlatform.Domain.Market.Instrument.#ctor(FinSysPlatform.Domain.Market.InstrumentDefinition,FinSysPlatform.Domain.Market.InstrumentParameters,System.String,System.String)">
+  Instrument(InstrumentDefinition, InstrumentParameters, string?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instrument(InstrumentDefinition definition, InstrumentParameters instrumentParameters, string? symbol = null, string? exchange = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definition</code> <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html">InstrumentDefinition</a></dt>
+    <dd></dd>
+    <dt><code>instrumentParameters</code> <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentParameters.html">InstrumentParameters</a></dt>
+    <dd></dd>
+    <dt><code>symbol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exchange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument__ctor_" data-uid="FinSysPlatform.Domain.Market.Instrument.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument__ctor_FinSysPlatform_Domain_Market_StockInstrumentDefinitionCreator_System_String_System_String_" data-uid="FinSysPlatform.Domain.Market.Instrument.#ctor(FinSysPlatform.Domain.Market.StockInstrumentDefinitionCreator,System.String,System.String)">
+  Instrument(StockInstrumentDefinitionCreator, string?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instrument(StockInstrumentDefinitionCreator definitionCreator, string? symbol = null, string? exchange = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definitionCreator</code> <a class="xref" href="FinSysPlatform.Domain.Market.StockInstrumentDefinitionCreator.html">StockInstrumentDefinitionCreator</a></dt>
+    <dd></dd>
+    <dt><code>symbol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exchange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_Definition_" data-uid="FinSysPlatform.Domain.Market.Instrument.Definition*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_Definition" data-uid="FinSysPlatform.Domain.Market.Instrument.Definition">
+  Definition
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instrument definition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InstrumentDefinition Definition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html">InstrumentDefinition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Instrument_Definition_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Instrument definition is a constant part of instrument properties which cannot be changed from contract to contract
+For example, futures have month contracts (<a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_Expiry">Expiry</a>), each contract generates new instance of <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a> but for
+all instrument instances have the same instrument definition</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_Description_" data-uid="FinSysPlatform.Domain.Market.Instrument.Description*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_Description" data-uid="FinSysPlatform.Domain.Market.Instrument.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates the description of the instrument</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Description { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_Exchange_" data-uid="FinSysPlatform.Domain.Market.Instrument.Exchange*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_Exchange" data-uid="FinSysPlatform.Domain.Market.Instrument.Exchange">
+  Exchange
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates the current exchange of an instrument</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Exchange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_Expiry_" data-uid="FinSysPlatform.Domain.Market.Instrument.Expiry*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_Expiry" data-uid="FinSysPlatform.Domain.Market.Instrument.Expiry">
+  Expiry
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-454"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates the expiration date of the instrument
+The expiration time usually is obligatory for future contracts (<a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Future">Future</a>) and options (<a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Option">Option</a>)
+For other types of instrument it is optional
+If the instrument has no limitation, then the value is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime.maxvalue">MaxValue</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime Expiry { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_ExpiryIsSet_" data-uid="FinSysPlatform.Domain.Market.Instrument.ExpiryIsSet*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_ExpiryIsSet" data-uid="FinSysPlatform.Domain.Market.Instrument.ExpiryIsSet">
+  ExpiryIsSet
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-459"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_Expiry">Expiry</a> is set (has a valid value)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExpiryIsSet { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_OptionClass_" data-uid="FinSysPlatform.Domain.Market.Instrument.OptionClass*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_OptionClass" data-uid="FinSysPlatform.Domain.Market.Instrument.OptionClass">
+  OptionClass
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-469"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Option class (for options only, <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Option">Option</a>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OptionClass? OptionClass { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.OptionClass.html">OptionClass</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_OptionRight_" data-uid="FinSysPlatform.Domain.Market.Instrument.OptionRight*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_OptionRight" data-uid="FinSysPlatform.Domain.Market.Instrument.OptionRight">
+  OptionRight
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-464"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Option right (for options only, <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Option">Option</a>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OptionRight? OptionRight { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.OptionRight.html">OptionRight</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_PointSize_" data-uid="FinSysPlatform.Domain.Market.Instrument.PointSize*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_PointSize" data-uid="FinSysPlatform.Domain.Market.Instrument.PointSize">
+  PointSize
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-316"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates the minimal possible fraction of the price. Usually it is mirror of <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_Precision">Precision</a>
+For example, it Precision=2, Point size most likely will be 0.01
+Do not confuse with <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_TickSize">TickSize</a>, which describes the minimal possible price change. For example, point size 0.01, tick size = 0.05, which means that
+minimal price change is 5 points (pips)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double PointSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Instrument_PointSize_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The property forwards value from <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_PointSize">PointSize</a>
+To convert some price delta to points, use <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_PriceToPoints_System_Double_System_Boolean_">PriceToPoints(double, bool)</a> method, to convert points value to price delta use <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_PointsToPrice_System_Double_System_Boolean_">PointsToPrice(double, bool)</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_PointValue_" data-uid="FinSysPlatform.Domain.Market.Instrument.PointValue*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_PointValue" data-uid="FinSysPlatform.Domain.Market.Instrument.PointValue">
+  PointValue
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-324"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates the currency value of 1 full point of movement. For example, 1 point in the SP 500 E-mini futures contract
+(ES) is $50 USD which is equal to $12.50 USD per tick.
+<a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_PointValue">PointValue</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double PointValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Instrument_PointValue_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Forwards value from <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_PointValue">PointValue</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_Precision_" data-uid="FinSysPlatform.Domain.Market.Instrument.Precision*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_Precision" data-uid="FinSysPlatform.Domain.Market.Instrument.Precision">
+  Precision
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of digits after decimal point. <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_Precision">Precision</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Precision { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Instrument_Precision_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Forwards value from <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_Precision">Precision</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_StrikePrice_" data-uid="FinSysPlatform.Domain.Market.Instrument.StrikePrice*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_StrikePrice" data-uid="FinSysPlatform.Domain.Market.Instrument.StrikePrice">
+  StrikePrice
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-475"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Strike price (for options only, <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Option">Option</a>)
+If strike is not specified (not acceptable for this type of instrument), then the value is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.nan">NaN</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double StrikePrice { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_SwapCurrency_" data-uid="FinSysPlatform.Domain.Market.Instrument.SwapCurrency*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_SwapCurrency" data-uid="FinSysPlatform.Domain.Market.Instrument.SwapCurrency">
+  SwapCurrency
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-549"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forex: Net Swap Short Amount for standard lot (100,000) in Account Base Currency.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? SwapCurrency { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_SwapLong_" data-uid="FinSysPlatform.Domain.Market.Instrument.SwapLong*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_SwapLong" data-uid="FinSysPlatform.Domain.Market.Instrument.SwapLong">
+  SwapLong
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-539"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forex: Net Swap Long Amount for standard lot (100,000) in Account Base Currency</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double SwapLong { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_SwapShort_" data-uid="FinSysPlatform.Domain.Market.Instrument.SwapShort*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_SwapShort" data-uid="FinSysPlatform.Domain.Market.Instrument.SwapShort">
+  SwapShort
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-544"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forex: Net Swap Short Amount for standard lot (100,000) in Account Base Currency.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double SwapShort { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_Symbol_" data-uid="FinSysPlatform.Domain.Market.Instrument.Symbol*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_Symbol" data-uid="FinSysPlatform.Domain.Market.Instrument.Symbol">
+  Symbol
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates the full FinScript name of an instrument. For futures, this would include the expiration date. The
+September SP 500 E-mini contract full name is ES 09-14</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Symbol { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_TickPoints_" data-uid="FinSysPlatform.Domain.Market.Instrument.TickPoints*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_TickPoints" data-uid="FinSysPlatform.Domain.Market.Instrument.TickPoints">
+  TickPoints
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-342"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates the tick size (minimal price change) in points
+For example, point size = 0.01, tick size = 0.05. Thus tick in points = 5</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TickPoints { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Instrument_TickPoints_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Forwards value from <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_TickPoints">TickPoints</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_TickSize_" data-uid="FinSysPlatform.Domain.Market.Instrument.TickSize*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_TickSize" data-uid="FinSysPlatform.Domain.Market.Instrument.TickSize">
+  TickSize
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-334"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates the tick size (minimal price change). The tick size cannot be less than <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_PointSize">PointSize</a>
+In order to get tick size in points you have to divide <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_TickSize">TickSize</a> by <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_PointSize">PointSize</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TickSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Instrument_TickSize_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The property forwards value from <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_TickSize">TickSize</a>
+To align a price to tick size use <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_RoundToTickSize_System_Double_">RoundToTickSize(double)</a>, <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_RoundDownToTickSize_System_Double_">RoundDownToTickSize(double)</a>, <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_RoundUpToTickSize_System_Double_">RoundUpToTickSize(double)</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_TickValue_" data-uid="FinSysPlatform.Domain.Market.Instrument.TickValue*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_TickValue" data-uid="FinSysPlatform.Domain.Market.Instrument.TickValue">
+  TickValue
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-348"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates the currency value of 1 tick of movement (minimal price change). This value is calculated from <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_PointValue">PointValue</a> multiplied to <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_TickPoints">TickPoints</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TickValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Instrument_TickValue_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Forwards value from <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_TickValue">TickValue</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_TimeZone_" data-uid="FinSysPlatform.Domain.Market.Instrument.TimeZone*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_TimeZone" data-uid="FinSysPlatform.Domain.Market.Instrument.TimeZone">
+  TimeZone
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-365"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a time zone which is used for storing date and time values. A shortcut to <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_Definition">Definition</a>, <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_TradingHours">TradingHours</a>, <a class="xref" href="FinSysPlatform.Domain.Market.TradingHours.html#FinSysPlatform_Domain_Market_TradingHours_TimeZone">TimeZone</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeZoneInfo TimeZone { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_Type_" data-uid="FinSysPlatform.Domain.Market.Instrument.Type*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_Type" data-uid="FinSysPlatform.Domain.Market.Instrument.Type">
+  Type
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-360"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the type of instrument. <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_InstrumentType">InstrumentType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InstrumentType Type { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html">InstrumentType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Instrument_Type_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Forwards value from <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_InstrumentType">InstrumentType</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_UniqueKey_" data-uid="FinSysPlatform.Domain.Market.Instrument.UniqueKey*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_UniqueKey" data-uid="FinSysPlatform.Domain.Market.Instrument.UniqueKey">
+  UniqueKey
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-481"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A string which identifies the symbol uniquely
+<a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_Symbol">Symbol</a> and <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html">InstrumentType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InstrumentKey UniqueKey { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentKey.html">InstrumentKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_Equals_" data-uid="FinSysPlatform.Domain.Market.Instrument.Equals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_Equals_System_Object_" data-uid="FinSysPlatform.Domain.Market.Instrument.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-585"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Equality is based on reference equality <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsThis_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">IsThis(Instrument?, Instrument?)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Instrument_Equals_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Since instrument has 3 ways of comparison (by reference <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsThis_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">IsThis(Instrument?, Instrument?)</a> , by properties <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_ParametersEqual_FinSysPlatform_Domain_Market_Instrument_System_Boolean_">ParametersEqual(Instrument, bool)</a>  and by key <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_UniqueKey">UniqueKey</a>) it is highly recommended to use
+<a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsThis_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">IsThis(Instrument?, Instrument?)</a> method instead of standard <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Equals(object)</a>  to avoid ambiguity
+This method behaves like standard <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Equals(object)</a>  and still compares by reference, so, technically, it is equal to <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsThis_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">IsThis(Instrument?, Instrument?)</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_GetHashCode_" data-uid="FinSysPlatform.Domain.Market.Instrument.GetHashCode*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_GetHashCode" data-uid="FinSysPlatform.Domain.Market.Instrument.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-592"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_GetUniqueKeyFromParameters_" data-uid="FinSysPlatform.Domain.Market.Instrument.GetUniqueKeyFromParameters*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_GetUniqueKeyFromParameters_System_String_FinSysPlatform_Domain_Market_InstrumentType_FinSysPlatform_Domain_Market_InstrumentParameters_" data-uid="FinSysPlatform.Domain.Market.Instrument.GetUniqueKeyFromParameters(System.String,FinSysPlatform.Domain.Market.InstrumentType,FinSysPlatform.Domain.Market.InstrumentParameters)">
+  GetUniqueKeyFromParameters(string, InstrumentType, InstrumentParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-560"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defines the minimum of parameters needed to compose a unique instrument key (<a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_UniqueKey">UniqueKey</a>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InstrumentKey GetUniqueKeyFromParameters(string symbol, InstrumentType instrumentType, InstrumentParameters instrumentParameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>symbol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>instrumentType</code> <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html">InstrumentType</a></dt>
+    <dd></dd>
+    <dt><code>instrumentParameters</code> <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentParameters.html">InstrumentParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentKey.html">InstrumentKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_MoveBackPoints_" data-uid="FinSysPlatform.Domain.Market.Instrument.MoveBackPoints*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_MoveBackPoints_FinSysPlatform_Domain_Market_TradeAction_System_Double_System_Double_" data-uid="FinSysPlatform.Domain.Market.Instrument.MoveBackPoints(FinSysPlatform.Domain.Market.TradeAction,System.Double,System.Double)">
+  MoveBackPoints(TradeAction, double, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-413"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forwarded method <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_MoveBackPoints_FinSysPlatform_Domain_Market_TradeAction_System_Double_System_Double_">MoveBackPoints(TradeAction, double, double)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MoveBackPoints(TradeAction tradeAction, double startPrice, double distancePoints)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tradeAction</code> <a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html">TradeAction</a></dt>
+    <dd></dd>
+    <dt><code>startPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>distancePoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_MoveForwardPoints_" data-uid="FinSysPlatform.Domain.Market.Instrument.MoveForwardPoints*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_MoveForwardPoints_FinSysPlatform_Domain_Market_TradeAction_System_Double_System_Double_" data-uid="FinSysPlatform.Domain.Market.Instrument.MoveForwardPoints(FinSysPlatform.Domain.Market.TradeAction,System.Double,System.Double)">
+  MoveForwardPoints(TradeAction, double, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-403"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forwarded method <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_MoveForwardPoints_FinSysPlatform_Domain_Market_TradeAction_System_Double_System_Double_">MoveForwardPoints(TradeAction, double, double)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MoveForwardPoints(TradeAction tradeAction, double startPrice, double distancePoints)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tradeAction</code> <a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html">TradeAction</a></dt>
+    <dd></dd>
+    <dt><code>startPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>distancePoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_ParametersEqual_" data-uid="FinSysPlatform.Domain.Market.Instrument.ParametersEqual*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_ParametersEqual_FinSysPlatform_Domain_Market_Instrument_System_Boolean_" data-uid="FinSysPlatform.Domain.Market.Instrument.ParametersEqual(FinSysPlatform.Domain.Market.Instrument,System.Boolean)">
+  ParametersEqual(Instrument, bool)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-510"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares all main parameters, which are the part of the natural key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ParametersEqual(Instrument other, bool includeUpdateableProperties)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>includeUpdateableProperties</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, then such next properties are included into comparison too:
+- <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_PointValue">PointValue</a>
+- <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_SwapCurrency">SwapCurrency</a>
+- <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_SwapLong">SwapLong</a>
+- <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_SwapShort">SwapShort</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_PointsToPrice_" data-uid="FinSysPlatform.Domain.Market.Instrument.PointsToPrice*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_PointsToPrice_System_Double_System_Boolean_" data-uid="FinSysPlatform.Domain.Market.Instrument.PointsToPrice(System.Double,System.Boolean)">
+  PointsToPrice(double, bool)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-429"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forwarded method <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_PointsToPrice_System_Double_System_Boolean_">PointsToPrice(double, bool)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double PointsToPrice(double points, bool roundResult = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>points</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>roundResult</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_PointsToPrice_" data-uid="FinSysPlatform.Domain.Market.Instrument.PointsToPrice*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_PointsToPrice_System_Int64_System_Boolean_" data-uid="FinSysPlatform.Domain.Market.Instrument.PointsToPrice(System.Int64,System.Boolean)">
+  PointsToPrice(long, bool)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-441"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forwarded method <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_PointsToPrice_System_Int64_System_Boolean_">PointsToPrice(long, bool)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double PointsToPrice(long points, bool roundResult = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>points</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>roundResult</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_PriceToPoints_" data-uid="FinSysPlatform.Domain.Market.Instrument.PriceToPoints*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_PriceToPoints_System_Double_System_Boolean_" data-uid="FinSysPlatform.Domain.Market.Instrument.PriceToPoints(System.Double,System.Boolean)">
+  PriceToPoints(double, bool)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-421"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forwarded method <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_PriceToPoints_System_Double_System_Boolean_">PriceToPoints(double, bool)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double PriceToPoints(double price, bool roundResult = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>roundResult</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, result value will be rounded to remove fractional part</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_Round_" data-uid="FinSysPlatform.Domain.Market.Instrument.Round*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_Round_System_Double_" data-uid="FinSysPlatform.Domain.Market.Instrument.Round(System.Double)">
+  Round(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-394"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forwarded method <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_Round_System_Double_">Round(double)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Round(double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_RoundDownToTickSize_" data-uid="FinSysPlatform.Domain.Market.Instrument.RoundDownToTickSize*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_RoundDownToTickSize_System_Double_" data-uid="FinSysPlatform.Domain.Market.Instrument.RoundDownToTickSize(System.Double)">
+  RoundDownToTickSize(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forwarded method <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_RoundDownToTickSize_System_Double_">RoundDownToTickSize(double)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double RoundDownToTickSize(double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_RoundToTickSize_" data-uid="FinSysPlatform.Domain.Market.Instrument.RoundToTickSize*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_RoundToTickSize_System_Double_" data-uid="FinSysPlatform.Domain.Market.Instrument.RoundToTickSize(System.Double)">
+  RoundToTickSize(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forwarded method <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_RoundToTickSize_System_Double_">RoundToTickSize(double)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double RoundToTickSize(double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_RoundUpToTickSize_" data-uid="FinSysPlatform.Domain.Market.Instrument.RoundUpToTickSize*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_RoundUpToTickSize_System_Double_" data-uid="FinSysPlatform.Domain.Market.Instrument.RoundUpToTickSize(System.Double)">
+  RoundUpToTickSize(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-380"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forwarded method <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_RoundUpToTickSize_System_Double_">RoundUpToTickSize(double)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double RoundUpToTickSize(double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_ToString_" data-uid="FinSysPlatform.Domain.Market.Instrument.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_ToString" data-uid="FinSysPlatform.Domain.Market.Instrument.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-491"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that represents the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_op_Equality_" data-uid="FinSysPlatform.Domain.Market.Instrument.op_Equality*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_op_Equality_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_" data-uid="FinSysPlatform.Domain.Market.Instrument.op_Equality(FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.Instrument)">
+  operator ==(Instrument?, Instrument?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-610"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Two instruments can be compared by 3 different methods:</p>
+<ol>
+<li>By reference equality, see <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsThis_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">IsThis(Instrument?, Instrument?)</a> or standard method <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">ReferenceEquals(object, object)</a></li>
+<li>By field to field comparison, see <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_ParametersEqual_FinSysPlatform_Domain_Market_Instrument_System_Boolean_">ParametersEqual(Instrument, bool)</a> method</li>
+<li>By <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_UniqueKey">UniqueKey</a> comparison, see <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsSameKey_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">IsSameKey(Instrument, Instrument?)</a> method
+To avoid ambiguity of equality, equality operator is defined as obsolete. Use specific methods instead</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Possible comparison ambiguity. In order to compare instrument instance references, use IsThis method, to compare by attributes, use  ParametersEqual method. If you need to compare only UniqueKey, then IsSameKey method, if you need to check for null, use is null&quot;)]
+public static bool operator ==(Instrument? left, Instrument? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_op_Implicit_" data-uid="FinSysPlatform.Domain.Market.Instrument.op_Implicit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_op_Implicit_FinSysPlatform_Domain_Market_Instrument__FinSysPlatform_Domain_Market_InstrumentKey" data-uid="FinSysPlatform.Domain.Market.Instrument.op_Implicit(FinSysPlatform.Domain.Market.Instrument)~FinSysPlatform.Domain.Market.InstrumentKey">
+  implicit operator InstrumentKey(Instrument)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-487"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicit conversion operator from <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a> to <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentKey.html">InstrumentKey</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InstrumentKey(Instrument i)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>i</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentKey.html">InstrumentKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Instrument_op_Inequality_" data-uid="FinSysPlatform.Domain.Market.Instrument.op_Inequality*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Instrument_op_Inequality_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_" data-uid="FinSysPlatform.Domain.Market.Instrument.op_Inequality(FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.Instrument)">
+  operator !=(Instrument?, Instrument?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-626"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Two instruments can be compared by 3 different methods:</p>
+<ol>
+<li>By reference equality, see <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsThis_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">IsThis(Instrument?, Instrument?)</a> or standard method <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">ReferenceEquals(object, object)</a></li>
+<li>By field to field comparison, see <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_ParametersEqual_FinSysPlatform_Domain_Market_Instrument_System_Boolean_">ParametersEqual(Instrument, bool)</a> method</li>
+<li>By <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_UniqueKey">UniqueKey</a> comparison, see <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentExtensions.html#FinSysPlatform_Domain_Market_InstrumentExtensions_IsSameKey_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Instrument_">IsSameKey(Instrument, Instrument?)</a> method
+To avoid ambiguity of equality, equality operator is defined as obsolete. Use specific methods instead</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Possible comparison ambiguity. In order to compare instrument instance references, use IsThis method, to compare by attributes, use  ParametersEqual method. If you need to compare only UniqueKey, then IsSameKey method, if you need to check for not null, use is not null&quot;)]
+public static bool operator !=(Instrument? left, Instrument? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Instrument.cs#lines-35" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

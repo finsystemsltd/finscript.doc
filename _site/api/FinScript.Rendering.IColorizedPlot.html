@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IColorizedPlot | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IColorizedPlot | FinScript ">
+      
+      <meta name="description" content="Plot with palette, the color of each item can be customized. If color for specified item is not set,">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinScript.Rendering.IColorizedPlot">
+
+
+
+  <h1 id="FinScript_Rendering_IColorizedPlot" data-uid="FinScript.Rendering.IColorizedPlot" class="text-break">
+Interface IColorizedPlot  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/IColorizedPlot.cs#lines-10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinScript.html">FinScript</a>.<a class="xref" href="FinScript.Rendering.html">Rendering</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinScript.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Plot with palette, the color of each item can be customized. If color for specified item is not set, <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_Stroke">Stroke</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IColorizedPlot : IPlot, ISeries&lt;double&gt;, ISeriesBase, INameDescriptionProvider, INameProvider</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_Id">IPlot.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_IsConfigurable">IPlot.IsConfigurable</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_DisplayInDataBox">IPlot.DisplayInDataBox</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_FirstPlottedBarIndex">IPlot.FirstPlottedBarIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_DrawMarker">IPlot.DrawMarker</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_VerticalOffset">IPlot.VerticalOffset</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_PlotStyle">IPlot.PlotStyle</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_PlotPointType">IPlot.PlotPointType</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_Stroke">IPlot.Stroke</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_IsVisible">IPlot.IsVisible</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_IsAutoColor">IPlot.IsAutoColor</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_FillColor">IPlot.FillColor</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_FillColor2">IPlot.FillColor2</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeries-1.html#FinSysPlatform_Domain_Market_Data_ISeries_1_GetValueAt_System_Int32_">ISeries&lt;double&gt;.GetValueAt(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeries-1.html#FinSysPlatform_Domain_Market_Data_ISeries_1_GetValueAt_System_Int32__0__">ISeries&lt;double&gt;.GetValueAt(int, out double)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeries-1.html#FinSysPlatform_Domain_Market_Data_ISeries_1_EnumerateItems">ISeries&lt;double&gt;.EnumerateItems()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesBase.html#FinSysPlatform_Domain_Market_Data_ISeriesBase_MasterSource">ISeriesBase.MasterSource</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesBase.html#FinSysPlatform_Domain_Market_Data_ISeriesBase_IsValidValueAt_System_Int32_">ISeriesBase.IsValidValueAt(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.INameDescriptionProvider.html#FinSysPlatform_Domain_Script_INameDescriptionProvider_Description">INameDescriptionProvider.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.INameDescriptionProvider.html#FinSysPlatform_Domain_Script_INameDescriptionProvider_DisplayName">INameDescriptionProvider.DisplayName</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.INameProvider.html#FinSysPlatform_Domain_Market_INameProvider_Name">INameProvider.Name</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesBaseExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesBaseExtensions_Count_FinSysPlatform_Domain_Market_Data_ISeriesBase_">ISeriesBaseExtensions.Count(ISeriesBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesBaseExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesBaseExtensions_GetBarIndex_FinSysPlatform_Domain_Market_Data_ISeriesBase_System_DateTime_FinSysPlatform_Domain_Market_Data_TimeToIndexMappingMode_">ISeriesBaseExtensions.GetBarIndex(ISeriesBase, DateTime, TimeToIndexMappingMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesBaseExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesBaseExtensions_GetFirstTime_FinSysPlatform_Domain_Market_Data_ISeriesBase_">ISeriesBaseExtensions.GetFirstTime(ISeriesBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesBaseExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesBaseExtensions_GetLastTime_FinSysPlatform_Domain_Market_Data_ISeriesBase_">ISeriesBaseExtensions.GetLastTime(ISeriesBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesBaseExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesBaseExtensions_GetTimeAt_FinSysPlatform_Domain_Market_Data_ISeriesBase_System_Int32_">ISeriesBaseExtensions.GetTimeAt(ISeriesBase, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesBaseExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesBaseExtensions_LockForRead_FinSysPlatform_Domain_Market_Data_ISeriesBase_">ISeriesBaseExtensions.LockForRead(ISeriesBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesBaseExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesBaseExtensions_NormalizeBarIndexRanges_FinSysPlatform_Domain_Market_Data_ISeriesBase_System_Int32_System_Int32_System_Int32__System_Int32__">ISeriesBaseExtensions.NormalizeBarIndexRanges(ISeriesBase, int, int, out int, out int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_IsValidLastValue_FinSysPlatform_Domain_Market_Data_ISeriesBase_System_Int32_">ISeriesExtensions.IsValidLastValue(ISeriesBase, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_AsReadOnlyList__1_FinSysPlatform_Domain_Market_Data_ISeries___0__">ISeriesExtensions.AsReadOnlyList&lt;T&gt;(ISeries&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_AsValueReadOnlyList__1_FinSysPlatform_Domain_Market_Data_ISeries___0__">ISeriesExtensions.AsValueReadOnlyList&lt;T&gt;(ISeries&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_CrossesDownBackward__1_FinSysPlatform_Domain_Market_Data_ISeries___0____0_System_Int32_">ISeriesExtensions.CrossesDownBackward&lt;T&gt;(ISeries&lt;T&gt;, T, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_CrossesDown__1_FinSysPlatform_Domain_Market_Data_ISeries___0__FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_">ISeriesExtensions.CrossesDown&lt;T&gt;(ISeries&lt;T&gt;, ISeries&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_CrossesDown__1_FinSysPlatform_Domain_Market_Data_ISeries___0____0_System_Int32_">ISeriesExtensions.CrossesDown&lt;T&gt;(ISeries&lt;T&gt;, T, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_CrossesUpBackward__1_FinSysPlatform_Domain_Market_Data_ISeries___0____0_System_Int32_">ISeriesExtensions.CrossesUpBackward&lt;T&gt;(ISeries&lt;T&gt;, T, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_CrossesUp__1_FinSysPlatform_Domain_Market_Data_ISeries___0__FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_">ISeriesExtensions.CrossesUp&lt;T&gt;(ISeries&lt;T&gt;, ISeries&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_CrossesUp__1_FinSysPlatform_Domain_Market_Data_ISeries___0____0_System_Int32_">ISeriesExtensions.CrossesUp&lt;T&gt;(ISeries&lt;T&gt;, T, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_Crosses__1_FinSysPlatform_Domain_Market_Data_ISeries___0__FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_">ISeriesExtensions.Crosses&lt;T&gt;(ISeries&lt;T&gt;, ISeries&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_Crosses__1_FinSysPlatform_Domain_Market_Data_ISeries___0__FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Collections_Generic_IComparer___0__">ISeriesExtensions.Crosses&lt;T&gt;(ISeries&lt;T&gt;, ISeries&lt;T&gt;, int, IComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_FindBackFirstValidDataIndex__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_">ISeriesExtensions.FindBackFirstValidDataIndex&lt;T&gt;(ISeries&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_FindBackFirstValidDataIndex__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Func___0_System_Boolean__">ISeriesExtensions.FindBackFirstValidDataIndex&lt;T&gt;(ISeries&lt;T&gt;, int, Func&lt;T, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_FindMaxInRanges__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_System_Boolean_">ISeriesExtensions.FindMaxInRanges&lt;T&gt;(ISeries&lt;T&gt;, int, int, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_FindMinInRanges__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_System_Boolean_">ISeriesExtensions.FindMinInRanges&lt;T&gt;(ISeries&lt;T&gt;, int, int, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_GetLastOrDefaultValue__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32___0_">ISeriesExtensions.GetLastOrDefaultValue&lt;T&gt;(ISeries&lt;T&gt;, int, T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_GetLastValue__1_FinSysPlatform_Domain_Market_Data_ISeries___0____0__">ISeriesExtensions.GetLastValue&lt;T&gt;(ISeries&lt;T&gt;, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_GetLastValue__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_">ISeriesExtensions.GetLastValue&lt;T&gt;(ISeries&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_IsFallingBackward__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.IsFallingBackward&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_IsFalling__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.IsFalling&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_IsMaxBackward__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.IsMaxBackward&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_IsMax__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.IsMax&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_IsMinBackward__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.IsMinBackward&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_IsMin__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.IsMin&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_IsRisingBackward__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.IsRisingBackward&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_IsRising__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.IsRising&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_LockAndExecute__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Action_FinSysPlatform_Domain_Market_Data_ISeries___0___">ISeriesExtensions.LockAndExecute&lt;TSource&gt;(ISeries&lt;TSource&gt;, Action&lt;ISeries&lt;TSource&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_LockAndExecute__2_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Func_FinSysPlatform_Domain_Market_Data_ISeries___0____1__">ISeriesExtensions.LockAndExecute&lt;TSource, TResult&gt;(ISeries&lt;TSource&gt;, Func&lt;ISeries&lt;TSource&gt;, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_Max__2_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Func_FinSysPlatform_Domain_Market_Data_SeriesItem___0____1__">ISeriesExtensions.Max&lt;TSource, TResult&gt;(ISeries&lt;TSource&gt;, Func&lt;SeriesItem&lt;TSource&gt;, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_Min__2_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Func_FinSysPlatform_Domain_Market_Data_SeriesItem___0____1__">ISeriesExtensions.Min&lt;TSource, TResult&gt;(ISeries&lt;TSource&gt;, Func&lt;SeriesItem&lt;TSource&gt;, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_SelectExistingValuesInRanges__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.SelectExistingValuesInRanges&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_Select__2_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Func_FinSysPlatform_Domain_Market_Data_SeriesItem___0____1__">ISeriesExtensions.Select&lt;TSource, TResult&gt;(ISeries&lt;TSource&gt;, Func&lt;SeriesItem&lt;TSource&gt;, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_TakeFrom__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_">ISeriesExtensions.TakeFrom&lt;T&gt;(ISeries&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_TakeFrom__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.TakeFrom&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_TakeRanges__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.TakeRanges&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_TakeTimeStartingFrom__1_FinSysPlatform_Domain_Market_Data_ISeries___0__System_Int32_System_Int32_">ISeriesExtensions.TakeTimeStartingFrom&lt;T&gt;(ISeries&lt;T&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesExtensions.html#FinSysPlatform_Domain_Market_Data_ISeriesExtensions_TryGetLastOrDefaultValue__1_FinSysPlatform_Domain_Market_Data_ISeries___0____0__System_Int32_">ISeriesExtensions.TryGetLastOrDefaultValue&lt;T&gt;(ISeries&lt;T&gt;, out T?, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.ConditionHelper.html#FinSysPlatform_Domain_Script_ConditionHelper_FallsFromAboveBackward__1_FinSysPlatform_Domain_Market_Data_ISeries___0____0_System_Int32_">ConditionHelper.FallsFromAboveBackward&lt;T&gt;(ISeries&lt;T&gt;, T, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.ConditionHelper.html#FinSysPlatform_Domain_Script_ConditionHelper_RisesFromBelowBackward__1_FinSysPlatform_Domain_Market_Data_ISeries___0____0_System_Int32_">ConditionHelper.RisesFromBelowBackward&lt;T&gt;(ISeries&lt;T&gt;, T, int)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinScript_Rendering_IColorizedPlot_FillColors_" data-uid="FinScript.Rendering.IColorizedPlot.FillColors*"></a>
+
+  <h3 id="FinScript_Rendering_IColorizedPlot_FillColors" data-uid="FinScript.Rendering.IColorizedPlot.FillColors">
+  FillColors
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/IColorizedPlot.cs#lines-20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Colors for filling bodies of the plot items. <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_FillColor">FillColor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISeries&lt;Argb&gt; FillColors { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.Argb.html">Argb</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinScript_Rendering_IColorizedPlot_StrokeColors_" data-uid="FinScript.Rendering.IColorizedPlot.StrokeColors*"></a>
+
+  <h3 id="FinScript_Rendering_IColorizedPlot_StrokeColors" data-uid="FinScript.Rendering.IColorizedPlot.StrokeColors">
+  StrokeColors
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/IColorizedPlot.cs#lines-15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Colors for strokes. <a class="xref" href="FinSysPlatform.Domain.Script.Rendering.IPlot.html#FinSysPlatform_Domain_Script_Rendering_IPlot_Stroke">Stroke</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISeries&lt;Argb&gt; StrokeColors { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.Argb.html">Argb</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/IColorizedPlot.cs#lines-10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

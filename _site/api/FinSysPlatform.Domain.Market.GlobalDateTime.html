@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct GlobalDateTime | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct GlobalDateTime | FinScript ">
+      
+      <meta name="description" content="Stores date and time value and its time zone. It allows to identify the time globally, all round the world. Globally coordinated time allows to use times across the time zones. For example, the expiration time for the order can be set in local time zone, whereas the server works with times of EST zone, and this will not be a problem because the time will be automatically converted to the target time zone See more details about globally coordinated time:">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.GlobalDateTime">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_GlobalDateTime" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime" class="text-break">
+Struct GlobalDateTime  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-27"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Stores date and time value and its time zone. It allows to identify the time globally, all round the world. Globally coordinated time allows to
+use times across the time zones. For example, the expiration time for the order can be set in local time zone, whereas the server works with times of EST zone, and this will not be a problem because
+the time will be automatically converted to the target time zone
+See more details about globally coordinated time: <see ref="https://docs.microsoft.com/en-us/dotnet/standard/datetime/choosing-between-datetime"></see></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+[TypeConverter(typeof(GlobalDateTime.TypeConverter))]
+[ObjectSerializer(typeof(GlobalDateTime.ObjectSerializer))]
+public readonly struct GlobalDateTime : IEquatable&lt;GlobalDateTime&gt;, IFormattable, IComparable&lt;GlobalDateTime&gt;, IComparable, ITimeZoneProvider</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1">IComparable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.ITimeZoneProvider.html">ITimeZoneProvider</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="FinSysPlatform_Domain_Market_GlobalDateTime_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This type is recommended to use only when the context has no information about time zone. For example,it can be used as an input parameters for data queries.
+But if the timezone information is available, it is recommended to use <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>. Let's consider for example <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html">Trade</a>. Since it provides information about its time zone via <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_TimeZone">TimeZone</a>
+all its time values (<a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_EntryTime">EntryTime</a>, <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_ExitTime">ExitTime</a>) can be stored in standard <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> format
+<a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_TimeZone">TimeZone</a>. If the conversion goes out of instrument scopes, then use <a class="xref" href="FinSysPlatform.Domain.Market.IAccountImplementor.html#FinSysPlatform_Domain_Market_IAccountImplementor_PrimaryTimeZone">PrimaryTimeZone</a></p>
+<p>Pay attention, the type does not support comparison (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1">IComparable&lt;T&gt;</a> because for comparison, both arguments should be converted to the same time zone (for example, UTC),
+but this may produce duplication due to daylight time saving feature, that will lead to exceptions in sorted lists, unpredictable results on sorting, etc</p>
+<p>Consider this class just as a container for a time transfer between application blocks</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime__ctor_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime__ctor_FinSysPlatform_Domain_Market_GlobalDateTime_System_TimeZoneInfo_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.#ctor(FinSysPlatform.Domain.Market.GlobalDateTime,System.TimeZoneInfo)">
+  GlobalDateTime(GlobalDateTime, TimeZoneInfo)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime(GlobalDateTime value, TimeZoneInfo timeZoneInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+    <dt><code>timeZoneInfo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime__ctor_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime__ctor_System_DateTime_FinSysPlatform_Domain_Market_IAccountImplementor_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.#ctor(System.DateTime,FinSysPlatform.Domain.Market.IAccountImplementor)">
+  GlobalDateTime(DateTime, IAccountImplementor)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime(DateTime value, IAccountImplementor timeZoneProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+    <dt><code>timeZoneProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.IAccountImplementor.html">IAccountImplementor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime__ctor_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime__ctor_System_DateTime_FinSysPlatform_Domain_Market_ITimeZoneProvider_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.#ctor(System.DateTime,FinSysPlatform.Domain.Market.ITimeZoneProvider)">
+  GlobalDateTime(DateTime, ITimeZoneProvider)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime(DateTime value, ITimeZoneProvider timeZoneProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+    <dt><code>timeZoneProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.ITimeZoneProvider.html">ITimeZoneProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime__ctor_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime__ctor_System_DateTime_System_TimeZoneInfo_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.#ctor(System.DateTime,System.TimeZoneInfo)">
+  GlobalDateTime(DateTime, TimeZoneInfo)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime(DateTime value, TimeZoneInfo timeZoneInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+    <dt><code>timeZoneInfo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_DateTime_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.DateTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_DateTime" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.DateTime">
+  DateTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the clock date and time (without information about UTC time shift)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime DateTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_GlobalDateTime_DateTime_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Be cautious about using this property. Since the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> does not contain information about UTC shift, a returned value may lead to unpredictable behavior, like
+incorrect comparison. For example, market times 04:00:00 (UTC+4) and 03:00:00 (UTC+3) are equal, but after extracting their &quot;clock&quot; times (04:00:00 and 03:00:00) values will not be equal anymore
+It is strongly recommended to use <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html#FinSysPlatform_Domain_Market_GlobalDateTime_ToDateTime_System_TimeZoneInfo_">ToDateTime(TimeZoneInfo)</a> instead to be sure you get the clock time exactly in the TZ you want
+<seealso ref="https://docs.microsoft.com/en-us/dotnet/standard/datetime/choosing-between-datetime"></seealso></p>
+<p>To convert the value to date and time of different time zone use <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html#FinSysPlatform_Domain_Market_GlobalDateTime_ToDateTime_System_TimeZoneInfo_">ToDateTime(TimeZoneInfo)</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_LocalDateTime_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.LocalDateTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_LocalDateTime" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.LocalDateTime">
+  LocalDateTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the date and time converted to local time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime LocalDateTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_LocalNow_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.LocalNow*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_LocalNow" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.LocalNow">
+  LocalNow
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance from the current date/time for the local time zone</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalDateTime LocalNow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_MaxValue_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.MaxValue*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_MaxValue" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.MaxValue">
+  MaxValue
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Max possible value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalDateTime MaxValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_MinValue_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.MinValue*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_MinValue" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.MinValue">
+  MinValue
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Min possible value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalDateTime MinValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_TimeZone_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.TimeZone*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_TimeZone" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.TimeZone">
+  TimeZone
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a time zone which a provider uses for as a primary time zone</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeZoneInfo TimeZone { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_GlobalDateTime_TimeZone_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For the specified instrument it is better to use <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_TradingHours">TradingHours</a> and <a class="xref" href="FinSysPlatform.Domain.Market.TradingHours.html#FinSysPlatform_Domain_Market_TradingHours_TimeZone">TimeZone</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_UtcDateTime_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.UtcDateTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_UtcDateTime" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.UtcDateTime">
+  UtcDateTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the date and time converted to UTC time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime UtcDateTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_UtcNow_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.UtcNow*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_UtcNow" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.UtcNow">
+  UtcNow
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance from the current date/time for the UTC time zone</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalDateTime UtcNow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_AddDays_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddDays*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_AddDays_System_Double_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddDays(System.Double)">
+  AddDays(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds specified number of days and returns a new copy of the global date and time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime AddDays(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_AddHours_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddHours*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_AddHours_System_Double_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddHours(System.Double)">
+  AddHours(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds specified number of hours and returns a new copy of the global date and time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime AddHours(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_AddMilliseconds_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddMilliseconds*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_AddMilliseconds_System_Double_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddMilliseconds(System.Double)">
+  AddMilliseconds(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds specified number of milliseconds and returns a new copy of the global date and time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime AddMilliseconds(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_AddMinutes_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddMinutes*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_AddMinutes_System_Double_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddMinutes(System.Double)">
+  AddMinutes(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds specified number of minutes and returns a new copy of the global date and time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime AddMinutes(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_AddMonths_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddMonths*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_AddMonths_System_Int32_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddMonths(System.Int32)">
+  AddMonths(int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds specified number of months and returns a new copy of the global date and time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime AddMonths(int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_AddSeconds_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddSeconds*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_AddSeconds_System_Double_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddSeconds(System.Double)">
+  AddSeconds(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-292"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds specified number of seconds and returns a new copy of the global date and time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime AddSeconds(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_AddYears_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddYears*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_AddYears_System_Int32_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.AddYears(System.Int32)">
+  AddYears(int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-329"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds specified number of months and returns a new copy of the global date and time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime AddYears(int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_CompareTo_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.CompareTo*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_CompareTo_FinSysPlatform_Domain_Market_GlobalDateTime_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.CompareTo(FinSysPlatform.Domain.Market.GlobalDateTime)">
+  CompareTo(GlobalDateTime)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-509"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(GlobalDateTime other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd><p>An object to compare with this instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A value that indicates the relative order of the objects being compared. The return value has these meanings:</p>
+ <table><thead><tr><th class="term"> Value</th><th class="description"> Meaning</th></tr></thead><tbody><tr><td class="term"> Less than zero</td><td class="description"> This instance precedes <code class="paramref">other</code> in the sort order.</td></tr><tr><td class="term"> Zero</td><td class="description"> This instance occurs in the same position in the sort order as <code class="paramref">other</code>.</td></tr><tr><td class="term"> Greater than zero</td><td class="description"> This instance follows <code class="paramref">other</code> in the sort order.</td></tr></tbody></table>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_CompareTo_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.CompareTo*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_CompareTo_System_Object_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.CompareTo(System.Object)">
+  CompareTo(object?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-417"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An object to compare with this instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A value that indicates the relative order of the objects being compared. The return value has these meanings:</p>
+ <table><thead><tr><th class="term"> Value</th><th class="description"> Meaning</th></tr></thead><tbody><tr><td class="term"> Less than zero</td><td class="description"> This instance precedes <code class="paramref">obj</code> in the sort order.</td></tr><tr><td class="term"> Zero</td><td class="description"> This instance occurs in the same position in the sort order as <code class="paramref">obj</code>.</td></tr><tr><td class="term"> Greater than zero</td><td class="description"> This instance follows <code class="paramref">obj</code> in the sort order.</td></tr></tbody></table>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><code class="paramref">obj</code> is not the same type as this instance.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_Equals_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.Equals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_Equals_FinSysPlatform_Domain_Market_GlobalDateTime_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.Equals(FinSysPlatform.Domain.Market.GlobalDateTime)">
+  Equals(GlobalDateTime)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(GlobalDateTime other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd><p>An object to compare with this object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_Equals_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.Equals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_Equals_System_Object_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-347"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_ExtractDate_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ExtractDate*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_ExtractDate" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ExtractDate">
+  ExtractDate()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a date part of the global date and time value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalDateTime ExtractDate()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_FromLocal_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.FromLocal*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_FromLocal_System_DateTime_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.FromLocal(System.DateTime)">
+  FromLocal(DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance from the specified date/time assuming it is local time no matter what really is set in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime.kind">Kind</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalDateTime FromLocal(DateTime dateTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dateTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_FromNow_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.FromNow*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_FromNow_System_TimeZoneInfo_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.FromNow(System.TimeZoneInfo)">
+  FromNow(TimeZoneInfo)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance from the current date/time for the specified time zone</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalDateTime FromNow(TimeZoneInfo timeZoneInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeZoneInfo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_FromUtc_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.FromUtc*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_FromUtc_System_DateTime_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.FromUtc(System.DateTime)">
+  FromUtc(DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance from the specified date/time assuming it is UTC time no matter what really is set in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime.kind">Kind</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalDateTime FromUtc(DateTime dateTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dateTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_GetHashCode_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.GetHashCode*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_GetHashCode" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-359"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_IsNaT_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.IsNaT*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_IsNaT" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.IsNaT">
+  IsNaT()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Not-a-time, analog of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.nan">NaN</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNaT()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_Max_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.Max*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_Max_FinSysPlatform_Domain_Market_GlobalDateTime_FinSysPlatform_Domain_Market_GlobalDateTime_System_TimeZoneInfo_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.Max(FinSysPlatform.Domain.Market.GlobalDateTime,FinSysPlatform.Domain.Market.GlobalDateTime,System.TimeZoneInfo)">
+  Max(GlobalDateTime, GlobalDateTime, TimeZoneInfo)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-496"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares specified times using a specified <code class="paramref">timeZoneInfo</code> as a time zone for comparison</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalDateTime Max(GlobalDateTime x, GlobalDateTime y, TimeZoneInfo timeZoneInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+    <dt><code>timeZoneInfo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_Min_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.Min*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_Min_FinSysPlatform_Domain_Market_GlobalDateTime_FinSysPlatform_Domain_Market_GlobalDateTime_System_TimeZoneInfo_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.Min(FinSysPlatform.Domain.Market.GlobalDateTime,FinSysPlatform.Domain.Market.GlobalDateTime,System.TimeZoneInfo)">
+  Min(GlobalDateTime, GlobalDateTime, TimeZoneInfo)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-478"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares specified times using a specified <code class="paramref">timeZoneInfo</code> as a time zone for comparison</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalDateTime Min(GlobalDateTime x, GlobalDateTime y, TimeZoneInfo timeZoneInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+    <dt><code>timeZoneInfo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_ToDateTime_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ToDateTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_ToDateTime_FinSysPlatform_Domain_Market_ITimeZoneProvider_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ToDateTime(FinSysPlatform.Domain.Market.ITimeZoneProvider)">
+  ToDateTime(ITimeZoneProvider)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A wrapper for <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html#FinSysPlatform_Domain_Market_GlobalDateTime_ToDateTime_System_TimeZoneInfo_">ToDateTime(TimeZoneInfo)</a> to make the notation shorter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime ToDateTime(ITimeZoneProvider timeZoneProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeZoneProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.ITimeZoneProvider.html">ITimeZoneProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_ToDateTime_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ToDateTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_ToDateTime_System_TimeZoneInfo_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ToDateTime(System.TimeZoneInfo)">
+  ToDateTime(TimeZoneInfo)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts time from the current time zone to specified time zone</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime ToDateTime(TimeZoneInfo timeZoneInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>timeZoneInfo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_ToString_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_ToString" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-411"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified type name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_ToString_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_ToString_System_IFormatProvider_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ToString(System.IFormatProvider)">
+  ToString(IFormatProvider?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-402"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats the value according to specified format settings</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString(IFormatProvider? formatProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>formatProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_ToString_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_ToString_System_String_System_IFormatProvider_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.ToString(System.String,System.IFormatProvider)">
+  ToString(string?, IFormatProvider?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-391"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats the value of the current instance using the specified format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString(string? format, IFormatProvider? formatProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The format to use.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic) to use the default format defined for the type of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a> implementation.</p>
+</dd>
+    <dt><code>formatProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd><p>The provider to use to format the value.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic) to obtain the numeric format information from the current locale setting of the operating system.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value of the current instance in the specified format.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_op_Addition_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.op_Addition*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_op_Addition_FinSysPlatform_Domain_Market_GlobalDateTime__System_TimeSpan_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.op_Addition(FinSysPlatform.Domain.Market.GlobalDateTime@,System.TimeSpan)">
+  operator +(in GlobalDateTime, TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-464"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Addition operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalDateTime operator +(in GlobalDateTime a, TimeSpan delta)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+    <dt><code>delta</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_op_Equality_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.op_Equality*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_op_Equality_FinSysPlatform_Domain_Market_GlobalDateTime_FinSysPlatform_Domain_Market_GlobalDateTime_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.op_Equality(FinSysPlatform.Domain.Market.GlobalDateTime,FinSysPlatform.Domain.Market.GlobalDateTime)">
+  operator ==(GlobalDateTime, GlobalDateTime)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-371"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Equality operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(GlobalDateTime left, GlobalDateTime right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_op_Inequality_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.op_Inequality*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_op_Inequality_FinSysPlatform_Domain_Market_GlobalDateTime_FinSysPlatform_Domain_Market_GlobalDateTime_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.op_Inequality(FinSysPlatform.Domain.Market.GlobalDateTime,FinSysPlatform.Domain.Market.GlobalDateTime)">
+  operator !=(GlobalDateTime, GlobalDateTime)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-382"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Non-equality operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(GlobalDateTime left, GlobalDateTime right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_op_Subtraction_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.op_Subtraction*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_op_Subtraction_FinSysPlatform_Domain_Market_GlobalDateTime__FinSysPlatform_Domain_Market_GlobalDateTime__" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.op_Subtraction(FinSysPlatform.Domain.Market.GlobalDateTime@,FinSysPlatform.Domain.Market.GlobalDateTime@)">
+  operator -(in GlobalDateTime, in GlobalDateTime)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-438"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subtraction operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TimeSpan operator -(in GlobalDateTime a, in GlobalDateTime b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_GlobalDateTime_op_Subtraction_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.op_Subtraction*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_GlobalDateTime_op_Subtraction_FinSysPlatform_Domain_Market_GlobalDateTime__System_TimeSpan_" data-uid="FinSysPlatform.Domain.Market.GlobalDateTime.op_Subtraction(FinSysPlatform.Domain.Market.GlobalDateTime@,System.TimeSpan)">
+  operator -(in GlobalDateTime, TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-449"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Addition operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalDateTime operator -(in GlobalDateTime a, TimeSpan delta)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+    <dt><code>delta</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.GlobalDateTime.html">GlobalDateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/GlobalDateTime.cs#lines-27" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

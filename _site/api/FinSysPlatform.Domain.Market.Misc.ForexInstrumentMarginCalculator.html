@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ForexInstrumentMarginCalculator | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ForexInstrumentMarginCalculator | FinScript ">
+      
+      <meta name="description" content="Calculates margin for  instruments using predefined computation methods">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator" class="text-break">
+Class ForexInstrumentMarginCalculator  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/ForexInstrumentMarginCalculator.cs#lines-16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.html">Misc</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Calculates margin for <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentType.html#FinSysPlatform_Domain_Market_InstrumentType_Forex">Forex</a> instruments using predefined computation methods</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ForexInstrumentMarginCalculator : IInstrumentMarginCalculator</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ForexInstrumentMarginCalculator</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.Misc.IInstrumentMarginCalculator.html">IInstrumentMarginCalculator</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>To calculate a margin for XXX/YYY instrument we have</p>
+<ol>
+<li>To calculate pure margin: margin = quantity / <a class="xref" href="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.html#FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_Leverage">Leverage</a></li>
+<li>To convert it to base currency (<a class="xref" href="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.html#FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_BaseCurrency">BaseCurrency</a>). If base currency == XXX, then return pure margin. If base currency == YYY, then return pure margin * current currency rate (price).</li>
+<li>If base currency is neither XXX nor YYY, we have to calculate the rate via cross-rates. See details <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html#FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryGetRate_System_String_System_String_System_Double__">TryGetRate(string, string, out double)</a></li>
+</ol>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator__ctor_" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator__ctor_FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_AssetPair_System_Double_System_String_FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.#ctor(FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair,System.Double,System.String,FinSysPlatform.Domain.Market.Misc.AssetRateCalculator)">
+  ForexInstrumentMarginCalculator(AssetPair, double, string, AssetRateCalculator)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/ForexInstrumentMarginCalculator.cs#lines-27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.html">ForexInstrumentMarginCalculator</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ForexInstrumentMarginCalculator(AssetRateCalculator.AssetPair assetPair, double leverage, string baseCurrency, AssetRateCalculator currencyRateCalculator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetPair</code> <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair.html">AssetPair</a></dt>
+    <dd></dd>
+    <dt><code>leverage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>baseCurrency</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>currencyRateCalculator</code> <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_AssetPair_" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.AssetPair*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_AssetPair" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.AssetPair">
+  AssetPair
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/ForexInstrumentMarginCalculator.cs#lines-62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A source forex pair
+<a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public AssetRateCalculator.AssetPair AssetPair { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair.html">AssetPair</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_BaseCurrency_" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.BaseCurrency*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_BaseCurrency" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.BaseCurrency">
+  BaseCurrency
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/ForexInstrumentMarginCalculator.cs#lines-53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A currency used for margin</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BaseCurrency { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_InstrumentKey_" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.InstrumentKey*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_InstrumentKey" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.InstrumentKey">
+  InstrumentKey
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/ForexInstrumentMarginCalculator.cs#lines-56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>What instrument is processed by this calculator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InstrumentKey InstrumentKey { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.InstrumentKey.html">InstrumentKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_Leverage_" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.Leverage*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_Leverage" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.Leverage">
+  Leverage
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/ForexInstrumentMarginCalculator.cs#lines-47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Leverage (denominator of real margin)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public double Leverage { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_Leverage_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>see for details:
+<a href="https://www.investopedia.com/articles/forex/07/forex_leverage.asp">https://www.investopedia.com/articles/forex/07/forex_leverage.asp</a>
+<a href="https://admiralmarkets.com/education/articles/forex-basics/margin-in-forex-trading-margin-level-vs-margin-call">https://admiralmarkets.com/education/articles/forex-basics/margin-in-forex-trading-margin-level-vs-margin-call</a></p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_Calculate_" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.Calculate*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_Calculate_FinSysPlatform_Domain_Market_Quantity_System_Double_" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.Calculate(FinSysPlatform.Domain.Market.Quantity,System.Double)">
+  Calculate(Quantity, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/ForexInstrumentMarginCalculator.cs#lines-130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A wrapper around <a class="xref" href="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.html#FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_Calculate_FinSysPlatform_Domain_Market_Quantity__System_Double_System_Double__">Calculate(in Quantity, double, out double)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Calculate(Quantity quantity, double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Required margin to fill specified quantity of specified instrument. If calculation is not possible, returns <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.nan">NaN</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_Calculate_" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.Calculate*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_Calculate_FinSysPlatform_Domain_Market_Quantity__System_Double_System_Double__" data-uid="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.Calculate(FinSysPlatform.Domain.Market.Quantity@,System.Double,System.Double@)">
+  Calculate(in Quantity, double, out double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/ForexInstrumentMarginCalculator.cs#lines-74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates instrument margin converted to base currency <a class="xref" href="FinSysPlatform.Domain.Market.Misc.ForexInstrumentMarginCalculator.html#FinSysPlatform_Domain_Market_Misc_ForexInstrumentMarginCalculator_BaseCurrency">BaseCurrency</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Calculate(in Quantity quantity, double price, out double result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Result required margin to fill specified quantity of specified instrument</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If calculation is not possible, returns false, otherwise true</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/ForexInstrumentMarginCalculator.cs#lines-16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

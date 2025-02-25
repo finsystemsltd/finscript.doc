@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PositionRepresenter | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PositionRepresenter | FinScript ">
+      
+      <meta name="description" content="Representer of">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter" class="text-break">
+Class PositionRepresenter  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/PositionRepresenter.cs#lines-22"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Representers.html">Representers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Representer of <a class="xref" href="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.html#FinSysPlatform_Domain_Market_Representers_PositionRepresenter_Position">Position</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public class PositionRepresenter : BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;, IRepresenter, IEquatable&lt;PositionRepresenter?&gt;, ICloneable, IComparable, IComparable&lt;PositionRepresenter&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">BaseRepresenter</span>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a>&gt;</div>
+      <div><span class="xref">BaseEquatableRepresenter</span>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.html">PositionRepresenter</a>, <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a>&gt;</div>
+      <div><span class="xref">BaseComparableRepresenterCore</span>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.html">PositionRepresenter</a>, <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a>&gt;</div>
+      <div><span class="xref">PositionRepresenter</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IRepresenter</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.html">PositionRepresenter</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1">IComparable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.html">PositionRepresenter</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;.CompareTo(object)</a>
+    </div>
+    <div>
+      <span class="xref">BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;.CompareTo(Position)</span>
+    </div>
+    <div>
+      <span class="xref">BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;.CompareTo(PositionRepresenter)</span>
+    </div>
+    <div>
+      <span class="xref">BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;.LessThanOperator(BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;, PositionRepresenter)</span>
+    </div>
+    <div>
+      <span class="xref">BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;.LessThanOrEqualOperator(BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;, PositionRepresenter)</span>
+    </div>
+    <div>
+      <span class="xref">BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;.GreaterThanOperator(BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;, PositionRepresenter)</span>
+    </div>
+    <div>
+      <span class="xref">BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;.GreaterThanOrEqualOperator(BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;, PositionRepresenter)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">BaseComparableRepresenterCore&lt;PositionRepresenter, Position&gt;.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">BaseEquatableRepresenter&lt;PositionRepresenter, Position&gt;.Clone()</span>
+    </div>
+    <div>
+      <span class="xref">BaseEquatableRepresenter&lt;PositionRepresenter, Position&gt;.Equals(PositionRepresenter)</span>
+    </div>
+    <div>
+      <span class="xref">BaseEquatableRepresenter&lt;PositionRepresenter, Position&gt;.EqualityOperator(BaseEquatableRepresenter&lt;PositionRepresenter, Position&gt;, PositionRepresenter)</span>
+    </div>
+    <div>
+      <span class="xref">BaseEquatableRepresenter&lt;PositionRepresenter, Position&gt;.EqualityOperator(BaseEquatableRepresenter&lt;PositionRepresenter, Position&gt;, Position)</span>
+    </div>
+    <div>
+      <span class="xref">BaseRepresenter&lt;Position&gt;.Equals(Position)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">BaseRepresenter&lt;Position&gt;.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">BaseRepresenter&lt;Position&gt;.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">BaseRepresenter&lt;Position&gt;.FormatCulture</span>
+    </div>
+    <div>
+      <span class="xref">BaseRepresenter&lt;Position&gt;.GetFormatCulture()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Comparison operators are not redefined (unlike f.e. <a class="xref" href="FinSysPlatform.Domain.Market.Representers.PriceRepresenter.html">PriceRepresenter</a>) because UI controls (grids etc) should not offer comparison operators to user (<a class="xref" href="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.html#FinSysPlatform_Domain_Market_Representers_PositionRepresenter_Position">Position</a> cannot be compared by less/larger operations)</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter__ctor_" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter__ctor_FinSysPlatform_Domain_Market_Position_" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.#ctor(FinSysPlatform.Domain.Market.Position)">
+  PositionRepresenter(Position)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/PositionRepresenter.cs#lines-35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.html">PositionRepresenter</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PositionRepresenter(Position position)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter_InnerValue_" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.InnerValue*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter_InnerValue" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.InnerValue">
+  InnerValue
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/PositionRepresenter.cs#lines-55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Must be overriden by inheritors to return inner value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Position InnerValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter_Position_" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.Position*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter_Position" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.Position">
+  Position
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/PositionRepresenter.cs#lines-29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Position Position { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter_Clone_" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.Clone*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter_Clone" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.Clone">
+  Clone()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/PositionRepresenter.cs#lines-59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new object that is a copy of the current instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PositionRepresenter Clone()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.html">PositionRepresenter</a></dt>
+    <dd><p>A new object that is a copy of this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter_CompareTo_" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.CompareTo*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter_CompareTo_FinSysPlatform_Domain_Market_Position_" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.CompareTo(FinSysPlatform.Domain.Market.Position)">
+  CompareTo(Position)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/PositionRepresenter.cs#lines-69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicit implementation of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto">CompareTo(T)</a>
+Inheritors must implement inner value comparison</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int CompareTo(Position other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter_ToString_" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_PositionRepresenter_ToString" data-uid="FinSysPlatform.Domain.Market.Representers.PositionRepresenter.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/PositionRepresenter.cs#lines-45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that represents the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/PositionRepresenter.cs#lines-22" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

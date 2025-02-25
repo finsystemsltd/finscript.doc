@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Trade | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Trade | FinScript ">
+      
+      <meta name="description" content="Represents entry+exit pair. Depending on broker, this pair can be virtual (calculated from real executions) For example, netting accounts afford to add new portions to existing position and close position partially etc. So, for netting account deal can consist of several entries and one exit For hedging accounts usually entry+exit pair usually represents real trade Attention: deal is always calculated from exit. Deal can have multiply entries (for netting accounts) but always has one exit">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.Trade">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_Trade" data-uid="FinSysPlatform.Domain.Market.Trade" class="text-break">
+Class Trade  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-33"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents entry+exit pair. Depending on broker, this pair can be virtual (calculated from real executions)
+For example, netting accounts afford to add new portions to existing position and close position partially etc.
+So, for netting account deal can consist of several entries and one exit
+For hedging accounts usually entry+exit pair usually represents real trade
+Attention: deal is always calculated from exit. Deal can have multiply entries (for netting accounts) but always has one exit</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class Trade : ITradeProperties, IBasicTradeProperties, IInstrumentProvider, ITradeQuantityProvider, IQuantityProvider, IProfitProvider, ITimeZoneProvider</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Trade</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.ITradeProperties.html">ITradeProperties</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IBasicTradeProperties.html">IBasicTradeProperties</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentProvider.html">IInstrumentProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.ITradeQuantityProvider.html">ITradeQuantityProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IQuantityProvider.html">IQuantityProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html">IProfitProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.ITimeZoneProvider.html">ITimeZoneProvider</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.BuilderTrade.html">TradeHistoryBuilder.BuilderTrade</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.IBasicTradePropertiesExtensions.html#FinSysPlatform_Domain_Market_IBasicTradePropertiesExtensions_FormatToString_FinSysPlatform_Domain_Market_IBasicTradeProperties_">IBasicTradePropertiesExtensions.FormatToString(IBasicTradeProperties)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.ITradePropertiesExtension.html#FinSysPlatform_Domain_Market_ITradePropertiesExtension_GetFullDescription_FinSysPlatform_Domain_Market_ITradeProperties_">ITradePropertiesExtension.GetFullDescription(ITradeProperties?)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.ITradePropertiesExtension.html#FinSysPlatform_Domain_Market_ITradePropertiesExtension_GetProfitInPoints_FinSysPlatform_Domain_Market_ITradeProperties_System_Boolean_">ITradePropertiesExtension.GetProfitInPoints(ITradeProperties, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.ITradePropertiesExtension.html#FinSysPlatform_Domain_Market_ITradePropertiesExtension_GetProfitInPrice_FinSysPlatform_Domain_Market_ITradeProperties_">ITradePropertiesExtension.GetProfitInPrice(ITradeProperties)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.ITradeQuantityProviderExtensions.html#FinSysPlatform_Domain_Market_ITradeQuantityProviderExtensions_GetSignedQuantity_FinSysPlatform_Domain_Market_ITradeQuantityProvider_">ITradeQuantityProviderExtensions.GetSignedQuantity(ITradeQuantityProvider)</a>
+  </div>
+  </dd></dl>
+
+
+  <h2 id="FinSysPlatform_Domain_Market_Trade_examples">Examples</h2>
+  <p>Example #1:
+Hedging account, EUR/USD, buy 0.2 lots at 1.10000, then exit 0.1 lots at 1.10100.
+Result deal:
+<a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_Quantity">Quantity</a> = 0.1 lots
+<a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_TradeAction">TradeAction</a> = Buy
+<a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_EntryPrice">EntryPrice</a> = 1.10000
+<a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_ExitPrice">ExitPrice</a> = 1.10100
+Example #2:
+Netting account, EUR/USD:
+1. Buy 0.1 lots at 1.10000
+2. Buy 0.1 lots at 1.10010
+3. Buy 0.1 lots at 1.10020
+4. Close 0.1 lots at 1.10030
+Result deal:
+<a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_Quantity">Quantity</a> = 0.1 lots
+<a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_TradeAction">TradeAction</a> = Buy
+<a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_EntryPrice">EntryPrice</a> = 1.10005 (average price of 1.10000 and 1.10010)
+<a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_ExitPrice">ExitPrice</a> = 1.10030</p>
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade__ctor_" data-uid="FinSysPlatform.Domain.Market.Trade.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade__ctor_FinSysPlatform_Domain_Market_ITradeProperties_" data-uid="FinSysPlatform.Domain.Market.Trade.#ctor(FinSysPlatform.Domain.Market.ITradeProperties)">
+  Trade(ITradeProperties)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html">Trade</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Trade(ITradeProperties p)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>p</code> <a class="xref" href="FinSysPlatform.Domain.Market.ITradeProperties.html">ITradeProperties</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_AlgoKey_" data-uid="FinSysPlatform.Domain.Market.Trade.AlgoKey*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_AlgoKey" data-uid="FinSysPlatform.Domain.Market.Trade.AlgoKey">
+  AlgoKey
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Name of initiator of order that made this execution part.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? AlgoKey { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_Commission_" data-uid="FinSysPlatform.Domain.Market.Trade.Commission*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_Commission" data-uid="FinSysPlatform.Domain.Market.Trade.Commission">
+  Commission
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total commission, which is <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_EntryCommission">EntryCommission</a> plus <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_ExitCommission">ExitCommission</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Commission { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_Currency_" data-uid="FinSysPlatform.Domain.Market.Trade.Currency*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_Currency" data-uid="FinSysPlatform.Domain.Market.Trade.Currency">
+  Currency
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The currency that is used to nominate all money values: <a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_Profit">Profit</a>, <a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_NetProfit">NetProfit</a>, <a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_Fee">Fee</a>, <a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_Commission">Commission</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Currency { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_Entries_" data-uid="FinSysPlatform.Domain.Market.Trade.Entries*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_Entries" data-uid="FinSysPlatform.Domain.Market.Trade.Entries">
+  Entries
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provider information about entry execution(s)
+Can be null if provider does not support an information about entry execution inside the trade</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;ITradeEntryPart&gt;? Entries { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.ITradeEntryPart.html">ITradeEntryPart</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_EntryCommission_" data-uid="FinSysPlatform.Domain.Market.Trade.EntryCommission*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_EntryCommission" data-uid="FinSysPlatform.Domain.Market.Trade.EntryCommission">
+  EntryCommission
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total commission for all entries (if there were several)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double EntryCommission { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_EntryFee_" data-uid="FinSysPlatform.Domain.Market.Trade.EntryFee*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_EntryFee" data-uid="FinSysPlatform.Domain.Market.Trade.EntryFee">
+  EntryFee
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total fees for all entries (if there were several)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double EntryFee { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Trade_EntryFee_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Must be specified with sign. So, negative value means broker took some money from trader, positive value means a broker returned money to a trader (which is hardly possible)
+In standard cases, fee is always negative</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_EntryName_" data-uid="FinSysPlatform.Domain.Market.Trade.EntryName*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_EntryName" data-uid="FinSysPlatform.Domain.Market.Trade.EntryName">
+  EntryName
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>For multiple entries (netting accounts) the name usually is a concatenation of all entries</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? EntryName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_EntryPrice_" data-uid="FinSysPlatform.Domain.Market.Trade.EntryPrice*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_EntryPrice" data-uid="FinSysPlatform.Domain.Market.Trade.EntryPrice">
+  EntryPrice
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Price of entry. If there are several entries, this is an average price</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double EntryPrice { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_EntryTime_" data-uid="FinSysPlatform.Domain.Market.Trade.EntryTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_EntryTime" data-uid="FinSysPlatform.Domain.Market.Trade.EntryTime">
+  EntryTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>For netting accounts this is the time of the last entry
+For hedging accounts this is the time of opening position
+The time is represented in time zone <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_TimeZone">TimeZone</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime EntryTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_Exchange_" data-uid="FinSysPlatform.Domain.Market.Trade.Exchange*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_Exchange" data-uid="FinSysPlatform.Domain.Market.Trade.Exchange">
+  Exchange
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exchange where position run</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Exchange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_ExitCommission_" data-uid="FinSysPlatform.Domain.Market.Trade.ExitCommission*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_ExitCommission" data-uid="FinSysPlatform.Domain.Market.Trade.ExitCommission">
+  ExitCommission
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exit commission</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ExitCommission { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_ExitExecutionId_" data-uid="FinSysPlatform.Domain.Market.Trade.ExitExecutionId*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_ExitExecutionId" data-uid="FinSysPlatform.Domain.Market.Trade.ExitExecutionId">
+  ExitExecutionId
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Id of the exit execution which spawned the deal</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ExitExecutionId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_ExitFee_" data-uid="FinSysPlatform.Domain.Market.Trade.ExitFee*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_ExitFee" data-uid="FinSysPlatform.Domain.Market.Trade.ExitFee">
+  ExitFee
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exit fee</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ExitFee { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Trade_ExitFee_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Must be specified with sign. So, negative value means broker took some money from trader, positive value means a broker returned money to a trader (which is hardly possible)
+In standard cases, fee is always negative</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_ExitName_" data-uid="FinSysPlatform.Domain.Market.Trade.ExitName*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_ExitName" data-uid="FinSysPlatform.Domain.Market.Trade.ExitName">
+  ExitName
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exit name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ExitName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_ExitPrice_" data-uid="FinSysPlatform.Domain.Market.Trade.ExitPrice*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_ExitPrice" data-uid="FinSysPlatform.Domain.Market.Trade.ExitPrice">
+  ExitPrice
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The price of exit position and making deal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ExitPrice { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_ExitTime_" data-uid="FinSysPlatform.Domain.Market.Trade.ExitTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_ExitTime" data-uid="FinSysPlatform.Domain.Market.Trade.ExitTime">
+  ExitTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time of exit position and making deal.
+The time is represented in time zone <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_TimeZone">TimeZone</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime ExitTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_Fee_" data-uid="FinSysPlatform.Domain.Market.Trade.Fee*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_Fee" data-uid="FinSysPlatform.Domain.Market.Trade.Fee">
+  Fee
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total fee, which is <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_EntryFee">EntryFee</a> plus <a class="xref" href="FinSysPlatform.Domain.Market.Trade.html#FinSysPlatform_Domain_Market_Trade_ExitFee">ExitFee</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Fee { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_Instrument_" data-uid="FinSysPlatform.Domain.Market.Trade.Instrument*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_Instrument" data-uid="FinSysPlatform.Domain.Market.Trade.Instrument">
+  Instrument
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instrument. This property must always return not-nullable value
+If the provider may return null then consider using <a class="xref" href="FinSysPlatform.Domain.Market.INullableInstrumentProvider.html">INullableInstrumentProvider</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instrument Instrument { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_NetProfit_" data-uid="FinSysPlatform.Domain.Market.Trade.NetProfit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_NetProfit" data-uid="FinSysPlatform.Domain.Market.Trade.NetProfit">
+  NetProfit
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Net profit (money) which includes the pure profit (the difference between entry and exit price) and all expenses (fees, commissions, swaps (TODO swap is not presented in interface) etc)
+<a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_Profit">Profit</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_Fee">Fee</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_Commission">Commission</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_Currency">Currency</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double NetProfit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Trade_NetProfit_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Calculates as <a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_Profit">Profit</a> minus all expenses. As a rule of thumb, expenses consist of <a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_Fee">Fee</a> and <a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_Commission">Commission</a>
+The value may be negative which means loss.
+The value is nominated in <a class="xref" href="FinSysPlatform.Domain.Market.IProfitProvider.html#FinSysPlatform_Domain_Market_IProfitProvider_Currency">Currency</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_Profit_" data-uid="FinSysPlatform.Domain.Market.Trade.Profit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_Profit" data-uid="FinSysPlatform.Domain.Market.Trade.Profit">
+  Profit
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Result profit</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Profit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_Quantity_" data-uid="FinSysPlatform.Domain.Market.Trade.Quantity*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_Quantity" data-uid="FinSysPlatform.Domain.Market.Trade.Quantity">
+  Quantity
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The quantity of exit (and the total quantity of the deal accordingly)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quantity Quantity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_StopLoss_" data-uid="FinSysPlatform.Domain.Market.Trade.StopLoss*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_StopLoss" data-uid="FinSysPlatform.Domain.Market.Trade.StopLoss">
+  StopLoss
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stop loss
+If take profit is not set or is not supported by broker, the value is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.nan">NaN</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double StopLoss { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_StrategyName_" data-uid="FinSysPlatform.Domain.Market.Trade.StrategyName*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_StrategyName" data-uid="FinSysPlatform.Domain.Market.Trade.StrategyName">
+  StrategyName
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Name of strategy that placed order that made this execution part.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? StrategyName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_TakeProfit_" data-uid="FinSysPlatform.Domain.Market.Trade.TakeProfit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_TakeProfit" data-uid="FinSysPlatform.Domain.Market.Trade.TakeProfit">
+  TakeProfit
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Take profit
+If take profit is not set or is not supported by broker, the value is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.nan">NaN</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TakeProfit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_TimeZone_" data-uid="FinSysPlatform.Domain.Market.Trade.TimeZone*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_TimeZone" data-uid="FinSysPlatform.Domain.Market.Trade.TimeZone">
+  TimeZone
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a time zone which a provider uses for as a primary time zone</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeZoneInfo TimeZone { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Trade_TimeZone_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For the specified instrument it is better to use <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_TradingHours">TradingHours</a> and <a class="xref" href="FinSysPlatform.Domain.Market.TradingHours.html#FinSysPlatform_Domain_Market_TradingHours_TimeZone">TimeZone</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_TradeAction_" data-uid="FinSysPlatform.Domain.Market.Trade.TradeAction*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_TradeAction" data-uid="FinSysPlatform.Domain.Market.Trade.TradeAction">
+  TradeAction
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The direction of trade: buy or sell</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TradeAction TradeAction { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html">TradeAction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_TradeId_" data-uid="FinSysPlatform.Domain.Market.Trade.TradeId*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_TradeId" data-uid="FinSysPlatform.Domain.Market.Trade.TradeId">
+  TradeId
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A string value representing the generated trade id
+The rules of generation depend on provider</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TradeId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Trade_TradeId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To stress out, that this id is broker specific, we use TradeId instead of Id (because Id is too general name)</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Trade_ToString_" data-uid="FinSysPlatform.Domain.Market.Trade.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Trade_ToString" data-uid="FinSysPlatform.Domain.Market.Trade.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that represents the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Trade.cs#lines-33" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

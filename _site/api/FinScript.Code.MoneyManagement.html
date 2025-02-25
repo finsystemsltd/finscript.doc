@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MoneyManagement | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MoneyManagement | FinScript ">
+      
+      <meta name="description" content="Basic interface for money management">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinScript.Code.MoneyManagement">
+
+
+
+  <h1 id="FinScript_Code_MoneyManagement" data-uid="FinScript.Code.MoneyManagement" class="text-break">
+Class MoneyManagement  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-48"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinScript.html">FinScript</a>.<a class="xref" href="FinScript.Code.html">Code</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinScript.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Basic interface for money management</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class MoneyManagement : ScriptUnit, IScriptEnvironmentAssigner, IMoneyManagement, IScriptUnit, INameDescriptionProvider, INameProvider, IPropertyDisplayInfoProvider, ICloneable, IInstrumentAssigner, INullableInstrumentProvider, IAccountProvider, IAccountAssigner, IInstrumentChangeNotify, IInstrumentProvider, IAccountChangeNotify, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="FinScript.Code.ScriptUnit.html">ScriptUnit</a></div>
+      <div><span class="xref">MoneyManagement</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IScriptEnvironmentAssigner.html">IScriptEnvironmentAssigner</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IMoneyManagement.html">IMoneyManagement</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IScriptUnit.html">IScriptUnit</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.INameDescriptionProvider.html">INameDescriptionProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.INameProvider.html">INameProvider</a></div>
+      <div><span class="xref">IPropertyDisplayInfoProvider</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentAssigner.html">IInstrumentAssigner</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.INullableInstrumentProvider.html">INullableInstrumentProvider</a></div>
+      <div><a class="xref" href="FinScript.Code.IAccountProvider.html">IAccountProvider</a></div>
+      <div><a class="xref" href="FinScript.Code.IAccountAssigner.html">IAccountAssigner</a></div>
+      <div><a class="xref" href="FinScript.Code.IInstrumentChangeNotify.html">IInstrumentChangeNotify</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentProvider.html">IInstrumentProvider</a></div>
+      <div><a class="xref" href="FinScript.Code.IAccountChangeNotify.html">IAccountChangeNotify</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="FinScript.StdLib.MoneyManagements.AccountMoneyManagement.html">AccountMoneyManagement</a></div>
+      <div><a class="xref" href="FinScript.StdLib.MoneyManagements.FixedContract.html">FixedContract</a></div>
+      <div><a class="xref" href="FinScript.StdLib.MoneyManagements.FixedRatio.html">FixedRatio</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Environment">ScriptUnit.Environment</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_OnEnvironmentInitialized">ScriptUnit.OnEnvironmentInitialized()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_SetEnvironment_FinSysPlatform_Domain_Script_IScriptEnvironment_">ScriptUnit.SetEnvironment(IScriptEnvironment)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_InstanceId">ScriptUnit.InstanceId</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_CloneSourceInstanceId">ScriptUnit.CloneSourceInstanceId</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Id">ScriptUnit.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_DeclaredProperties">ScriptUnit.DeclaredProperties</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_DisplayName">ScriptUnit.DisplayName</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Description">ScriptUnit.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Name">ScriptUnit.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Version">ScriptUnit.Version</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Copyright">ScriptUnit.Copyright</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_EntityTypeName">ScriptUnit.EntityTypeName</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Print_System_String_">ScriptUnit.Print(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_LogInfo_System_String_">ScriptUnit.LogInfo(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_LogWarning_System_String_">ScriptUnit.LogWarning(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_LogError_System_String_">ScriptUnit.LogError(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_OnCheckIfConfiguredProperly_System_Collections_Generic_List_System_String__">ScriptUnit.OnCheckIfConfiguredProperly(List&lt;string&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_CheckIfConfiguredProperly">ScriptUnit.CheckIfConfiguredProperly()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_ToString">ScriptUnit.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.IMoneyManagementExtensions.html#FinSysPlatform_Domain_Script_IMoneyManagementExtensions_Calculate_FinSysPlatform_Domain_Script_IMoneyManagement_FinSysPlatform_Domain_Market_TradeAction_System_Nullable_FinSysPlatform_Domain_Market_OrderType__System_Double_">IMoneyManagementExtensions.Calculate(IMoneyManagement, TradeAction, OrderType?, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.IMoneyManagementExtensions.html#FinSysPlatform_Domain_Script_IMoneyManagementExtensions_Calculate_FinSysPlatform_Domain_Script_IMoneyManagement_FinSysPlatform_Domain_Market_TradeAction_System_Nullable_FinSysPlatform_Domain_Market_OrderType__System_Double_System_Double_">IMoneyManagementExtensions.Calculate(IMoneyManagement, TradeAction, OrderType?, double, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptUnitExtensions.html#FinScript_Code_IScriptUnitExtensions_CopyDeclaredPropertiesTo_FinSysPlatform_Domain_Script_IScriptUnit_FinSysPlatform_Domain_Script_IScriptUnit_">IScriptUnitExtensions.CopyDeclaredPropertiesTo(IScriptUnit, IScriptUnit)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptUnitExtensions.html#FinScript_Code_IScriptUnitExtensions_DeclaredPropertiesEqual_FinSysPlatform_Domain_Script_IScriptUnit_FinSysPlatform_Domain_Script_IScriptUnit_">IScriptUnitExtensions.DeclaredPropertiesEqual(IScriptUnit, IScriptUnit)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptUnitExtensions.html#FinScript_Code_IScriptUnitExtensions_SetInputFromBars_FinSysPlatform_Domain_Script_IScriptUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IScriptUnitExtensions.SetInputFromBars(IScriptUnit, IBarSeries)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinScript_Code_MoneyManagement_Account_" data-uid="FinScript.Code.MoneyManagement.Account*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_Account" data-uid="FinScript.Code.MoneyManagement.Account">
+  Account
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Account</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Account? Account { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinScript.Acc.Account.html">Account</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_AccountNotNull_" data-uid="FinScript.Code.MoneyManagement.AccountNotNull*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_AccountNotNull" data-uid="FinScript.Code.MoneyManagement.AccountNotNull">
+  AccountNotNull
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a class="xref" href="FinScript.Code.MoneyManagement.html#FinScript_Code_MoneyManagement_Account">Account</a> if it is not null, otherwise throws an exception</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Account AccountNotNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinScript.Acc.Account.html">Account</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="FinScript_Code_MoneyManagement_Instrument_" data-uid="FinScript.Code.MoneyManagement.Instrument*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_Instrument" data-uid="FinScript.Code.MoneyManagement.Instrument">
+  Instrument
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Assigned instrument</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instrument? Instrument { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_InstrumentNotNull_" data-uid="FinScript.Code.MoneyManagement.InstrumentNotNull*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_InstrumentNotNull" data-uid="FinScript.Code.MoneyManagement.InstrumentNotNull">
+  InstrumentNotNull
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a class="xref" href="FinScript.Code.MoneyManagement.html#FinScript_Code_MoneyManagement_Instrument">Instrument</a> if it is not null, otherwise throws an exception</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Instrument InstrumentNotNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ViolatedLimitsMode_" data-uid="FinScript.Code.MoneyManagement.ViolatedLimitsMode*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ViolatedLimitsMode" data-uid="FinScript.Code.MoneyManagement.ViolatedLimitsMode">
+  ViolatedLimitsMode
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Selected quantity. By default = 1</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UnitProperty(Name = &quot;Violated Limits Mode&quot;, CategoryName = &quot;Parameters&quot;, Description = &quot;A method to react to the quantity that violates broker limits: generate error, automatically adjust or leave it as is&quot;, Order = 100)]
+[PropertyMetadata(typeof(QuantityPropertyMetadata))]
+public ViolatedLimitsMode ViolatedLimitsMode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinScript.Code.ViolatedLimitsMode.html">ViolatedLimitsMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinScript_Code_MoneyManagement_AddAutoSetup_" data-uid="FinScript.Code.MoneyManagement.AddAutoSetup*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_AddAutoSetup_FinScript_Code_MoneyManagement_AutoSetupAction_" data-uid="FinScript.Code.MoneyManagement.AddAutoSetup(FinScript.Code.MoneyManagement.AutoSetupAction)">
+  AddAutoSetup(AutoSetupAction)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a handler for auto-setup event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void AddAutoSetup(MoneyManagement.AutoSetupAction action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="FinScript.Code.MoneyManagement.html">MoneyManagement</a>.<a class="xref" href="FinScript.Code.MoneyManagement.AutoSetupAction.html">AutoSetupAction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_Calculate_" data-uid="FinScript.Code.MoneyManagement.Calculate*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_Calculate_FinSysPlatform_Domain_Script_MoneyManagementParameters_" data-uid="FinScript.Code.MoneyManagement.Calculate(FinSysPlatform.Domain.Script.MoneyManagementParameters)">
+  Calculate(MoneyManagementParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates quantity to submit new order based on given parameters</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MoneyManagementResult Calculate(MoneyManagementParameters parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameters</code> <a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementParameters.html">MoneyManagementParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd><p>Result quantity or error, if calculation is not possible</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="FinScript_Code_MoneyManagement_Calculate_FinSysPlatform_Domain_Script_MoneyManagementParameters__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Catches any exceptions and returns an error within <a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></p>
+</div>
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_CheckRequirements_" data-uid="FinScript.Code.MoneyManagement.CheckRequirements*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_CheckRequirements_FinSysPlatform_Domain_Script_MoneyManagementResult__System_Double_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="FinScript.Code.MoneyManagement.CheckRequirements(FinSysPlatform.Domain.Script.MoneyManagementResult@,System.Double,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  CheckRequirements(out MoneyManagementResult?, double, bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-318"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A set of checks to be sure the money management is ready to calculate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool CheckRequirements(out MoneyManagementResult? res, double price, bool checkAccountIsSet = true, bool checkInstrumentIsSet = true, bool checkBrokerageProviderAvailable = true, bool checkAccountIsConnected = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>res</code> <a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>checkAccountIsSet</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>To check if <a class="xref" href="FinScript.Code.MoneyManagement.html#FinScript_Code_MoneyManagement_Account">Account</a> is not null</p>
+</dd>
+    <dt><code>checkInstrumentIsSet</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>To check if <a class="xref" href="FinScript.Code.MoneyManagement.html#FinScript_Code_MoneyManagement_Instrument">Instrument</a> is not null</p>
+</dd>
+    <dt><code>checkBrokerageProviderAvailable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>To check if the <a class="xref" href="FinScript.Acc.Account.html#FinScript_Acc_Account_BrokerageProvider">BrokerageProvider</a> is not null</p>
+</dd>
+    <dt><code>checkAccountIsConnected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>To check if <a class="xref" href="FinScript.Code.MoneyManagement.html#FinScript_Code_MoneyManagement_Account">Account</a> is connected</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_Clone_" data-uid="FinScript.Code.MoneyManagement.Clone*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_Clone" data-uid="FinScript.Code.MoneyManagement.Clone">
+  Clone()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-503"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a copy of script unit. Default implementation creates a new instance and copy values of declared properties there (<a class="xref" href="FinScript.Code.IScriptUnitExtensions.html#FinScript_Code_IScriptUnitExtensions_CopyDeclaredPropertiesTo_FinSysPlatform_Domain_Script_IScriptUnit_FinSysPlatform_Domain_Script_IScriptUnit_">CopyDeclaredPropertiesTo(IScriptUnit, IScriptUnit)</a>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ScriptUnit Clone()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinScript.Code.ScriptUnit.html">ScriptUnit</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_Dispose_" data-uid="FinScript.Code.MoneyManagement.Dispose*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_Dispose" data-uid="FinScript.Code.MoneyManagement.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-558"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_Dispose_" data-uid="FinScript.Code.MoneyManagement.Dispose*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_Dispose_System_Boolean_" data-uid="FinScript.Code.MoneyManagement.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-548"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes the object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrAccountBalanceIsNotAvailable_" data-uid="FinScript.Code.MoneyManagement.ErrAccountBalanceIsNotAvailable*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrAccountBalanceIsNotAvailable" data-uid="FinScript.Code.MoneyManagement.ErrAccountBalanceIsNotAvailable">
+  ErrAccountBalanceIsNotAvailable()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-419"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Account balance is not available&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected static MoneyManagementResult ErrAccountBalanceIsNotAvailable()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrAccountEquityIsNotAvailable_" data-uid="FinScript.Code.MoneyManagement.ErrAccountEquityIsNotAvailable*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrAccountEquityIsNotAvailable" data-uid="FinScript.Code.MoneyManagement.ErrAccountEquityIsNotAvailable">
+  ErrAccountEquityIsNotAvailable()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-412"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Account equity is not available&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected static MoneyManagementResult ErrAccountEquityIsNotAvailable()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrAccountIsNotSet_" data-uid="FinScript.Code.MoneyManagement.ErrAccountIsNotSet*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrAccountIsNotSet" data-uid="FinScript.Code.MoneyManagement.ErrAccountIsNotSet">
+  ErrAccountIsNotSet()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-390"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Brokerage provider is not available&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected static MoneyManagementResult ErrAccountIsNotSet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrAccountNotConnected_" data-uid="FinScript.Code.MoneyManagement.ErrAccountNotConnected*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrAccountNotConnected" data-uid="FinScript.Code.MoneyManagement.ErrAccountNotConnected">
+  ErrAccountNotConnected()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-433"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Account is not connected&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected static MoneyManagementResult ErrAccountNotConnected()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrAccountRealizedProfitLossIsNotAvailable_" data-uid="FinScript.Code.MoneyManagement.ErrAccountRealizedProfitLossIsNotAvailable*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrAccountRealizedProfitLossIsNotAvailable" data-uid="FinScript.Code.MoneyManagement.ErrAccountRealizedProfitLossIsNotAvailable">
+  ErrAccountRealizedProfitLossIsNotAvailable()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-426"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Account balance is not available&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected static MoneyManagementResult ErrAccountRealizedProfitLossIsNotAvailable()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrBrokerageProviderIsNotAvailable_" data-uid="FinScript.Code.MoneyManagement.ErrBrokerageProviderIsNotAvailable*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrBrokerageProviderIsNotAvailable" data-uid="FinScript.Code.MoneyManagement.ErrBrokerageProviderIsNotAvailable">
+  ErrBrokerageProviderIsNotAvailable()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-405"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Brokerage provider is not available&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected static MoneyManagementResult ErrBrokerageProviderIsNotAvailable()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrInstrumentIsNotAvailable_" data-uid="FinScript.Code.MoneyManagement.ErrInstrumentIsNotAvailable*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrInstrumentIsNotAvailable" data-uid="FinScript.Code.MoneyManagement.ErrInstrumentIsNotAvailable">
+  ErrInstrumentIsNotAvailable()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-440"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Instrument is not available&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected MoneyManagementResult ErrInstrumentIsNotAvailable()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrInstrumentIsNotSet_" data-uid="FinScript.Code.MoneyManagement.ErrInstrumentIsNotSet*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrInstrumentIsNotSet" data-uid="FinScript.Code.MoneyManagement.ErrInstrumentIsNotSet">
+  ErrInstrumentIsNotSet()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-398"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Brokerage provider is not available&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected static MoneyManagementResult ErrInstrumentIsNotSet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrInvalidPrice_" data-uid="FinScript.Code.MoneyManagement.ErrInvalidPrice*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrInvalidPrice_System_Double_" data-uid="FinScript.Code.MoneyManagement.ErrInvalidPrice(System.Double)">
+  ErrInvalidPrice(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-448"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Invalid price&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected MoneyManagementResult ErrInvalidPrice(double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrInvalidStopLoss_" data-uid="FinScript.Code.MoneyManagement.ErrInvalidStopLoss*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrInvalidStopLoss" data-uid="FinScript.Code.MoneyManagement.ErrInvalidStopLoss">
+  ErrInvalidStopLoss()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-468"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected static MoneyManagementResult ErrInvalidStopLoss()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrNoEnoughMoney_" data-uid="FinScript.Code.MoneyManagement.ErrNoEnoughMoney*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrNoEnoughMoney" data-uid="FinScript.Code.MoneyManagement.ErrNoEnoughMoney">
+  ErrNoEnoughMoney()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-465"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected static MoneyManagementResult ErrNoEnoughMoney()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrQuantityIsNotAligned_" data-uid="FinScript.Code.MoneyManagement.ErrQuantityIsNotAligned*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrQuantityIsNotAligned_FinSysPlatform_Domain_Market_Quantity__FinSysPlatform_Domain_Market_Quantity__" data-uid="FinScript.Code.MoneyManagement.ErrQuantityIsNotAligned(FinSysPlatform.Domain.Market.Quantity@,FinSysPlatform.Domain.Market.Quantity@)">
+  ErrQuantityIsNotAligned(in Quantity, in Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-491"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Specified quantity is not aligned to instrument quantity step&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected MoneyManagementResult ErrQuantityIsNotAligned(in Quantity quantity, in Quantity quantityStep)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+    <dt><code>quantityStep</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrQuantityIsTooLarge_" data-uid="FinScript.Code.MoneyManagement.ErrQuantityIsTooLarge*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrQuantityIsTooLarge_FinSysPlatform_Domain_Market_Quantity__FinSysPlatform_Domain_Market_Quantity__" data-uid="FinScript.Code.MoneyManagement.ErrQuantityIsTooLarge(FinSysPlatform.Domain.Market.Quantity@,FinSysPlatform.Domain.Market.Quantity@)">
+  ErrQuantityIsTooLarge(in Quantity, in Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-478"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Specified quantity is too small&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected MoneyManagementResult ErrQuantityIsTooLarge(in Quantity quantity, in Quantity maxPossibleQuantity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+    <dt><code>maxPossibleQuantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_ErrQuantityIsTooSmall_" data-uid="FinScript.Code.MoneyManagement.ErrQuantityIsTooSmall*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_ErrQuantityIsTooSmall_FinSysPlatform_Domain_Market_Quantity_FinSysPlatform_Domain_Market_Quantity__" data-uid="FinScript.Code.MoneyManagement.ErrQuantityIsTooSmall(FinSysPlatform.Domain.Market.Quantity,FinSysPlatform.Domain.Market.Quantity@)">
+  ErrQuantityIsTooSmall(Quantity, in Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-458"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error &quot;Specified quantity is too small&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+protected MoneyManagementResult ErrQuantityIsTooSmall(Quantity quantity, in Quantity minPossibleQuantity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+    <dt><code>minPossibleQuantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_OnCalculate_" data-uid="FinScript.Code.MoneyManagement.OnCalculate*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_OnCalculate_FinSysPlatform_Domain_Script_MoneyManagementParameters_" data-uid="FinScript.Code.MoneyManagement.OnCalculate(FinSysPlatform.Domain.Script.MoneyManagementParameters)">
+  OnCalculate(MoneyManagementParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-288"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract MoneyManagementResult OnCalculate(MoneyManagementParameters parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameters</code> <a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementParameters.html">MoneyManagementParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_RoundDownQuantity_" data-uid="FinScript.Code.MoneyManagement.RoundDownQuantity*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_RoundDownQuantity_FinSysPlatform_Domain_Market_Quantity__" data-uid="FinScript.Code.MoneyManagement.RoundDownQuantity(FinSysPlatform.Domain.Market.Quantity@)">
+  RoundDownQuantity(in Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rounds quantity according to <a class="xref" href="FinScript.Code.MoneyManagement.html#FinScript_Code_MoneyManagement_Instrument">Instrument</a>  quantity step</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MoneyManagementResult RoundDownQuantity(in Quantity quantity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd><p>Computed quantity</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.MoneyManagementResult.html">MoneyManagementResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_SetAccount_" data-uid="FinScript.Code.MoneyManagement.SetAccount*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_SetAccount_FinScript_Acc_Account_" data-uid="FinScript.Code.MoneyManagement.SetAccount(FinScript.Acc.Account)">
+  SetAccount(Account)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Assigns <a class="xref" href="FinScript.Code.MoneyManagement.html#FinScript_Code_MoneyManagement_Account">Account</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public virtual void SetAccount(Account account)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>account</code> <a class="xref" href="FinScript.Acc.Account.html">Account</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Code_MoneyManagement_SetInstrument_" data-uid="FinScript.Code.MoneyManagement.SetInstrument*"></a>
+
+  <h3 id="FinScript_Code_MoneyManagement_SetInstrument_FinSysPlatform_Domain_Market_Instrument_" data-uid="FinScript.Code.MoneyManagement.SetInstrument(FinSysPlatform.Domain.Market.Instrument)">
+  SetInstrument(Instrument)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Assigns the specified instrument</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public virtual void SetInstrument(Instrument instrument)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="FinScript_Code_MoneyManagement_AccountChanged" data-uid="FinScript.Code.MoneyManagement.AccountChanged">
+  AccountChanged
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-519"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>On <a class="xref" href="FinScript.Code.MoneyManagement.html#FinScript_Code_MoneyManagement_Account">Account</a> changed event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;IAccountChangeNotify, Account&gt;? AccountChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="FinScript.Code.IAccountChangeNotify.html">IAccountChangeNotify</a>, <a class="xref" href="FinScript.Acc.Account.html">Account</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="FinScript_Code_MoneyManagement_InstrumentChanged" data-uid="FinScript.Code.MoneyManagement.InstrumentChanged">
+  InstrumentChanged
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-524"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>On <a class="xref" href="FinScript.Code.MoneyManagement.html#FinScript_Code_MoneyManagement_Instrument">Instrument</a> changed event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;IInstrumentChangeNotify, Instrument&gt;? InstrumentChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="FinScript.Code.IInstrumentChangeNotify.html">IInstrumentChangeNotify</a>, <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/MoneyManagement.cs#lines-48" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

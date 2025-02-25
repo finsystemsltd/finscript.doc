@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OrderProperties | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OrderProperties | FinScript ">
+      
+      <meta name="description" content="The container to store all properties of  Unlike  and  this class is not immutable and allows to change its properties after creation Usually, this class is used to prepare all parameters and then pass it to order constructor">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.OrderProperties">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_OrderProperties" data-uid="FinSysPlatform.Domain.Market.OrderProperties" class="text-break">
+Class OrderProperties  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-23"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The container to store all properties of <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a>
+Unlike <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a> and <a class="xref" href="FinSysPlatform.Domain.Market.IOrderProperties.html">IOrderProperties</a> this class is not immutable and allows to change its properties after creation
+Usually, this class is used to prepare all parameters and then pass it to order constructor <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order__ctor_FinSysPlatform_Domain_Market_IOrderProperties_">Order(IOrderProperties)</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public class OrderProperties : IOrderProperties, IBrokerageProviderProvider, IOrderBasicParameters, IInstrumentProvider, ITradeQuantityProvider, IQuantityProvider, ITimeZoneProvider, IOrderLifeTimeParameters</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">OrderProperties</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IOrderProperties.html">IOrderProperties</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IBrokerageProviderProvider.html">IBrokerageProviderProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentProvider.html">IInstrumentProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.ITradeQuantityProvider.html">ITradeQuantityProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IQuantityProvider.html">IQuantityProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.ITimeZoneProvider.html">ITimeZoneProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IOrderLifeTimeParameters.html">IOrderLifeTimeParameters</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParametersExtensions.html#FinSysPlatform_Domain_Market_IOrderBasicParametersExtensions_ParametersEqual_FinSysPlatform_Domain_Market_IOrderBasicParameters_FinSysPlatform_Domain_Market_IOrderBasicParameters_">IOrderBasicParametersExtensions.ParametersEqual(IOrderBasicParameters, IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_GetOrderTypeAsString_FinSysPlatform_Domain_Market_IOrderBasicParameters_System_Boolean_">OrderExtensions.GetOrderTypeAsString(IOrderBasicParameters, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_GetPriceAsString_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.GetPriceAsString(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_GetShortDescription_FinSysPlatform_Domain_Market_IOrderBasicParameters_System_Boolean_">OrderExtensions.GetShortDescription(IOrderBasicParameters, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_GetTradeActionAsString_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.GetTradeActionAsString(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsBuy_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.IsBuy(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsLimit_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.IsLimit(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsLimitPriceSet_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.IsLimitPriceSet(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsMarket_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.IsMarket(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsMarketIfTouched_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.IsMarketIfTouched(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsPendingOrder_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.IsPendingOrder(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsSell_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.IsSell(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsStop_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.IsStop(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsStopLimit_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.IsStopLimit(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsStopPriceSet_FinSysPlatform_Domain_Market_IOrderBasicParameters_">OrderExtensions.IsStopPriceSet(IOrderBasicParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.IOrderLifeTimeParametersExtensions.html#FinSysPlatform_Domain_Market_IOrderLifeTimeParametersExtensions_ParametersEqual_FinSysPlatform_Domain_Market_IOrderLifeTimeParameters_FinSysPlatform_Domain_Market_IOrderLifeTimeParameters_">IOrderLifeTimeParametersExtensions.ParametersEqual(IOrderLifeTimeParameters, IOrderLifeTimeParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsTerminated_FinSysPlatform_Domain_Market_IOrderLifeTimeParameters_">OrderExtensions.IsTerminated(IOrderLifeTimeParameters)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.ITradeQuantityProviderExtensions.html#FinSysPlatform_Domain_Market_ITradeQuantityProviderExtensions_GetSignedQuantity_FinSysPlatform_Domain_Market_ITradeQuantityProvider_">ITradeQuantityProviderExtensions.GetSignedQuantity(ITradeQuantityProvider)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties__ctor_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties__ctor_FinSysPlatform_Domain_Market_IOrderProperties_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.#ctor(FinSysPlatform.Domain.Market.IOrderProperties)">
+  OrderProperties(IOrderProperties)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.OrderProperties.html">OrderProperties</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrderProperties(IOrderProperties order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderProperties.html">IOrderProperties</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties__ctor_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties__ctor_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.#ctor(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Instrument)">
+  OrderProperties(IBrokerageProvider, Instrument)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.OrderProperties.html">OrderProperties</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrderProperties(IBrokerageProvider account, Instrument instrument)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>account</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_AlgoKey_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.AlgoKey*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_AlgoKey" data-uid="FinSysPlatform.Domain.Market.OrderProperties.AlgoKey">
+  AlgoKey
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains a key that can be used by a strategy to distinguish its orders from other orders
+Also, <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html#FinSysPlatform_Domain_Market_IOrderBasicParameters_InitiatorType">InitiatorType</a> in this case should be <a class="xref" href="FinSysPlatform.Domain.Market.InitiatorType.html#FinSysPlatform_Domain_Market_InitiatorType_Automated">Automated</a>, and <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html#FinSysPlatform_Domain_Market_IOrderBasicParameters_AlgoKey">AlgoKey</a> should contain strategy AlgoKey.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? AlgoKey { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_AppliedPosition_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.AppliedPosition*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_AppliedPosition" data-uid="FinSysPlatform.Domain.Market.OrderProperties.AppliedPosition">
+  AppliedPosition
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>For netting positions (<a class="xref" href="FinSysPlatform.Domain.Market.PositionAccountingType.html#FinSysPlatform_Domain_Market_PositionAccountingType_Netting">Netting</a>) this parameter is not necessary, because the position is sole for each instrument
+But for hedging positions changes can be applied to already existing position, so if you have to modify existing position (instead of creating new one) you have to specify it
+by this parameter
+Pay attention that if applied position is set (not null), <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html#FinSysPlatform_Domain_Market_IOrderBasicParameters_PositionImpact">PositionImpact</a> value does not make any sense
+Pay also attention, that instrument of position must be equal to instruments of orders
+Attention: the referred position has the parameters at the moment of order creation. If the position changes afterwards, the order still refers the detached copy of the position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Position? AppliedPosition { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_BrokerageProvider_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.BrokerageProvider*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_BrokerageProvider" data-uid="FinSysPlatform.Domain.Market.OrderProperties.BrokerageProvider">
+  BrokerageProvider
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference to <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IBrokerageProvider BrokerageProvider { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_CreateTime_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.CreateTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_CreateTime" data-uid="FinSysPlatform.Domain.Market.OrderProperties.CreateTime">
+  CreateTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Server time of setting order
+The time is defined in <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_TimeZone">TimeZone</a> to which this order parameters relate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime CreateTime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_Description_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.Description*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_Description" data-uid="FinSysPlatform.Domain.Market.OrderProperties.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Description of the order, which can be set by client on order submission or changed at any other time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Description { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_FilledQuantity_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.FilledQuantity*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_FilledQuantity" data-uid="FinSysPlatform.Domain.Market.OrderProperties.FilledQuantity">
+  FilledQuantity
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>For <a class="xref" href="FinSysPlatform.Domain.Market.IOrderLifeTimeParameters.html#FinSysPlatform_Domain_Market_IOrderLifeTimeParameters_OrderState">OrderState</a> == <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Filled">Filled</a> it is equal to <a class="xref" href="FinSysPlatform.Domain.Market.IQuantityProvider.html#FinSysPlatform_Domain_Market_IQuantityProvider_Quantity">Quantity</a>,
+for <a class="xref" href="FinSysPlatform.Domain.Market.IOrderLifeTimeParameters.html#FinSysPlatform_Domain_Market_IOrderLifeTimeParameters_OrderState">OrderState</a> == <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_PartiallyFilled">PartiallyFilled</a> it is less than <a class="xref" href="FinSysPlatform.Domain.Market.IQuantityProvider.html#FinSysPlatform_Domain_Market_IQuantityProvider_Quantity">Quantity</a>
+For all other states a value is not defined</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quantity FilledQuantity { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_GoodTillDate_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.GoodTillDate*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_GoodTillDate" data-uid="FinSysPlatform.Domain.Market.OrderProperties.GoodTillDate">
+  GoodTillDate
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Time for GTD orders <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html#FinSysPlatform_Domain_Market_IOrderBasicParameters_TimeInForce">TimeInForce</a>, <a class="xref" href="FinSysPlatform.Domain.Market.TimeInForce.html#FinSysPlatform_Domain_Market_TimeInForce_Gtd">Gtd</a>
+The time is defined in the time zone of <a class="xref" href="FinSysPlatform.Domain.Market.ITimeZoneProvider.html#FinSysPlatform_Domain_Market_ITimeZoneProvider_TimeZone">TimeZone</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.IAccountImplementor.html#FinSysPlatform_Domain_Market_IAccountImplementor_PrimaryTimeZone">PrimaryTimeZone</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime GoodTillDate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_GroupName_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.GroupName*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_GroupName" data-uid="FinSysPlatform.Domain.Market.OrderProperties.GroupName">
+  GroupName
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Client-side order group name. A user can use it to group his orders visually</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GroupName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_InitiatorType_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.InitiatorType*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_InitiatorType" data-uid="FinSysPlatform.Domain.Market.OrderProperties.InitiatorType">
+  InitiatorType
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initiator of order: human (manual) or program (automated)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InitiatorType InitiatorType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.InitiatorType.html">InitiatorType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_Instrument_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.Instrument*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_Instrument" data-uid="FinSysPlatform.Domain.Market.OrderProperties.Instrument">
+  Instrument
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instrument. This property must always return not-nullable value
+If the provider may return null then consider using <a class="xref" href="FinSysPlatform.Domain.Market.INullableInstrumentProvider.html">INullableInstrumentProvider</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instrument Instrument { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_LimitPrice_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.LimitPrice*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_LimitPrice" data-uid="FinSysPlatform.Domain.Market.OrderProperties.LimitPrice">
+  LimitPrice
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Limit price for limit or stop limit orders
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.nan">NaN</a> means the limit price is not set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double LimitPrice { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_LocalCreateTime_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.LocalCreateTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_LocalCreateTime" data-uid="FinSysPlatform.Domain.Market.OrderProperties.LocalCreateTime">
+  LocalCreateTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Local time of setting order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime LocalCreateTime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_LocalId_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.LocalId*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_LocalId" data-uid="FinSysPlatform.Domain.Market.OrderProperties.LocalId">
+  LocalId
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Order id, assigned locally. This Id is persistent during current application session.
+Once assigned to the order, it will be the same during the current session</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? LocalId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_LocalUpdateTime_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.LocalUpdateTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_LocalUpdateTime" data-uid="FinSysPlatform.Domain.Market.OrderProperties.LocalUpdateTime">
+  LocalUpdateTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Local time of last order's change</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime LocalUpdateTime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_Message_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.Message*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_Message" data-uid="FinSysPlatform.Domain.Market.OrderProperties.Message">
+  Message
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Broker response/comment of setting order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Message { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_Oco_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.Oco*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_Oco" data-uid="FinSysPlatform.Domain.Market.OrderProperties.Oco">
+  Oco
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>One-cancel-other identifier for coupling several orders</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Oco { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_OrderId_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.OrderId*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_OrderId" data-uid="FinSysPlatform.Domain.Market.OrderProperties.OrderId">
+  OrderId
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Order id, assigned by broker
+Usually before the state <a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Accepted">Accepted</a> or this Id is null</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? OrderId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_OrderProperties_OrderId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To stress out, that this id is broker specific, we use OrderId instead of Id (because Id is too general name)</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_OrderState_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.OrderState*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_OrderState" data-uid="FinSysPlatform.Domain.Market.OrderProperties.OrderState">
+  OrderState
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current state of the order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrderState OrderState { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html">OrderState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_OrderType_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.OrderType*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_OrderType" data-uid="FinSysPlatform.Domain.Market.OrderProperties.OrderType">
+  OrderType
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Order type: market, limit, stop etc</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrderType OrderType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html">OrderType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_PositionImpact_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.PositionImpact*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_PositionImpact" data-uid="FinSysPlatform.Domain.Market.OrderProperties.PositionImpact">
+  PositionImpact
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The type of order's impact to current position (modify existing position, or create new one etc)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrderPositionImpact PositionImpact { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.OrderPositionImpact.html">OrderPositionImpact</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_OrderProperties_PositionImpact_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See for explanation:
+<a href="http://faq.labs.gaincapital.com/topic/952-newtradeorderrequestdto-properties/?tab=comments#comment-1552">http://faq.labs.gaincapital.com/topic/952-newtradeorderrequestdto-properties/?tab=comments#comment-1552</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_Quantity_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.Quantity*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_Quantity" data-uid="FinSysPlatform.Domain.Market.OrderProperties.Quantity">
+  Quantity
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An numeric value representing quantity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quantity Quantity { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_StopLoss_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.StopLoss*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_StopLoss" data-uid="FinSysPlatform.Domain.Market.OrderProperties.StopLoss">
+  StopLoss
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stop order (also known as stop loss) that will be attached to position when this order fills
+<a class="xref" href="FinSysPlatform.Domain.Market.IOrderSubmissionParameters.html#FinSysPlatform_Domain_Market_IOrderSubmissionParameters_StopLossParameters">StopLossParameters</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.StopLimitOrder.html">StopLimitOrder</a>  documentation for more details</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StopLimitOrder? StopLoss { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.StopLimitOrder.html">StopLimitOrder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_OrderProperties_StopLoss_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is a particular case of if-done order attached to master order. As soon as master order fills,
+if-done orders get activated. For simplicity if-done order collection is limited by 2 orders max (stop and limit order)
+Possibly, in future this limitation will be removed</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_StopPrice_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.StopPrice*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_StopPrice" data-uid="FinSysPlatform.Domain.Market.OrderProperties.StopPrice">
+  StopPrice
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stop price for stop or stop limit orders
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.nan">NaN</a> means the stop price is not set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double StopPrice { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_StrategyName_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.StrategyName*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_StrategyName" data-uid="FinSysPlatform.Domain.Market.OrderProperties.StrategyName">
+  StrategyName
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains strategy name, if this order was submitted by strategy.
+Also, <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html#FinSysPlatform_Domain_Market_IOrderBasicParameters_InitiatorType">InitiatorType</a> in this case should be <a class="xref" href="FinSysPlatform.Domain.Market.InitiatorType.html#FinSysPlatform_Domain_Market_InitiatorType_Automated">Automated</a>, and <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html#FinSysPlatform_Domain_Market_IOrderBasicParameters_AlgoKey">AlgoKey</a> should contain strategy AlgoKey.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? StrategyName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_TakeProfit_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.TakeProfit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_TakeProfit" data-uid="FinSysPlatform.Domain.Market.OrderProperties.TakeProfit">
+  TakeProfit
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The limit order (also known as take profit) that will be attached to position when this order fills
+<a class="xref" href="FinSysPlatform.Domain.Market.IOrderSubmissionParameters.html#FinSysPlatform_Domain_Market_IOrderSubmissionParameters_TakeProfitParameters">TakeProfitParameters</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.StopLimitOrder.html">StopLimitOrder</a>  documentation for more details</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StopLimitOrder? TakeProfit { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.StopLimitOrder.html">StopLimitOrder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_OrderProperties_TakeProfit_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is a particular case of if-done order attached to master order. As soon as master order fills,
+if-done orders get activated. For simplicity if-done order collection is limited by 2 orders max (stop and limit order)
+Possibly, in future this limitation will be removed</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_TimeInForce_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.TimeInForce*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_TimeInForce" data-uid="FinSysPlatform.Domain.Market.OrderProperties.TimeInForce">
+  TimeInForce
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Time-in-force mode (how long order will be alive)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeInForce TimeInForce { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.TimeInForce.html">TimeInForce</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_TimeZone_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.TimeZone*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_TimeZone" data-uid="FinSysPlatform.Domain.Market.OrderProperties.TimeZone">
+  TimeZone
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a time zone which a provider uses for as a primary time zone</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeZoneInfo TimeZone { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timezoneinfo">TimeZoneInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_OrderProperties_TimeZone_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For the specified instrument it is better to use <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_TradingHours">TradingHours</a> and <a class="xref" href="FinSysPlatform.Domain.Market.TradingHours.html#FinSysPlatform_Domain_Market_TradingHours_TimeZone">TimeZone</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_TradeAction_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.TradeAction*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_TradeAction" data-uid="FinSysPlatform.Domain.Market.OrderProperties.TradeAction">
+  TradeAction
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The direction of trade: buy or sell</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TradeAction TradeAction { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html">TradeAction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderProperties_UpdateTime_" data-uid="FinSysPlatform.Domain.Market.OrderProperties.UpdateTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderProperties_UpdateTime" data-uid="FinSysPlatform.Domain.Market.OrderProperties.UpdateTime">
+  UpdateTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Server time of the last order change
+The time is defined in <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html#FinSysPlatform_Domain_Market_Instrument_TimeZone">TimeZone</a> to which this order parameters relate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime UpdateTime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderProperties.cs#lines-23" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum TimeInForce | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum TimeInForce | FinScript ">
+      
+      <meta name="description" content="Time in force types">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.TimeInForce">
+
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_TimeInForce" data-uid="FinSysPlatform.Domain.Market.TimeInForce" class="text-break">
+Enum TimeInForce  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/TimeInForce.cs#lines-23"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Time in force types</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum TimeInForce</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="FinSysPlatform_Domain_Market_TimeInForce_Day"><code>[ShortName(&quot;Day&quot;)]
+Day = 1</code></dt>
+  
+  <dd><p>DAY - Valid for the day only.</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_TimeInForce_Fok"><code>[ShortName(&quot;FOK&quot;)]
+Fok = 3</code></dt>
+  
+  <dd><p>FOK - If the entire Fill-or-Kill order does not execute as soon as it becomes available, the entire order is canceled.</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_TimeInForce_Gtc"><code>[ShortName(&quot;GTC&quot;)]
+Gtc = 0</code></dt>
+  
+  <dd><p>GTC - Good until canceled.The order will continue to work within the system and in the marketplace until it executes or is canceled.</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_TimeInForce_Gtd"><code>[ShortName(&quot;GTD&quot;)]
+Gtd = 5</code></dt>
+  
+  <dd><p>GTD. - Good until Date.It will remain working within the system and in the marketplace until it executes or until the close of the market on the date specified</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_TimeInForce_Ioc"><code>[ShortName(&quot;IOC&quot;)]
+Ioc = 2</code></dt>
+  
+  <dd><p>IOC - Immediate or Cancel. Any portion that is not filled as soon as it becomes available in the market is canceled.</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Market_TimeInForce_Opg"><code>[ShortName(&quot;OPG&quot;)]
+Opg = 4</code></dt>
+  
+  <dd><p>OPG orders are qualified as At-the-Open. An OPG qualifier requests that your order will be executed as close to the opening price as possible.
+Any unfilled orders after opening of the market will be cancelled.
+OPG - Use OPG to send a market-on-open(MOO) or limit-on-open(LOO) order.</p>
+</dd>
+  </dl>
+
+
+  <h2 id="FinSysPlatform_Domain_Market_TimeInForce_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>See a classic set of time-in-force values in FIX API: <a href="https://www.onixs.biz/fix-dictionary/4.4/tagnum_59.html">https://www.onixs.biz/fix-dictionary/4.4/tagnum_59.html</a>
+Also, see <a href="https://www.interactivebrokers.com/en/software/tws/usersguidebook/ordertypes/time_in_force_for_orders.htm">https://www.interactivebrokers.com/en/software/tws/usersguidebook/ordertypes/time_in_force_for_orders.htm</a> for explanation how TIF works</p>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/TimeInForce.cs#lines-23" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

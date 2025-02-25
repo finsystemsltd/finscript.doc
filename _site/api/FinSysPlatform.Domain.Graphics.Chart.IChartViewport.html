@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IChartViewport | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IChartViewport | FinScript ">
+      
+      <meta name="description" content="The view port object is supposed to reflect Y and X axes states and provide calculation methods to transform values to coordinates and vice versa Pay attention that unique instance of the chart view port is created for each X+Y axes (but not for each chart element)">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport" class="text-break">
+Interface IChartViewport  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Graphics.html">Graphics</a>.<a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.html">Chart</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Graphics.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The view port object is supposed to reflect Y and X axes states and provide calculation methods to transform values to coordinates and vice versa
+Pay attention that unique instance of the chart view port is created for each X+Y axes (but not for each chart element)</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IChartViewport</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_ChartPanel_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.ChartPanel*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_ChartPanel" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.ChartPanel">
+  ChartPanel
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parent chart panel <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartPanel.html">IChartPanel</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IChartPanel ChartPanel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartPanel.html">IChartPanel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_FromIndex_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.FromIndex*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_FromIndex" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.FromIndex">
+  FromIndex
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An index value which represents the first bar rendered on the chart. It may be outside of real data ranges</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int FromIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_FromTime_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.FromTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_FromTime" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.FromTime">
+  FromTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A time of the <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.html#FinSysPlatform_Domain_Graphics_Chart_IChartViewport_FromIndex">FromIndex</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTime FromTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_IsInvalidated_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.IsInvalidated*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_IsInvalidated" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.IsInvalidated">
+  IsInvalidated
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.html#FinSysPlatform_Domain_Graphics_Chart_IChartViewport_Invalidate">Invalidate()</a> method was already called and not still not processed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsInvalidated { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_IsInvalidated_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This property can be used to optimize the drawing process: the whole drawing process looks this way: invalidation request =&gt; put into queue =&gt; redraw
+Consequently, if the invalidation request was already performed and is not processed yet, we can skip any next coming invalidation request</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_MaxValue_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.MaxValue*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_MaxValue" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.MaxValue">
+  MaxValue
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The highest displayed value on the chart scale (Y axis)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double MaxValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_MaxValue_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The max value is calculated from all chart elements attached to the view port
+The view port, on its turn, is always associated with Y axis (generally speaking, it is associated with the both X+Y axes, but considering the chart has only one X axis, in fact we're speaking about Y association only)</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_MinValue_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.MinValue*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_MinValue" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.MinValue">
+  MinValue
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The lowest rendered value on the chart scale (Y axis)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double MinValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_MinValue_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The min value is calculated from all chart elements attached to the view port
+The view port, on its turn, is always associated with Y axis (generally speaking, it is associated with the both X+Y axes, but considering the chart has only one X axis, in fact we're speaking about Y association only)</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_ToIndex_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.ToIndex*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_ToIndex" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.ToIndex">
+  ToIndex
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An index value which represents the last bar rendered on the chart. It may be outside of real data ranges (calculated bar)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ToIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_ToTime_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.ToTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_ToTime" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.ToTime">
+  ToTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A time of the <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.html#FinSysPlatform_Domain_Graphics_Chart_IChartViewport_ToIndex">ToIndex</a> The time may be calculated (not real) if the index is out of data ranges</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTime ToTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_ConvertIndexToTime_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.ConvertIndexToTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_ConvertIndexToTime_System_Int32_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.ConvertIndexToTime(System.Int32)">
+  ConvertIndexToTime(int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a specified bar index to time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTime ConvertIndexToTime(int barIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>barIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_ConvertTimeToIndex_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.ConvertTimeToIndex*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_ConvertTimeToIndex_System_DateTime_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.ConvertTimeToIndex(System.DateTime)">
+  ConvertTimeToIndex(DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a specified time value to bar index</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ConvertTimeToIndex(DateTime time)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetDataPointWidth_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetDataPointWidth*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetDataPointWidth" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetDataPointWidth">
+  GetDataPointWidth()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the width (pixels) of data-points, used to compute column and OHLC bar widths</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetDataPointWidth()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetHitTestRadius_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetHitTestRadius*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetHitTestRadius" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetHitTestRadius">
+  GetHitTestRadius()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the hit test radius (pixels) to perform hit test</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetHitTestRadius()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetTimeByX_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetTimeByX*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetTimeByX_System_Double_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetTimeByX(System.Double)">
+  GetTimeByX(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a time value related to the specified X coordinate of ChartControl</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTime GetTimeByX(double x)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The x-coordinate used to find a time value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetValueByY_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetValueByY*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetValueByY_System_Double_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetValueByY(System.Double)">
+  GetValueByY(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the series value on the chart scale determined by a y pixel coordinate on the chart.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetValueByY(double y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>A float value representing a pixel coordinate on the chart scale</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetXByTime_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetXByTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetXByTime_System_DateTime_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetXByTime(System.DateTime)">
+  GetXByTime(DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the chart-canvas x-coordinate of the primary X axis corresponding to a specified time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetXByTime(DateTime time)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>A DateTime object used to determine an x-coordinate</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetYByValue_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetYByValue*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_GetYByValue_System_Double_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.GetYByValue(System.Double)">
+  GetYByValue(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the chart's y-pixel coordinate on the chart determined by a series value represented on the chart scale.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetYByValue(double val)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>val</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>A double value which usually represents a price or indicator value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_Invalidate_" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.Invalidate*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Chart_IChartViewport_Invalidate" data-uid="FinSysPlatform.Domain.Graphics.Chart.IChartViewport.Invalidate">
+  Invalidate()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forces view port to recalculate min/max and redraw the surface</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Invalidate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Chart/IChartViewport.cs#lines-9" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
