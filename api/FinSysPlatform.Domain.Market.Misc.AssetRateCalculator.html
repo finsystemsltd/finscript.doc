@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AssetRateCalculator | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AssetRateCalculator | FinScript ">
+      
+      <meta name="description" content="Calculates rate between 2 assets (currencies) using all registered instruments to make a relationship">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator" class="text-break">
+Class AssetRateCalculator  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-20"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.html">Misc</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Calculates rate between 2 assets (currencies) using all registered instruments to make a relationship</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public class AssetRateCalculator</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AssetRateCalculator</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+  <h2 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_examples">Examples</h2>
+  <p>Let's consider we have EUR/USD = 1.13, GBP/USD = 1.32. Having these rates, the calculator can calculate EUR/GBP rate (route: EUR-&gt;USD-&gt;GBP = 1.13/1.32 = 0.85)
+Another example: we have GOLD = 1783.68 USD, EUR/USD = 1.13. The calculator can calculate GOLD vs EUR rate (route: GOLD-&gt;USD-&gt;EUR = 1783.68/1.13 = 1.58)
+Calculation route can be more complex. For example, we have EUR/USD, EUR/CAD, GOLD/USD and we want to calculate rate GOLD/CAD: GOLD-&gt;USD-&gt;EUR-&gt;CAD</p>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisteredInstruments_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.RegisteredInstruments*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisteredInstruments" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.RegisteredInstruments">
+  RegisteredInstruments
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The collection of registered instruments
+<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html#FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_IMarketPrice_System_String_System_String_">RegisterInstrument(Instrument, IMarketPrice, string, string)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;InstrumentKey, AssetRateCalculator.AssetPair&gt; RegisteredInstruments { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.InstrumentKey.html">InstrumentKey</a>, <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair.html">AssetPair</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_GetAssetPairs_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.GetAssetPairs*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_GetAssetPairs_FinSysPlatform_Domain_Market_Providers_IInstrumentServiceProvider_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.GetAssetPairs(FinSysPlatform.Domain.Market.Providers.IInstrumentServiceProvider)">
+  GetAssetPairs(IInstrumentServiceProvider)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-930"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses all <a class="xref" href="FinSysPlatform.Domain.Market.Providers.IInstrumentServiceProvider.html#FinSysPlatform_Domain_Market_Providers_IInstrumentServiceProvider_LocalInstruments">LocalInstruments</a> to get asset pair for each, and returns the array of successfully parsed instruments</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;AssetPairInfo&gt; GetAssetPairs(IInstrumentServiceProvider instrumentServiceProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instrumentServiceProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.IInstrumentServiceProvider.html">IInstrumentServiceProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetPairInfo.html">AssetPairInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.RegisterInstrument*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_IMarketPrice_System_String_System_String_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.RegisterInstrument(FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.IMarketPrice,System.String,System.String)">
+  RegisterInstrument(Instrument, IMarketPrice, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds and instrument into collection of known instruments and associates it with 2 assets.
+Example 1: instrument = EUR/USD, Currency1 = EUR. Currency2=USD
+Example 2: instrument = APPL, Currency1 = AAPL. Currency2=USD</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public AssetRateCalculator.AssetPair RegisterInstrument(Instrument instrument, AssetRateCalculator.IMarketPrice marketPrice, string currency1, string currency2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>marketPrice</code> <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.IMarketPrice.html">IMarketPrice</a></dt>
+    <dd><p>A provider of market price</p>
+</dd>
+    <dt><code>currency1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>currency2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair.html">AssetPair</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.RegisterInstrument*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_FinSysPlatform_Domain_Market_Instrument_System_Double_System_String_System_String_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.RegisterInstrument(FinSysPlatform.Domain.Market.Instrument,System.Double,System.String,System.String)">
+  RegisterInstrument(Instrument, double, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Same to <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html#FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_IMarketPrice_System_String_System_String_">RegisterInstrument(Instrument, IMarketPrice, string, string)</a> but
+instead of market price provider a constant value is used (<code class="paramref">marketPrice</code>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetRateCalculator.AssetPair RegisterInstrument(Instrument instrument, double marketPrice, string currency1, string currency2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>marketPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>currency1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>currency2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair.html">AssetPair</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.RegisterInstrument*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_FinSysPlatform_Domain_Market_Misc_AssetPairInfo_FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_IMarketPrice_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.RegisterInstrument(FinSysPlatform.Domain.Market.Misc.AssetPairInfo,FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.IMarketPrice)">
+  RegisterInstrument(AssetPairInfo, IMarketPrice)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Same to <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html#FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_IMarketPrice_System_String_System_String_">RegisterInstrument(Instrument, IMarketPrice, string, string)</a> but
+instrument and both currencies are passed via <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetPairInfo.html">AssetPairInfo</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetRateCalculator.AssetPair RegisterInstrument(AssetPairInfo assetPairInfo, AssetRateCalculator.IMarketPrice marketPrice)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetPairInfo</code> <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetPairInfo.html">AssetPairInfo</a></dt>
+    <dd><p>Information about instrument and both currencies</p>
+</dd>
+    <dt><code>marketPrice</code> <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.IMarketPrice.html">IMarketPrice</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair.html">AssetPair</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.RegisterInstrument*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_FinSysPlatform_Domain_Market_Misc_AssetPairInfo_System_Double_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.RegisterInstrument(FinSysPlatform.Domain.Market.Misc.AssetPairInfo,System.Double)">
+  RegisterInstrument(AssetPairInfo, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Same to <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html#FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_FinSysPlatform_Domain_Market_Instrument_System_Double_System_String_System_String_">RegisterInstrument(Instrument, double, string, string)</a> but
+instrument and both currencies are passed via <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetPairInfo.html">AssetPairInfo</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetRateCalculator.AssetPair RegisterInstrument(AssetPairInfo assetPairInfo, double marketPrice)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetPairInfo</code> <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetPairInfo.html">AssetPairInfo</a></dt>
+    <dd><p>Information about instrument and both currencies</p>
+</dd>
+    <dt><code>marketPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair.html">AssetPair</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryBuildCalculationRoute_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryBuildCalculationRoute*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryBuildCalculationRoute_System_String_System_String_FinSysPlatform_Domain_Market_Misc_AssetPairInfo___" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryBuildCalculationRoute(System.String,System.String,FinSysPlatform.Domain.Market.Misc.AssetPairInfo[])">
+  TryBuildCalculationRoute(string, string, params AssetPairInfo[])
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-906"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a set of instruments that will be involved into rate calculation <code class="paramref">currency1</code> vs <code class="paramref">currency2</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlySet&lt;AssetPairInfo&gt; TryBuildCalculationRoute(string currency1, string currency2, params AssetPairInfo[] assets)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currency1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>currency2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>assets</code> <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetPairInfo.html">AssetPairInfo</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetPairInfo.html">AssetPairInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryBuildCalculationRoute_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryBuildCalculationRoute*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryBuildCalculationRoute_System_String_System_String_FinSysPlatform_Domain_Market_Providers_IInstrumentServiceProvider_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryBuildCalculationRoute(System.String,System.String,FinSysPlatform.Domain.Market.Providers.IInstrumentServiceProvider)">
+  TryBuildCalculationRoute(string, string, IInstrumentServiceProvider)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-919"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a set of instruments that will be involved into rate calculation <code class="paramref">currency1</code> vs <code class="paramref">currency2</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlySet&lt;AssetPairInfo&gt; TryBuildCalculationRoute(string currency1, string currency2, IInstrumentServiceProvider instrumentServiceProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currency1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>currency2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>instrumentServiceProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.IInstrumentServiceProvider.html">IInstrumentServiceProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetPairInfo.html">AssetPairInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryBuildCalculationRoute_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryBuildCalculationRoute*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryBuildCalculationRoute_System_String_System_String_System_Collections_Generic_IEnumerable_FinSysPlatform_Domain_Market_Misc_AssetPairInfo__" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryBuildCalculationRoute(System.String,System.String,System.Collections.Generic.IEnumerable{FinSysPlatform.Domain.Market.Misc.AssetPairInfo})">
+  TryBuildCalculationRoute(string, string, IEnumerable&lt;AssetPairInfo&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-887"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a set of instruments that will be involved into rate calculation <code class="paramref">currency1</code> vs <code class="paramref">currency2</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlySet&lt;AssetPairInfo&gt; TryBuildCalculationRoute(string currency1, string currency2, IEnumerable&lt;AssetPairInfo&gt; assets)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currency1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>currency2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>assets</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetPairInfo.html">AssetPairInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetPairInfo.html">AssetPairInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryBuildRateGetter_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryBuildRateGetter*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryBuildRateGetter_System_String_System_String_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryBuildRateGetter(System.String,System.String)">
+  TryBuildRateGetter(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-693"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a action chain to calculate a rate for specified currencies
+Can be used as an optimized version of <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html#FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryGetRate_System_String_System_String_System_Double__">TryGetRate(string, string, out double)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetRateCalculator.IRateGetter? TryBuildRateGetter(string currency1, string currency2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currency1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>currency2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.IRateGetter.html">IRateGetter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryGetPair_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryGetPair*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryGetPair_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_AssetPair__" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryGetPair(FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair@)">
+  TryGetPair(Instrument, out AssetPair)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Searches for existing forex pair for the specified instrument <code class="paramref">instrument</code>
+<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html#FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_IMarketPrice_System_String_System_String_">RegisterInstrument(Instrument, IMarketPrice, string, string)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetPair(Instrument instrument, out AssetRateCalculator.AssetPair value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair.html">AssetPair</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryGetPair_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryGetPair*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryGetPair_FinSysPlatform_Domain_Market_InstrumentKey_FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_AssetPair__" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryGetPair(FinSysPlatform.Domain.Market.InstrumentKey,FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair@)">
+  TryGetPair(InstrumentKey, out AssetPair)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Searches for existing forex pair for the specified instrument <code class="paramref">instrumentKey</code>
+<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html#FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_RegisterInstrument_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_IMarketPrice_System_String_System_String_">RegisterInstrument(Instrument, IMarketPrice, string, string)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetPair(InstrumentKey instrumentKey, out AssetRateCalculator.AssetPair value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instrumentKey</code> <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentKey.html">InstrumentKey</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.html">AssetRateCalculator</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.AssetPair.html">AssetPair</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryGetRate_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryGetRate*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_TryGetRate_System_String_System_String_System_Double__" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.TryGetRate(System.String,System.String,System.Double@)">
+  TryGetRate(string, string, out double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-834"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns rate <code class="paramref">currency1</code> against <code class="paramref">currency2</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetRate(string currency1, string currency2, out double rate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currency1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>currency2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>rate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_UnregisterInstrument_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.UnregisterInstrument*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_UnregisterInstrument_FinSysPlatform_Domain_Market_Instrument_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.UnregisterInstrument(FinSysPlatform.Domain.Market.Instrument)">
+  UnregisterInstrument(Instrument)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the specified instrument from the collection of known instruments</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterInstrument(Instrument instrument)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_UnregisterInstrument_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.UnregisterInstrument*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_AssetRateCalculator_UnregisterInstrument_FinSysPlatform_Domain_Market_InstrumentKey_" data-uid="FinSysPlatform.Domain.Market.Misc.AssetRateCalculator.UnregisterInstrument(FinSysPlatform.Domain.Market.InstrumentKey)">
+  UnregisterInstrument(InstrumentKey)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the specified instrument from the collection of known instruments</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterInstrument(InstrumentKey instrumentKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instrumentKey</code> <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentKey.html">InstrumentKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/AssetRateCalculator.cs#lines-20" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

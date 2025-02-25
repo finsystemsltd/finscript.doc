@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MarketDataEventArgs | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MarketDataEventArgs | FinScript ">
+      
+      <meta name="description" content="A block of parameters to define market data quote from provider">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs" class="text-break">
+Class MarketDataEventArgs  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/MarketData/MarketDataEventArgs.cs#lines-10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Providers.html">Providers</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Providers.MarketData.html">MarketData</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A block of parameters to define market data quote from provider
+<a class="xref" href="FinSysPlatform.Domain.Market.Providers.MarketData.IMarketDataProvider.html">IMarketDataProvider</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MarketDataEventArgs : EventArgs, IInstrumentProvider</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></div>
+      <div><span class="xref">MarketDataEventArgs</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentProvider.html">IInstrumentProvider</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs.empty">EventArgs.Empty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs__ctor_" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs__ctor_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_MarketData_FinSysPlatform_Domain_Market_MarketData_FinSysPlatform_Domain_Market_MarketDepth_" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.#ctor(FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.MarketData,FinSysPlatform.Domain.Market.MarketData,FinSysPlatform.Domain.Market.MarketDepth)">
+  MarketDataEventArgs(Instrument, MarketData, MarketData, MarketDepth?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/MarketData/MarketDataEventArgs.cs#lines-63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDataEventArgs(Instrument instrument, MarketData change, MarketData currentMarket, MarketDepth? marketDepth)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>change</code> <a class="xref" href="FinSysPlatform.Domain.Market.MarketData.html">MarketData</a></dt>
+    <dd></dd>
+    <dt><code>currentMarket</code> <a class="xref" href="FinSysPlatform.Domain.Market.MarketData.html">MarketData</a></dt>
+    <dd></dd>
+    <dt><code>marketDepth</code> <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html">MarketDepth</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs__ctor_" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs__ctor_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_MarketData_FinSysPlatform_Domain_Market_MarketDepth_" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.#ctor(FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.MarketData,FinSysPlatform.Domain.Market.MarketDepth)">
+  MarketDataEventArgs(Instrument, MarketData, MarketDepth?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/MarketData/MarketDataEventArgs.cs#lines-54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDataEventArgs(Instrument instrument, MarketData change, MarketDepth? marketDepth)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>change</code> <a class="xref" href="FinSysPlatform.Domain.Market.MarketData.html">MarketData</a></dt>
+    <dd></dd>
+    <dt><code>marketDepth</code> <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html">MarketDepth</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_Change_" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.Change*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_Change" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.Change">
+  Change
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/MarketData/MarketDataEventArgs.cs#lines-43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Change of the top of the book (main quote)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketData Change { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketData.html">MarketData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_Change_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Pay attention, the property provides a difference between previous data and this data.
+To get the current market data, use <a class="xref" href="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.html#FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_CurrentMarket">CurrentMarket</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_CurrentMarket_" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.CurrentMarket*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_CurrentMarket" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.CurrentMarket">
+  CurrentMarket
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/MarketData/MarketDataEventArgs.cs#lines-34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Merged prices to get the current market price for each type of price</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketData CurrentMarket { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketData.html">MarketData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_CurrentMarket_examples">Examples</h4>
+  <p>Consider an example of market data provider that generates Bid, Ask and Last price updates separately.</p>
+<ol>
+<li>Bid price update: 100.00, Ask = NoValue, Last = NoValue: CurrentPrices = {100.00, NoValue, NoValue}</li>
+<li>Ask price update: 100.02, Bid = NoValue, Last = NoValue: CurrentPrices = {100.00, 100.02, NoValue}</li>
+<li>Last price update: 100.01, Bid = NoValue, Ask = NoValue: CurrentPrices = {100.00, 100.02, 100.01}</li>
+<li>Bid price update: 100.05, Ask = NoValue, Last = NoValue: CurrentPrices = {100.05, 100.02, 100.01}</li>
+<li>Ask price update: 100.06, Bid = NoValue, Last = NoValue: CurrentPrices = {100.05, 100.06, 100.01}
+...</li>
+</ol>
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_CurrentMarket_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Market data provider may generate Bid, Ask and Last price updates separately. For example, first - Bid info, then Ask info, then Last info.
+In this case, one packet of data does not contain info about each price.
+This property contains info about all prices: if the packet does not contain update for the price, the previous value is used.</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_Instrument_" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.Instrument*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_Instrument" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.Instrument">
+  Instrument
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/MarketData/MarketDataEventArgs.cs#lines-15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instrument</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instrument Instrument { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_MarketDepth_" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.MarketDepth*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_MarketDepth" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.MarketDepth">
+  MarketDepth
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/MarketData/MarketDataEventArgs.cs#lines-51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A full market depth (level 2 market data)
+May be null, if Level 1 market data only supported
+<a class="xref" href="FinSysPlatform.Domain.Market.Providers.MarketData.SubscriptionModel.html#FinSysPlatform_Domain_Market_Providers_MarketData_SubscriptionModel_FullBook">FullBook</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.Providers.MarketData.IMarketDataProvider.html#FinSysPlatform_Domain_Market_Providers_MarketData_IMarketDataProvider_Subscribe_FinSysPlatform_Domain_Market_Providers_MarketData_SubscriptionInfo___">Subscribe(params SubscriptionInfo[])</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDepth? MarketDepth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html">MarketDepth</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_ToString_" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventArgs_ToString" data-uid="FinSysPlatform.Domain.Market.Providers.MarketData.MarketDataEventArgs.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/MarketData/MarketDataEventArgs.cs#lines-74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that represents the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/MarketData/MarketDataEventArgs.cs#lines-10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

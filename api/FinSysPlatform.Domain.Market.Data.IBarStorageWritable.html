@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IBarStorageWritable | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IBarStorageWritable | FinScript ">
+      
+      <meta name="description" content="Extended interface of the storage with update support">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.Data.IBarStorageWritable">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_Data_IBarStorageWritable" data-uid="FinSysPlatform.Domain.Market.Data.IBarStorageWritable" class="text-break">
+Interface IBarStorageWritable  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Data/IBarStorageWritable.cs#lines-188"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Data.html">Data</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Extended interface of the storage with update support</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public interface IBarStorageWritable : IBarStorage, IInstrumentProvider, ITimeZoneProvider</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_EnterRead">IBarStorage.EnterRead()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_EnterRead_FinSysPlatform_Domain_Market_Data_IBarStorageReadAccessor__">IBarStorage.EnterRead(out IBarStorageReadAccessor)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_Count">IBarStorage.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_ChangeCount">IBarStorage.ChangeCount</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_Capacity">IBarStorage.Capacity</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_PriceType">IBarStorage.PriceType</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_LastBarTickHistory">IBarStorage.LastBarTickHistory</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_State">IBarStorage.State</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_IsInAddRangeTransaction">IBarStorage.IsInAddRangeTransaction</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_GetAt_System_Int32_">IBarStorage.GetAt(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_BinarySearch_System_DateTime_">IBarStorage.BinarySearch(DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_Changed">IBarStorage.Changed</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_ChangeCompleted">IBarStorage.ChangeCompleted</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_CapacityChanged">IBarStorage.CapacityChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_AddRangeBegin">IBarStorage.AddRangeBegin</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_AddRangeEnd">IBarStorage.AddRangeEnd</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentProvider.html#FinSysPlatform_Domain_Market_IInstrumentProvider_Instrument">IInstrumentProvider.Instrument</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.ITimeZoneProvider.html#FinSysPlatform_Domain_Market_ITimeZoneProvider_TimeZone">ITimeZoneProvider.TimeZone</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_Any_FinSysPlatform_Domain_Market_Data_IBarStorage_">IReadOnlyBarStorageExtensions.Any(IBarStorage)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_GetBarIndex_FinSysPlatform_Domain_Market_Data_IBarStorage_System_DateTime_FinSysPlatform_Domain_Market_Data_TimeToIndexMappingMode_">IReadOnlyBarStorageExtensions.GetBarIndex(IBarStorage, DateTime, TimeToIndexMappingMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_GetFirstGlobalTime_FinSysPlatform_Domain_Market_Data_IBarStorage_">IReadOnlyBarStorageExtensions.GetFirstGlobalTime(IBarStorage)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_GetFirstTime_FinSysPlatform_Domain_Market_Data_IBarStorage_">IReadOnlyBarStorageExtensions.GetFirstTime(IBarStorage)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_GetLastBar_FinSysPlatform_Domain_Market_Data_IBarStorage_System_Int32_">IReadOnlyBarStorageExtensions.GetLastBar(IBarStorage, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_GetLastBarTimeOrDefault_FinSysPlatform_Domain_Market_Data_IBarStorage_">IReadOnlyBarStorageExtensions.GetLastBarTimeOrDefault(IBarStorage)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_GetLastGlobalTime_FinSysPlatform_Domain_Market_Data_IBarStorage_">IReadOnlyBarStorageExtensions.GetLastGlobalTime(IBarStorage)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_GetLastTickTime_FinSysPlatform_Domain_Market_Data_IBarStorage_">IReadOnlyBarStorageExtensions.GetLastTickTime(IBarStorage)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_GetLastTickTimeOrDefault_FinSysPlatform_Domain_Market_Data_IBarStorage_">IReadOnlyBarStorageExtensions.GetLastTickTimeOrDefault(IBarStorage)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_GetLastTime_FinSysPlatform_Domain_Market_Data_IBarStorage_">IReadOnlyBarStorageExtensions.GetLastTime(IBarStorage)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_MirrorToCollection__1_FinSysPlatform_Domain_Market_Data_IBarStorage_System_Func_FinSysPlatform_Domain_Market_Data_IBarStorage_System_Int32___0__System_Collections_Generic_IList___0__">IReadOnlyBarStorageExtensions.MirrorToCollection&lt;T&gt;(IBarStorage, Func&lt;IBarStorage, int, T&gt;, IList&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IReadOnlyBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IReadOnlyBarStorageExtensions_TakeWhere_FinSysPlatform_Domain_Market_Data_IBarStorage_System_Func_FinSysPlatform_Domain_Market_Bar_System_Boolean__">IReadOnlyBarStorageExtensions.TakeWhere(IBarStorage, Func&lt;Bar, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorageExtensions.html#FinSysPlatform_Domain_Market_Data_IBarStorageExtensions_ResetLast_FinSysPlatform_Domain_Market_Data_IBarStorageWritable_FinSysPlatform_Domain_Market_Bar__">IBarStorageExtensions.ResetLast(IBarStorageWritable, in Bar)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Data_IBarStorageWritable_Add_" data-uid="FinSysPlatform.Domain.Market.Data.IBarStorageWritable.Add*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Data_IBarStorageWritable_Add_FinSysPlatform_Domain_Market_Bar__FinSysPlatform_Domain_Market_Tick__" data-uid="FinSysPlatform.Domain.Market.Data.IBarStorageWritable.Add(FinSysPlatform.Domain.Market.Bar@,FinSysPlatform.Domain.Market.Tick@)">
+  Add(in Bar, in Tick)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Data/IBarStorageWritable.cs#lines-196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds new item</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Add(in Bar value, in Tick barTick)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="FinSysPlatform.Domain.Market.Bar.html">Bar</a></dt>
+    <dd></dd>
+    <dt><code>barTick</code> <a class="xref" href="FinSysPlatform.Domain.Market.Tick.html">Tick</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Data_IBarStorageWritable_RemoveLast_" data-uid="FinSysPlatform.Domain.Market.Data.IBarStorageWritable.RemoveLast*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Data_IBarStorageWritable_RemoveLast" data-uid="FinSysPlatform.Domain.Market.Data.IBarStorageWritable.RemoveLast">
+  RemoveLast()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Data/IBarStorageWritable.cs#lines-216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delete last bar in the collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RemoveLast()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Data_IBarStorageWritable_ResetLast_" data-uid="FinSysPlatform.Domain.Market.Data.IBarStorageWritable.ResetLast*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Data_IBarStorageWritable_ResetLast_FinSysPlatform_Domain_Market_Bar__FinSysPlatform_Domain_Market_Tick__" data-uid="FinSysPlatform.Domain.Market.Data.IBarStorageWritable.ResetLast(FinSysPlatform.Domain.Market.Bar@,FinSysPlatform.Domain.Market.Tick@)">
+  ResetLast(in Bar, in Tick)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Data/IBarStorageWritable.cs#lines-211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rewrites the last bar with new values. It is the same to call <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorageWritable.html#FinSysPlatform_Domain_Market_Data_IBarStorageWritable_RemoveLast">RemoveLast()</a> and then <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorageWritable.html#FinSysPlatform_Domain_Market_Data_IBarStorageWritable_Add_FinSysPlatform_Domain_Market_Bar__FinSysPlatform_Domain_Market_Tick__">Add(in Bar, in Tick)</a> but just is faster</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ResetLast(in Bar value, in Tick barTick)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="FinSysPlatform.Domain.Market.Bar.html">Bar</a></dt>
+    <dd></dd>
+    <dt><code>barTick</code> <a class="xref" href="FinSysPlatform.Domain.Market.Tick.html">Tick</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Data_IBarStorageWritable_UpdateLast_" data-uid="FinSysPlatform.Domain.Market.Data.IBarStorageWritable.UpdateLast*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Data_IBarStorageWritable_UpdateLast_FinSysPlatform_Domain_Market_Tick__System_Double_System_Double_" data-uid="FinSysPlatform.Domain.Market.Data.IBarStorageWritable.UpdateLast(FinSysPlatform.Domain.Market.Tick@,System.Double,System.Double)">
+  UpdateLast(in Tick, double, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Data/IBarStorageWritable.cs#lines-204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates last item by adding new tick as the close price (<a class="xref" href="FinSysPlatform.Domain.Market.Bar.html#FinSysPlatform_Domain_Market_Bar_Close">Close</a>) and adding new tick to <a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarStorage.html#FinSysPlatform_Domain_Market_Data_IBarStorage_LastBarTickHistory">LastBarTickHistory</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdateLast(in Tick barTick, double high = NaN, double low = NaN)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>barTick</code> <a class="xref" href="FinSysPlatform.Domain.Market.Tick.html">Tick</a></dt>
+    <dd></dd>
+    <dt><code>high</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Optional new high. If it is lower than existing high it is ignored</p>
+</dd>
+    <dt><code>low</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Optional new low. If it is lower than existing high it is ignored</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Data/IBarStorageWritable.cs#lines-188" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

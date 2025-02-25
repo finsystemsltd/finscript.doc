@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct Vector | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct Vector | FinScript ">
+      
+      <meta name="description" content="Vector - A value type which defined a vector in terms of X and Y">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Graphics.Vector">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Graphics_Vector" data-uid="FinSysPlatform.Domain.Graphics.Vector" class="text-break">
+Struct Vector  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Graphics.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Vector - A value type which defined a vector in terms of X and Y</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public struct Vector</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector__ctor_" data-uid="FinSysPlatform.Domain.Graphics.Vector.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector__ctor_System_Double_System_Double_" data-uid="FinSysPlatform.Domain.Graphics.Vector.#ctor(System.Double,System.Double)">
+  Vector(double, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor which sets the vector's initial values</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector(double x, double y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>double - The initial X</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>double - THe initial Y</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Length_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Length*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Length" data-uid="FinSysPlatform.Domain.Graphics.Vector.Length">
+  Length
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length Property - the length of this Vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Length { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_LengthSquared_" data-uid="FinSysPlatform.Domain.Graphics.Vector.LengthSquared*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_LengthSquared" data-uid="FinSysPlatform.Domain.Graphics.Vector.LengthSquared">
+  LengthSquared
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>LengthSquared Property - the squared length of this Vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double LengthSquared { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_X_" data-uid="FinSysPlatform.Domain.Graphics.Vector.X*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_X" data-uid="FinSysPlatform.Domain.Graphics.Vector.X">
+  X
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>X - double.  Default value is 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double X { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Y_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Y*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Y" data-uid="FinSysPlatform.Domain.Graphics.Vector.Y">
+  Y
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Y - double.  Default value is 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Y { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Add_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Add*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Add_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Point_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Add(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Point)">
+  Add(Vector, Point)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add: Vector + Point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Point Add(Vector vector, Point point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>point</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Add_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Add*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Add_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Add(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  Add(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add: Vector + Vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector Add(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_AngleBetween_" data-uid="FinSysPlatform.Domain.Graphics.Vector.AngleBetween*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_AngleBetween_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.AngleBetween(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  AngleBetween(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>AngleBetween - the angle between 2 vectors</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double AngleBetween(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The first Vector</p>
+</dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The second Vector</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Returns the the angle in degrees between vector1 and vector2</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_CrossProduct_" data-uid="FinSysPlatform.Domain.Graphics.Vector.CrossProduct*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_CrossProduct_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.CrossProduct(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  CrossProduct(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-226"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>CrossProduct - Returns the cross product: vector1.X<em>vector2.Y - vector1.Y</em>vector2.X</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double CrossProduct(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The first Vector</p>
+</dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The second Vector</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Returns the cross product: vector1.X<em>vector2.Y - vector1.Y</em>vector2.X</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Determinant_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Determinant*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Determinant_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Determinant(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  Determinant(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-402"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determinant - Returns the determinant det(vector1, vector2)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double Determinant(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The first Vector</p>
+</dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The second Vector</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Returns the determinant: vector1.X<em>vector2.Y - vector1.Y</em>vector2.X</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Divide_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Divide*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Divide_FinSysPlatform_Domain_Graphics_Vector_System_Double_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Divide(FinSysPlatform.Domain.Graphics.Vector,System.Double)">
+  Divide(Vector, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiply: Vector / double</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector Divide(Vector vector, double scalar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>scalar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Equals_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Equals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Equals_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Equals(FinSysPlatform.Domain.Graphics.Vector)">
+  Equals(Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Equals - compares this Vector with the passed in object.  In this equality
+Double.NaN is equal to itself, unlike in numeric equality.
+Note that double values can acquire error when operated upon, such that
+an exact comparison between two values which
+are logically equal may fail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Vector value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The Vector to compare to &quot;this&quot;</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>bool - true if &quot;value&quot; is equal to &quot;this&quot;.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Equals_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Equals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Equals_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Equals(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  Equals(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares two Vector instances for object equality.  In this equality
+Double.NaN is equal to itself, unlike in numeric equality.
+Note that double values can acquire error when operated upon, such that
+an exact comparison between two values which
+are logically equal may fail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Equals(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The first Vector to compare</p>
+</dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The second Vector to compare</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>bool - true if the two Vector instances are exactly equal, false otherwise</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Equals_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Equals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Equals_System_Object_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Equals - compares this Vector with the passed in object.  In this equality
+Double.NaN is equal to itself, unlike in numeric equality.
+Note that double values can acquire error when operated upon, such that
+an exact comparison between two values which
+are logically equal may fail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? o)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>o</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare to &quot;this&quot;</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>bool - true if the object is an instance of Vector and if it's equal to &quot;this&quot;.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_GetHashCode_" data-uid="FinSysPlatform.Domain.Graphics.Vector.GetHashCode*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_GetHashCode" data-uid="FinSysPlatform.Domain.Graphics.Vector.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the HashCode for this Vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>int - the HashCode for this Vector</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Multiply_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Multiply_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Multiply(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  Multiply(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiply - Returns the dot product: vector1.X<em>vector2.X + vector1.Y</em>vector2.Y</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double Multiply(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The first Vector</p>
+</dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The second Vector</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Returns the dot product: vector1.X<em>vector2.X + vector1.Y</em>vector2.Y</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Multiply_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Multiply_FinSysPlatform_Domain_Graphics_Vector_System_Double_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Multiply(FinSysPlatform.Domain.Graphics.Vector,System.Double)">
+  Multiply(Vector, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-332"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiply: Vector * double</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector Multiply(Vector vector, double scalar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>scalar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Multiply_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Multiply_System_Double_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Multiply(System.Double,FinSysPlatform.Domain.Graphics.Vector)">
+  Multiply(double, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-350"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiply: double * Vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector Multiply(double scalar, Vector vector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scalar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>vector</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Negate_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Negate*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Negate" data-uid="FinSysPlatform.Domain.Graphics.Vector.Negate">
+  Negate()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Negates the values of X and Y on this Vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Negate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Normalize_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Normalize*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Normalize" data-uid="FinSysPlatform.Domain.Graphics.Vector.Normalize">
+  Normalize()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Normalize - Updates this Vector to maintain its direction, but to have a length
+of 1.  This is equivalent to dividing this Vector by Length</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Normalize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_Subtract_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Subtract*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_Subtract_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.Subtract(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  Subtract(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subtract: Vector - Vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector Subtract(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_Addition_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Addition*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_Addition_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Point_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Addition(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Point)">
+  operator +(Vector, Point)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Vector + Point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Point operator +(Vector vector, Point point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>point</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_Addition_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Addition*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_Addition_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Addition(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  operator +(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Vector + Vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator +(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_Division_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Division*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_Division_FinSysPlatform_Domain_Graphics_Vector_System_Double_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Division(FinSysPlatform.Domain.Graphics.Vector,System.Double)">
+  operator /(Vector, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-359"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Vector / double</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator /(Vector vector, double scalar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>scalar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_Equality_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Equality*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_Equality_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Equality(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  operator ==(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares two Vector instances for exact equality.
+Note that double values can acquire error when operated upon, such that
+an exact comparison between two values which are logically equal may fail.
+Furthermore, using this equality operator, Double.NaN is not equal to itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The first Vector to compare</p>
+</dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The second Vector to compare</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>bool - true if the two Vector instances are exactly equal, false otherwise</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_Explicit_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Explicit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_Explicit_FinSysPlatform_Domain_Graphics_Vector__FinSysPlatform_Domain_Graphics_Point" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Explicit(FinSysPlatform.Domain.Graphics.Vector)~FinSysPlatform.Domain.Graphics.Point">
+  explicit operator Point(Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-427"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Explicit conversion to Point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator Point(Vector vector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>Vector - the Vector to convert to a Point</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Point.html">Point</a></dt>
+    <dd><p>Point - A Point equal to this Vector</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_Explicit_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Explicit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_Explicit_FinSysPlatform_Domain_Graphics_Vector__FinSysPlatform_Domain_Graphics_Size" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Explicit(FinSysPlatform.Domain.Graphics.Vector)~FinSysPlatform.Domain.Graphics.Size">
+  explicit operator Size(Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-415"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Explicit conversion to Size.  Note that since Size cannot contain negative values,
+the resulting size will contains the absolute values of X and Y</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator Size(Vector vector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>Vector - the Vector to convert to a Size</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd><p>Size - A Size equal to this Vector</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_Inequality_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Inequality*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_Inequality_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Inequality(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  operator !=(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares two Vector instances for exact inequality.
+Note that double values can acquire error when operated upon, such that
+an exact comparison between two values which are logically equal may fail.
+Furthermore, using this equality operator, Double.NaN is not equal to itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The first Vector to compare</p>
+</dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd><p>The second Vector to compare</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>bool - true if the two Vector instances are exactly unequal, false otherwise</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_Multiply_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_Multiply_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Multiply(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  operator *(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Vector * Vector, interpreted as their dot product</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double operator *(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_Multiply_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_Multiply_FinSysPlatform_Domain_Graphics_Vector_System_Double_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Multiply(FinSysPlatform.Domain.Graphics.Vector,System.Double)">
+  operator *(Vector, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Vector * double</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator *(Vector vector, double scalar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>scalar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_Multiply_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Multiply*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_Multiply_System_Double_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Multiply(System.Double,FinSysPlatform.Domain.Graphics.Vector)">
+  operator *(double, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator double * Vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator *(double scalar, Vector vector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scalar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>vector</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_Subtraction_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Subtraction*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_Subtraction_FinSysPlatform_Domain_Graphics_Vector_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_Subtraction(FinSysPlatform.Domain.Graphics.Vector,FinSysPlatform.Domain.Graphics.Vector)">
+  operator -(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-289"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator Vector - Vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator -(Vector vector1, Vector vector2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>vector2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Vector_op_UnaryNegation_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_UnaryNegation*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Vector_op_UnaryNegation_FinSysPlatform_Domain_Graphics_Vector_" data-uid="FinSysPlatform.Domain.Graphics.Vector.op_UnaryNegation(FinSysPlatform.Domain.Graphics.Vector)">
+  operator -(Vector)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operator -Vector (unary negation)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator -(Vector vector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Vector.cs#lines-8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

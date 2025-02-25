@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MarketDepth | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MarketDepth | FinScript ">
+      
+      <meta name="description" content="MarketDepth can be used to access snapshot market depth and for subscribing to market depth events.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.MarketDepth">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_MarketDepth" data-uid="FinSysPlatform.Domain.Market.MarketDepth" class="text-break">
+Class MarketDepth  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-25"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>MarketDepth can be used to access snapshot market depth and for subscribing to market depth events.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MarketDepth : ITimedEntity</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">MarketDepth</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.ITimedEntity.html">ITimedEntity</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth__ctor_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth__ctor_System_DateTime_FinSysPlatform_Domain_Market_MarketDepthRow___FinSysPlatform_Domain_Market_MarketDepthRow___FinSysPlatform_Domain_Market_MarketDataUpdate___" data-uid="FinSysPlatform.Domain.Market.MarketDepth.#ctor(System.DateTime,FinSysPlatform.Domain.Market.MarketDepthRow[],FinSysPlatform.Domain.Market.MarketDepthRow[],FinSysPlatform.Domain.Market.MarketDataUpdate[])">
+  MarketDepth(DateTime, MarketDepthRow[], MarketDepthRow[], MarketDataUpdate[]?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html">MarketDepth</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDepth(DateTime time, MarketDepthRow[] bids, MarketDepthRow[] asks, MarketDataUpdate[]? updates = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+    <dt><code>bids</code> <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html">MarketDepthRow</a>[]</dt>
+    <dd></dd>
+    <dt><code>asks</code> <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html">MarketDepthRow</a>[]</dt>
+    <dd></dd>
+    <dt><code>updates</code> <a class="xref" href="FinSysPlatform.Domain.Market.MarketDataUpdate.html">MarketDataUpdate</a>[]</dt>
+    <dd><p>Represents the recent change in market data</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_MarketDepth__ctor_System_DateTime_FinSysPlatform_Domain_Market_MarketDepthRow___FinSysPlatform_Domain_Market_MarketDepthRow___FinSysPlatform_Domain_Market_MarketDataUpdate____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Input collections are not copied and are stored as is. Thus, in order to avoid
+a possible further modification of <code class="paramref">bids</code>, <code class="paramref">asks</code> and <code class="paramref">updates</code>
+collections, only arrays are permitted</p>
+<p>In order to initialize array in a simple way, like list, via Add method, see <span class="xref">FinSysPlatform.NetExtension.Misc.ArrayInitializer&lt;T&gt;</span></p>
+</div>
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_IsTimeDuplicatesAllowed" data-uid="FinSysPlatform.Domain.Market.MarketDepth.IsTimeDuplicatesAllowed">
+  IsTimeDuplicatesAllowed
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The flag indicates if the adjacent items in the collection can have the equal time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const bool IsTimeDuplicatesAllowed = true</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_Asks_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.Asks*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_Asks" data-uid="FinSysPlatform.Domain.Market.MarketDepth.Asks">
+  Asks
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A collection of asks, always sorted by price ascending</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDepthRow[] Asks { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html">MarketDepthRow</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_BestAsk_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.BestAsk*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_BestAsk" data-uid="FinSysPlatform.Domain.Market.MarketDepth.BestAsk">
+  BestAsk
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the best (lowest) ask to buy from <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html#FinSysPlatform_Domain_Market_MarketDepth_Asks">Asks</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDepthRow BestAsk { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html">MarketDepthRow</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_BestBid_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.BestBid*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_BestBid" data-uid="FinSysPlatform.Domain.Market.MarketDepth.BestBid">
+  BestBid
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the best (highest) bid to sell from <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html#FinSysPlatform_Domain_Market_MarketDepth_Bids">Bids</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDepthRow BestBid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html">MarketDepthRow</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_Bids_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.Bids*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_Bids" data-uid="FinSysPlatform.Domain.Market.MarketDepth.Bids">
+  Bids
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A collection of bids, always sorted by price ascending</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDepthRow[] Bids { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html">MarketDepthRow</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_MarketDepthUpdates_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.MarketDepthUpdates*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_MarketDepthUpdates" data-uid="FinSysPlatform.Domain.Market.MarketDepth.MarketDepthUpdates">
+  MarketDepthUpdates
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains info about recent market data updates (what was added or removed)
+This info may be provided or may be not, depending on market provider type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarketDataUpdate[]? MarketDepthUpdates { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDataUpdate.html">MarketDataUpdate</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_Time_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.Time*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_Time" data-uid="FinSysPlatform.Domain.Market.MarketDepth.Time">
+  Time
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is the latest time among all <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html#FinSysPlatform_Domain_Market_MarketDepthRow_Time">Time</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime Time { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_CalculateAverageFillPrice_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.CalculateAverageFillPrice*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_CalculateAverageFillPrice_FinSysPlatform_Domain_Market_TradeAction_FinSysPlatform_Domain_Market_Quantity_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.CalculateAverageFillPrice(FinSysPlatform.Domain.Market.TradeAction,FinSysPlatform.Domain.Market.Quantity)">
+  CalculateAverageFillPrice(TradeAction, Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates average fill price for the specified quantity and trade action</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double CalculateAverageFillPrice(TradeAction tradeAction, Quantity q)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tradeAction</code> <a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html">TradeAction</a></dt>
+    <dd></dd>
+    <dt><code>q</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_MarketDepth_CalculateAverageFillPrice_FinSysPlatform_Domain_Market_TradeAction_FinSysPlatform_Domain_Market_Quantity__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method emulates a partial filling of the order, starting from the best price and then moving to the next price level until it fills all the required quantity
+For example, let's consider Asks with volumes:
+1.01: 100, 1.02: 80, 1.03: 50, 1.04: 20 etc
+Consider, we want to buy 200 shares. The average fill price will be calculated as follows: 1.01<em>100 + 1.02</em>80 + 1.03*20
+<a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html#FinSysPlatform_Domain_Market_MarketDepth_GetRecordsToFill_FinSysPlatform_Domain_Market_TradeAction_FinSysPlatform_Domain_Market_Quantity_">GetRecordsToFill(TradeAction, Quantity)</a>
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">WeightedAverage&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, double&gt;, Func&lt;T, double&gt;)</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_EnumerateAsksInRanges_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.EnumerateAsksInRanges*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_EnumerateAsksInRanges_System_Double_System_Double_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.EnumerateAsksInRanges(System.Double,System.Double)">
+  EnumerateAsksInRanges(double, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerates all <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html#FinSysPlatform_Domain_Market_MarketDepth_Asks">Asks</a> in the specified price range</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;MarketDepthRow&gt; EnumerateAsksInRanges(double startPrice, double endPrice)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The min price of the range</p>
+</dd>
+    <dt><code>endPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The max price of the range</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html">MarketDepthRow</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_EnumerateBidsInRanges_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.EnumerateBidsInRanges*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_EnumerateBidsInRanges_System_Double_System_Double_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.EnumerateBidsInRanges(System.Double,System.Double)">
+  EnumerateBidsInRanges(double, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerates all <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html#FinSysPlatform_Domain_Market_MarketDepth_Bids">Bids</a> in the specified price range</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;MarketDepthRow&gt; EnumerateBidsInRanges(double startPrice, double endPrice)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The min price of the range</p>
+</dd>
+    <dt><code>endPrice</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The max price of the range</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html">MarketDepthRow</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_FromMarketData_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.FromMarketData*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_FromMarketData_FinSysPlatform_Domain_Market_MarketData_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.FromMarketData(FinSysPlatform.Domain.Market.MarketData)">
+  FromMarketData(MarketData)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-453"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to create a market depth with a single line from the market data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MarketDepth? FromMarketData(MarketData marketData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketData</code> <a class="xref" href="FinSysPlatform.Domain.Market.MarketData.html">MarketData</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html">MarketDepth</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_GetRecordsToFill_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.GetRecordsToFill*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_GetRecordsToFill_FinSysPlatform_Domain_Market_Quantity_System_Collections_Generic_IEnumerable_FinSysPlatform_Domain_Market_MarketDepthRow__" data-uid="FinSysPlatform.Domain.Market.MarketDepth.GetRecordsToFill(FinSysPlatform.Domain.Market.Quantity,System.Collections.Generic.IEnumerable{FinSysPlatform.Domain.Market.MarketDepthRow})">
+  GetRecordsToFill(Quantity, IEnumerable&lt;MarketDepthRow&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the top records of the market that will be used to fill the requested quantity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;MarketDepth.MarketDepthRowToFill&gt; GetRecordsToFill(Quantity q, IEnumerable&lt;MarketDepthRow&gt; fromBestToLeastRows)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>q</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+    <dt><code>fromBestToLeastRows</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html">MarketDepthRow</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html">MarketDepth</a>.<a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.MarketDepthRowToFill.html">MarketDepthRowToFill</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_MarketDepth_GetRecordsToFill_FinSysPlatform_Domain_Market_Quantity_System_Collections_Generic_IEnumerable_FinSysPlatform_Domain_Market_MarketDepthRow___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method emulates a partial filling of the order, starting from the best price and then moving to the next price level until it fills all the required quantity
+For example, let's consider Asks with volumes:
+1.01: 100, 1.02: 80, 1.03: 50, 1.04: 20 etc
+Consider, we want to buy 200 shares. Then the returned records are: (1.01:100) , (1.02:80), (1.03: 20)</p>
+<p>If the depth of market is not enough, the method returns the available quantity only. For example, consider the depth contains records:
+1.01: 100, 1.02: 80, 1.03: 50
+The requested quantity is 300. The market does not provide such a volume, so, the method returns all available records with total quantity = 100+80+50=230</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_GetRecordsToFill_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.GetRecordsToFill*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_GetRecordsToFill_FinSysPlatform_Domain_Market_TradeAction_FinSysPlatform_Domain_Market_Quantity_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.GetRecordsToFill(FinSysPlatform.Domain.Market.TradeAction,FinSysPlatform.Domain.Market.Quantity)">
+  GetRecordsToFill(TradeAction, Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the top records of the market that will be used to fill the requested quantity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;MarketDepth.MarketDepthRowToFill&gt; GetRecordsToFill(TradeAction tradeAction, Quantity q)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tradeAction</code> <a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html">TradeAction</a></dt>
+    <dd></dd>
+    <dt><code>q</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html">MarketDepth</a>.<a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.MarketDepthRowToFill.html">MarketDepthRowToFill</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_MarketDepth_GetRecordsToFill_FinSysPlatform_Domain_Market_TradeAction_FinSysPlatform_Domain_Market_Quantity__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method emulates a partial filling of the order, starting from the best price and then moving to the next price level until it fills all the required quantity
+For example, let's consider Asks with volumes:
+1.01: 100, 1.02: 80, 1.03: 50, 1.04: 20 etc
+Consider, we want to buy 200 shares. Then the returned records are: (1.01:100) , (1.02:80), (1.03: 20)</p>
+<p>If the depth of market is not enough, the method returns the available quantity only. For example, consider the depth contains records:
+1.01: 100, 1.02: 80, 1.03: 50
+The requested quantity is 300. The market does not provide such a volume, so, the method returns all available records with total quantity = 100+80+50=230</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_MarketDepth_MergeRecords_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.MergeRecords*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_MarketDepth_MergeRecords_System_Int32_System_Int32_" data-uid="FinSysPlatform.Domain.Market.MarketDepth.MergeRecords(System.Int32,System.Int32)">
+  MergeRecords(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-393"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Merges <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html#FinSysPlatform_Domain_Market_MarketDepth_Bids">Bids</a> and <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html#FinSysPlatform_Domain_Market_MarketDepth_Asks">Asks</a> rows into the solid list (Bid+Ask) using <a class="xref" href="FinSysPlatform.Domain.Market.MarketDepthRow.html#FinSysPlatform_Domain_Market_MarketDepthRow_Price">Price</a> as a key for merging</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;MarketDepth.MergedMarketDepthRow&gt; MergeRecords(int bidCount = -1, int askCount = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bidCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Max bid records starting from the best bid. Any negative value means all records</p>
+</dd>
+    <dt><code>askCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Max ask records starting from the best ask. Any negative value means all records</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.html">MarketDepth</a>.<a class="xref" href="FinSysPlatform.Domain.Market.MarketDepth.MergedMarketDepthRow.html">MergedMarketDepthRow</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/MarketDepth.cs#lines-25" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

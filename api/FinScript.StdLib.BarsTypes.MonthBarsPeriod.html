@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MonthBarsPeriod | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MonthBarsPeriod | FinScript ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod">
+
+
+
+  <h1 id="FinScript_StdLib_BarsTypes_MonthBarsPeriod" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod" class="text-break">
+Class MonthBarsPeriod  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/MonthBars.cs#lines-23"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinScript.html">FinScript</a>.<a class="xref" href="FinScript.StdLib.html">StdLib</a>.<a class="xref" href="FinScript.StdLib.BarsTypes.html">BarsTypes</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinScript.StdLib.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MonthBarsPeriod : StandardBarsPeriod, IEquatable&lt;BarsPeriod&gt;, IStandardBarsPeriod</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.Data.BarsPeriod.html">BarsPeriod</a></div>
+      <div><a class="xref" href="FinScript.StdLib.BarsTypes.Base.StandardBarsPeriod.html">StandardBarsPeriod</a></div>
+      <div><span class="xref">MonthBarsPeriod</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Data.BarsPeriod.html">BarsPeriod</a>&gt;</div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.Data.IStandardBarsPeriod.html">IStandardBarsPeriod</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="FinScript.StdLib.BarsTypes.Base.StandardBarsPeriod.html#FinScript_StdLib_BarsTypes_Base_StandardBarsPeriod_Value">StandardBarsPeriod.Value</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.StdLib.BarsTypes.Base.StandardBarsPeriod.html#FinScript_StdLib_BarsTypes_Base_StandardBarsPeriod_UnderlyingPeriod">StandardBarsPeriod.UnderlyingPeriod</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.StdLib.BarsTypes.Base.StandardBarsPeriod.html#FinScript_StdLib_BarsTypes_Base_StandardBarsPeriod_GetDisplayName_FinSysPlatform_Domain_Market_Data_BarsPeriodDisplayNameMode_">StandardBarsPeriod.GetDisplayName(BarsPeriodDisplayNameMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.BarsPeriod.html#FinSysPlatform_Domain_Market_Data_BarsPeriod_DisplayName">BarsPeriod.DisplayName</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.BarsPeriod.html#FinSysPlatform_Domain_Market_Data_BarsPeriod_IsIntraday">BarsPeriod.IsIntraday</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.BarsPeriod.html#FinSysPlatform_Domain_Market_Data_BarsPeriod_Equals_FinSysPlatform_Domain_Market_Data_BarsPeriod_">BarsPeriod.Equals(BarsPeriod)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.BarsPeriod.html#FinSysPlatform_Domain_Market_Data_BarsPeriod_Equals_System_Object_">BarsPeriod.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.BarsPeriod.html#FinSysPlatform_Domain_Market_Data_BarsPeriod_GetHashCode">BarsPeriod.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Data.BarsPeriod.html#FinSysPlatform_Domain_Market_Data_BarsPeriod_ToString">BarsPeriod.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_DefaultPeriodValue_" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.DefaultPeriodValue*"></a>
+
+  <h3 id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_DefaultPeriodValue" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.DefaultPeriodValue">
+  DefaultPeriodValue
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/MonthBars.cs#lines-50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Period by default</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int DefaultPeriodValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_Timeframe_" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.Timeframe*"></a>
+
+  <h3 id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_Timeframe" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.Timeframe">
+  Timeframe
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/MonthBars.cs#lines-53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A standard timeframe</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Timeframe Timeframe { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Timeframe.html">Timeframe</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_Title_" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.Title*"></a>
+
+  <h3 id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_Title" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.Title">
+  Title
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/MonthBars.cs#lines-45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Friendly name of the bars period</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override string Title { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_UnderlyingTimeframe_" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.UnderlyingTimeframe*"></a>
+
+  <h3 id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_UnderlyingTimeframe" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.UnderlyingTimeframe">
+  UnderlyingTimeframe
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/MonthBars.cs#lines-26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Standard timeframe, which is base for this period</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Timeframe UnderlyingTimeframe { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Timeframe.html">Timeframe</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_FormatTime_" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.FormatTime*"></a>
+
+  <h3 id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_FormatTime_System_DateTime_" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.FormatTime(System.DateTime)">
+  FormatTime(DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/MonthBars.cs#lines-37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats DateTime according to the style of the period</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string FormatTime(DateTime time)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_ToSeconds_" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.ToSeconds*"></a>
+
+  <h3 id="FinScript_StdLib_BarsTypes_MonthBarsPeriod_ToSeconds_System_Boolean_" data-uid="FinScript.StdLib.BarsTypes.MonthBarsPeriod.ToSeconds(System.Boolean)">
+  ToSeconds(bool)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/MonthBars.cs#lines-32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns specified period in seconds. If period is not time based, returns 0, which usually means ticks</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int ToSeconds(bool multiplyToValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>multiplyToValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/MonthBars.cs#lines-23" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

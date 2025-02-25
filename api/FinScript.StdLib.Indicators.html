@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace FinScript.StdLib.Indicators | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace FinScript.StdLib.Indicators | FinScript ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinScript.StdLib.Indicators">
+
+  <h1 id="FinScript_StdLib_Indicators" data-uid="FinScript.StdLib.Indicators" class="text-break">Namespace FinScript.StdLib.Indicators</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.AccountBalanceEquity.html">AccountBalanceEquity</a></dt>
+      <dd><p>Account Balance,Equity and margin chart aligned to main chart</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.AccumulationDistribution.html">AccumulationDistribution</a></dt>
+      <dd><p>This indicator computes the Accumulation/Distribution (AD)
+The Accumulation/Distribution is calculated using the following formula:
+AD = AD + ((Close - Low) - (High - Close)) / (High - Low) * Volume</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.AdaptivePrizeZone.html">AdaptivePrizeZone</a></dt>
+      <dd><p>The APZ (Adaptive Prize Zone) forms a steady channel based on double smoothed
+exponential moving averages around the average price. See <a href="https://www.investopedia.com/terms/a/adaptive-price-zone.asp">https://www.investopedia.com/terms/a/adaptive-price-zone.asp</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.Aroon.html">Aroon</a></dt>
+      <dd><p>The Aroon Indicator was developed by Tushar Chande. Its comprised of two plots one
+measuring the number of periods since the most recent x-period high (Aroon Up) and the
+other measuring the number of periods since the most recent x-period low (Aroon Down).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.AroonOscillator.html">AroonOscillator</a></dt>
+      <dd><p>The Aroon Oscillator is the difference between AroonUp and AroonDown. The value of this
+indicator fluctuates between -100 and +100. An upward trend bias is present when the oscillator
+is positive, and a negative trend bias is present when the oscillator is negative. AroonUp/Down
+values over 75 identify strong trends in their respective direction.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.AverageDirectionalIndex.html">AverageDirectionalIndex</a></dt>
+      <dd><p>This indicator computes Average Directional Index which measures trend strength without regard to trend direction.
+Firstly, it calculates the Directional Movement and the True Range value, and then the values are accumulated and
+smoothed
+using a custom smoothing method proposed by Wilder. For an n period smoothing, 1/n of each period's value is added
+to the total period.
+From these accumulated values we are therefore able to derived the 'Positive Directional Index' (+DI) and 'Negative
+Directional Index' (-DI)
+which is used to calculate the Average Directional Index.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.AverageDirectionalIndexRating.html">AverageDirectionalIndexRating</a></dt>
+      <dd><p>This indicator computes the Average Directional Movement Index Rating (ADXR).
+The Average Directional Movement Index Rating is calculated with the following formula:
+ADXR[i] = (ADX[i] + ADX[i - period + 1]) / 2</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.AverageTrueRange.html">AverageTrueRange</a></dt>
+      <dd><p>The AverageTrueRange indicator is a measure of volatility introduced by Welles Wilder in his
+book: New Concepts in Technical Trading Systems.  This indicator computes the TrueRange and then
+smoothes the TrueRange over a given period.
+TrueRange is defined as the maximum of the following:
+High - Low
+ABS(High - PreviousClose)
+ABS(Low  - PreviousClose)    ///</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.BalanceOfPower.html">BalanceOfPower</a></dt>
+      <dd><p>The balance of power indicator measures the strength of the bulls vs. bears by
+assessing the ability of each to push price to an extreme level.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.BarRange.html">BarRange</a></dt>
+      <dd><p>Calculates the range of a bar (a difference between <a class="xref" href="FinSysPlatform.Domain.Market.Bar.html#FinSysPlatform_Domain_Market_Bar_High">High</a> and <a class="xref" href="FinSysPlatform.Domain.Market.Bar.html#FinSysPlatform_Domain_Market_Bar_Low">Low</a>).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.BarsDown.html">BarsDown</a></dt>
+      <dd><p>This indicator returns 1 when we have n of consecutive bars down, otherwise returns 0.
+A down bar is defined as a bar where the close is below the open and the bars makes a
+lower high and a lower low. You can adjust the specific requirements with the indicator options.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.BarsUp.html">BarsUp</a></dt>
+      <dd><p>This indicator returns 1 when we have n of consecutive bars up, otherwise returns 0.
+An up bar is defined as a bar where the close is above the open and the bars makes a higher
+high and a higher low. You can adjust the specific requirements with the indicator options.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.BollingerBands.html">BollingerBands</a></dt>
+      <dd><p>Bollinger Bands are plotted at standard deviation levels above and below a moving average.
+Since standard deviation is a measure of volatility, the bands are self-adjusting:
+widening during volatile markets and contracting during calmer periods.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.BuySellPressure.html">BuySellPressure</a></dt>
+      <dd><p>Indicates the current buying or selling pressure as a percentage values based on the categorization of trades as buy or sell trades. Trades are categorized in real-time as a buy (at the ask or above) or as a sell (at the bid or below).... Trades in between the market are ignored.
+This is a tick by tick indicator which can work in real time only. Market data provider should support 3 types of market price (<a class="xref" href="FinSysPlatform.Domain.Market.Providers.MarketData.IMarketDataProvider.html#FinSysPlatform_Domain_Market_Providers_MarketData_IMarketDataProvider_SupportedMarketPriceTypes">SupportedMarketPriceTypes</a>) : bid, ask and last
+It listens for market data <a class="xref" href="FinScript.Code.ScriptCalculationUnit.TopBookMarketDataEventArgs.html">OnMarketData(TopBookMarketDataEventArgs)</a> to accumulate statistics
+For historical data, the indicator values will always be Empty.
+The indicator can work only in <a class="xref" href="FinScript.Code.CalculateMode.html#FinScript_Code_CalculateMode_OnEachTick">OnEachTick</a>. For other modes indicator will generate either scarcely data or empty data</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.BuySellVolume.html">BuySellVolume</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.CandlestickPattern.html">CandlestickPattern</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.ChaikinMoneyFlow.html">ChaikinMoneyFlow</a></dt>
+      <dd><p>Chaikin Money Flow.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.ChaikinOscillator.html">ChaikinOscillator</a></dt>
+      <dd><p>Chaikin Oscillator.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.ChaikinVolatility.html">ChaikinVolatility</a></dt>
+      <dd><p>Chaikin Volatility</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.ChandeMomentumOscillator.html">ChandeMomentumOscillator</a></dt>
+      <dd><p>The chande momentum oscillator(CMO) was developed by Tushar Chande and is a technical indicator that attempts to
+capture the momentum of a security.
+Chande discussed this and many other indicators in his book &quot;The New Technical Trader&quot;.
+The chande momentum oscillator differs from other technical indicators like the RSI and MACD, because it uses up
+and down days in both the numerator and denominator.
+The formula for the chande momentum oscillator is:
+CMO = 100 x ((Su ? Sd) / (Su + Sd))</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.CommodityChannelIndex.html">CommodityChannelIndex</a></dt>
+      <dd><p>Represents the traditional commodity channel index (CCI)
+CCI = (Typical Price - 20-period SMA of TP) / (.015 * Mean Deviation)
+Typical Price (TP) = (High + Low + Close)/3
+Constant = 0.015
+There are four steps to calculating the Mean Deviation, first, subtract
+the most recent 20-period average of the typical price from each period's
+typical price. Second, take the absolute values of these numbers. Third,
+sum the absolute values. Fourth, divide by the total number of periods (20).    ///</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.CurrentDayOhl.html">CurrentDayOhl</a></dt>
+      <dd><p>Plots the open, high, and low values from the session starting on the current day.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.DarvasBox.html">DarvasBox</a></dt>
+      <dd><p>Darvas trading strategy rules visualization.
+Darvas Box is based on boxes that a price was trading in. For example, if the price is moving between $45 and $50,
+that is a box.
+Mr. Darvas’s goal was to only buy stocks that were moving into higher and higher boxes.
+<a href="http://traderhq.com/trading-strategies/darvas-box-trading-strategy-explained/">http://traderhq.com/trading-strategies/darvas-box-trading-strategy-explained/</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.DirectionalMovement.html">DirectionalMovement</a></dt>
+      <dd><p>Directional Movement (DM). This is the same indicator as the ADX,
+with the addition of the two directional movement indicators +DI
+and -DI. +DI and -DI measure upward and downward momentum. A buy
+signal is generated when +DI crosses -DI to the upside.
+A sell signal is generated when -DI crosses +DI to the downside.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.DirectionalMovementIndex.html">DirectionalMovementIndex</a></dt>
+      <dd><p>Directional Movement Index. Directional Movement Index is quite similiar
+to Welles Wilder's Relative Strength Index. The difference is the DMI
+uses variable time periods (from 3 to 30) vs. the RSI's fixed periods.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.DonchianChannel.html">DonchianChannel</a></dt>
+      <dd><p>Donchian Channel. The Donchian Channel indicator was created by Richard Donchian.
+It uses the highest high and the lowest low of a period of time to plot the channel.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.DoubleExponentialMovingAverage.html">DoubleExponentialMovingAverage</a></dt>
+      <dd><p>Double Exponential Moving Average</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.DoubleStochastics.html">DoubleStochastics</a></dt>
+      <dd><p>Double stochastics</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.DynamicMomentumIndex.html">DynamicMomentumIndex</a></dt>
+      <dd><p>The Dynamic Momentum Index is a variable term RSI. The RSI term varies
+from 3 to 30. The variable time period makes the RSI more responsive to
+short-term moves. The more volatile the price is, the shorter the time period is.
+It is interpreted in the same way as the RSI, but provides signals earlier.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.EaseOfMovement.html">EaseOfMovement</a></dt>
+      <dd><p>The Ease of Movement (EMV) indicator emphasizes days in which the stock is moving
+easily and minimizes the days in which the stock is finding it difficult to move.
+A buy signal is generated when the EMV crosses above zero, a sell signal when it
+crosses below zero. When the EMV hovers around zero, then there are small price
+movements and/or high volume, which is to say, the price is not moving easily.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.ExponentialMovingAverage.html">ExponentialMovingAverage</a></dt>
+      <dd><p>Exponential Moving Average. The Exponential Moving Average is an indicator that
+shows the average value of a security's price over a period of time. When calculating
+a moving average. The EMA applies more weight to recent prices than the SMA.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.FisherTransform.html">FisherTransform</a></dt>
+      <dd><summary>
+    The Fisher transform is a mathematical process which is used to convert any data set to a modified
+    data set whose Probabilty Distrbution Function is approximately Gaussian.  Once the Fisher transform
+    is computed, the transformed data can then be analyzed in terms of it's deviation from the mean.
+    The equation is y = .5 * ln [ 1 + x / 1 - x ] where
+    x is the input
+    y is the output
+    ln is the natural logarithm
+    The Fisher transform has much sharper turning points than other indicators such as MACD
+    For more info, read chapter 1 of Cybernetic Analysis for Stocks and Futures by John F. Ehlers
+    We are implementing the lastest version of this indicator found at Fig. 4 of
+    http://www.mesasoftware.com/papers/UsingTheFisherTransform.pdf
+</summary>
+///
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.HighLowTrend.html">HighLowTrend</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.HorizontalLine.html">HorizontalLine</a></dt>
+      <dd><p>Plots line at user  defined values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.HullMovingAverage.html">HullMovingAverage</a></dt>
+      <dd><p>The Hull Moving Average (HMA) employs weighted MA calculations to offer superior
+smoothing, and much less lag, over traditional SMA indicators.
+Produces a Hull Moving Average as explained at <a href="http://www.alanhull.com/hull-moving-average/">http://www.alanhull.com/hull-moving-average/</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html">IndicatorExtensions</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.KaufmanAdaptiveMovingAverage.html">KaufmanAdaptiveMovingAverage</a></dt>
+      <dd><p>Kaufman's Adaptive Moving Average. Developed by Perry Kaufman, this indicator is an
+EMA using an Efficiency Ratio to modify the smoothing constant, which ranges from
+a minimum of Fast Length to a maximum of Slow Length. Since this moving average is
+adaptive it tends to follow prices more closely than other MA's.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.KeltnerChannel.html">KeltnerChannel</a></dt>
+      <dd><p>Keltner Channel. The Keltner Channel is a similar indicator to Bollinger Bands.
+Here the midline is a standard moving average with the upper and lower bands offset
+by the SMA of the difference between the high and low of the previous bars.
+The offset multiplier as well as the SMA period is configurable.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.KeyReversalDown.html">KeyReversalDown</a></dt>
+      <dd><p>Returns a value of 1 when the current close is less than the prior close after penetrating the highest high of the
+last n bars.
+See also <a href="http://www.investinganswers.com/financial-dictionary/technical-analysis/key-reversal-1312">http://www.investinganswers.com/financial-dictionary/technical-analysis/key-reversal-1312</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.KeyReversalUp.html">KeyReversalUp</a></dt>
+      <dd><p>Returns a value of 1 when the current close is greater than the prior close after penetrating the lowest low of the
+last n bars.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.LinearRegression.html">LinearRegression</a></dt>
+      <dd><p>Linear Regression. The Linear Regression is an indicator that 'predicts' the value of a security's price.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.LinearWeightedMovingAverage.html">LinearWeightedMovingAverage</a></dt>
+      <dd><p>The Linear Weighted Moving Average (LWMA) is a Moving Average indicator that shows the average
+value of a security's price over a period of time with special emphasis on the more recent
+portions of the time period under analysis as opposed to the earlier.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.Maximum.html">Maximum</a></dt>
+      <dd><p>The Maximum shows the maximum of the last n bars.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.MesaAdaptiveMovingAverage.html">MesaAdaptiveMovingAverage</a></dt>
+      <dd><p>The MAMA (MESA Adaptive Moving Average) was developed by John Ehlers.
+It adapts to price movement in a new and unique way. The adaptation is
+based on the Hilbert Transform Discriminator. The adavantage of this method
+features fast attack average and a slow decay average. The MAMA + the FAMA
+(Following Adaptive Moving Average) lines only cross at major market reversals.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.Minimum.html">Minimum</a></dt>
+      <dd><p>The Minimum shows the minimum of the last n bars.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.Momentum.html">Momentum</a></dt>
+      <dd><p>The Momentum indicator measures the amount that a security's price has changed over a given time span.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.MoneyFlowIndex.html">MoneyFlowIndex</a></dt>
+      <dd><p>The MFI (Money Flow Index) is a momentum indicator that measures the strength of money flowing in and out of a
+security.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.MovingAverageConvergenceDivergence.html">MovingAverageConvergenceDivergence</a></dt>
+      <dd><p>The MACD (Moving Average Convergence/Divergence) is a trend following momentum indicator
+that shows the relationship between two moving averages of prices.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.MovingAverageEnvelopes.html">MovingAverageEnvelopes</a></dt>
+      <dd><p>Moving Average Envelopes</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.OnBalanceVolume.html">OnBalanceVolume</a></dt>
+      <dd><p>OBV (On Balance Volume) is a running total of volume. It shows if volume is flowing into
+or out of a security. When the security closes higher than the previous close, all
+of the day's volume is considered up-volume. When the security closes lower than the
+previous close, all of the day's volume is considered down-volume.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.ParabolicSar.html">ParabolicSar</a></dt>
+      <dd><p>Parabolic SAR according to Stocks and Commodities magazine V 11:11 (477-479).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.PercentagePriceOscillator.html">PercentagePriceOscillator</a></dt>
+      <dd><p>The Percentage Price Oscillator(PPO) is a momentum oscillator that measures the difference between two moving
+averages as a percentage
+of the larger moving average. As with its cousin, MACD, the Percentage Price Oscillator is shown with a signal
+line, a histogram and a center line.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.PolarizedFractalEfficiency.html">PolarizedFractalEfficiency</a></dt>
+      <dd><p>The PFE (Polarized Fractal Efficiency) is an indicator that uses fractal
+geometry to determine how efficiently the price is moving.
+It was developed by Hans Hannula that was invented to determine price efficiency over a user-defined time period.
+This indicator fluctuates between -100 and +100 with 0 as the center line.
+Securities with a PFE greater than zero are deemed to be trending up, while a reading of less than zero indicates
+the trend is down.
+Read more: Polarized Fractal Efficiency(PFE) <a href="https://www.investopedia.com/terms/p/pfe.asp#ixzz58akWch5I">https://www.investopedia.com/terms/p/pfe.asp#ixzz58akWch5I</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.PriceOscillator.html">PriceOscillator</a></dt>
+      <dd><p>The Price Oscillator indicator shows the variation among two moving averages for the price of a security.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.PriorDayOhlc.html">PriorDayOhlc</a></dt>
+      <dd><p>Plots the open, high, low and close values from the session starting on the prior day.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.RSquared.html">RSquared</a></dt>
+      <dd><p>R-squared indicator</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.RateOfChange.html">RateOfChange</a></dt>
+      <dd><p>The ROC (Rate-of-Change) indicator displays the percent change between the current price and the price x-time
+periods ago.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.RegressionChannel.html">RegressionChannel</a></dt>
+      <dd><p>Linear regression is used to calculate a best fit line for the price data. In addition an upper and lower band is
+added by calculating the standard deviation of prices from the regression line.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.RelativeSpreadStrength.html">RelativeSpreadStrength</a></dt>
+      <dd><p>Relative Spread Strength of the spread between two moving averages.
+<a href="http://traders.com/documentation/feedbk_docs/2006/10/TradersTips/TradersTips.html">http://traders.com/documentation/feedbk_docs/2006/10/TradersTips/TradersTips.html</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.RelativeStrengthIndex.html">RelativeStrengthIndex</a></dt>
+      <dd><p>The RSI (Relative Strength Index) is a price-following oscillator that ranges between 0 and 100.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.RelativeVolatilityIndex.html">RelativeVolatilityIndex</a></dt>
+      <dd><p>The RVI (Relative Volatility Index) was developed by Donald Dorsey as a compliment to and a confirmation of
+momentum based indicators. When used to confirm other signals, only buy when the RVI is over 50 and only sell when
+the RVI is under 50.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.Sessions.html">Sessions</a></dt>
+      <dd><p>Shows start of the Tokyo, London, New-York session
+TODO Move all string literals to resource</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.SimpleMovingAverage.html">SimpleMovingAverage</a></dt>
+      <dd><p>The SMA (Simple Moving Average) is an indicator that shows the average value of a security's price over a period of
+time.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.SmoothedMovingAverage.html">SmoothedMovingAverage</a></dt>
+      <dd><p>Smoothed Moving Average. The Smoothed Moving Average is an indicator that
+shows the average value of a security's price over a period of time. When calculating
+a moving average. The EMA applies more weight to recent prices than the SMA.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.StandardDeviation.html">StandardDeviation</a></dt>
+      <dd><p>Standard Deviation is a statistical measure of volatility.
+Standard Deviation is typically used as a component of other indicators,
+rather than as a stand-alone indicator. For example, Bollinger Bands are
+calculated by adding a security's Standard Deviation to a moving average.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.Stochastic.html">Stochastic</a></dt>
+      <dd><p>The Stochastic Oscillator is made up of two lines that oscillate between
+a vertical scale of 0 to 100. The %K is the main line and it is drawn as
+a solid line. The second is the %D line and is a moving average of %K.
+The %D line is drawn as a dotted line. Use as a buy/sell signal generator,
+buying when fast moves above slow and selling when fast moves below slow.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.StochasticRsi.html">StochasticRsi</a></dt>
+      <dd><p>The StochRSI is an oscillator similar in computation to the stochastic measure,
+except instead of price values as input, the StochRSI uses RSI values.
+The StochRSI computes the current position of the RSI relative to the high and
+low RSI values over a specified number of days. The intent of this measure,
+designed by Tushard Chande and Stanley Kroll, is to provide further information
+about the overbought/oversold nature of the RSI. The StochRSI ranges between 0.0 and 1.0.
+Values above 0.8 are generally seen to identify overbought levels and values below 0.2 are
+considered to indicate oversold conditions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.Sum.html">Sum</a></dt>
+      <dd><p>The Sum shows the summation of the last n data points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.SuperTrend.html">SuperTrend</a></dt>
+      <dd><p>Super trend indicator draws the trend line based on high/low values and ATR indicator
+See <a href="https://blog.elearnmarkets.com/supertrend-indicator-strategy-trading/">https://blog.elearnmarkets.com/supertrend-indicator-strategy-trading/</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.Swing.html">Swing</a></dt>
+      <dd><p>The Swing indicator plots lines that represents the swing high and low points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.T3MovingAverage.html">T3MovingAverage</a></dt>
+      <dd><p>T3 Moving Average</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.TriangularMovingAverage.html">TriangularMovingAverage</a></dt>
+      <dd><p>The TMA (Triangular Moving Average) is a weighted moving average.
+Compared to the LWMA which puts more weight on the latest price bar, the TMA puts more weight on the data in the
+middle of the specified period.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.TripleExponentialAverage.html">TripleExponentialAverage</a></dt>
+      <dd><p>The TRIX (Triple Exponential Average) displays the percentage Rate of Change (ROC)
+of a triple EMA. Trix oscillates above and below the zero value. The indicator
+applies triple smoothing in an attempt to eliminate insignificant price movements
+within the trend that you're trying to isolate.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.TripleExponentialMovingAverage.html">TripleExponentialMovingAverage</a></dt>
+      <dd><p>Triple Exponential Moving Average</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.TrueStrengthIndex.html">TrueStrengthIndex</a></dt>
+      <dd><p>The TSI (True Strength Index) is a momentum-based indicator, developed by William Blau.
+Designed to determine both trend and overbought/oversold conditions, the TSI is
+applicable to intraday time frames as well as long term trading.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.UltimateOscillator.html">UltimateOscillator</a></dt>
+      <dd><p>The Ultimate Oscillator is the weighted sum of three oscillators of different time periods.
+The typical time periods are 7, 14 and 28. The values of the Ultimate Oscillator range
+from zero to 100. Values over 70 indicate overbought conditions, and values under 30 indicate
+oversold conditions. Also look for agreement/divergence with the price to confirm a trend or signal the end of a
+trend.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.VariableMovingAverage.html">VariableMovingAverage</a></dt>
+      <dd><p>The VMA (Variable Moving Average, also known as VIDYA or Variable Index Dynamic Average)
+is an exponential moving average that automatically adjusts the smoothing weight based
+on the volatility of the data series. VMA solves a problem with most moving averages.
+In times of low volatility, such as when the price is trending, the moving average time
+period should be shorter to be sensitive to the inevitable break in the trend. Whereas,
+in more volatile non-trending times, the moving average time period should be longer to
+filter out the choppiness. VIDYA uses the CMO indicator for it's internal volatility calculations.
+Both the VMA and the CMO period are adjustable.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.Volume.html">Volume</a></dt>
+      <dd><p>Volume is simply the number of shares (or contracts) traded during a specified time frame (e.g. hour, day, week,
+month, etc).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.VolumeDirection.html">VolumeDirection</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.VolumeMovingAverage.html">VolumeMovingAverage</a></dt>
+      <dd><p>The VOLMA (Volume Moving Average) plots an exponential moving average (EMA) of volume.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.VolumeOscillator.html">VolumeOscillator</a></dt>
+      <dd><p>The Volume Oscillator measures volume by calculating the difference of a fast and
+a slow moving average of volume. The Volume Oscillator can provide insight into the
+strength or weakness of a price trend. A positive value suggests there is enough
+market support to continue driving price activity in the direction of the current
+trend. A negative value suggests there is a lack of support, that prices may begin
+to become stagnant or reverse.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.VolumeRateOfChange.html">VolumeRateOfChange</a></dt>
+      <dd><p>The VROC (Volume Rate-of-Change) shows whether or not a volume trend is
+developing in either an up or down direction. It is similar to the ROC
+indicator, but is applied to volume instead.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.VolumeWeightedMovingAverage.html">VolumeWeightedMovingAverage</a></dt>
+      <dd><p>The VWMA (Volume-Weighted Moving Average) returns the volume-weighted moving average
+for the specified price series and period. VWMA is similar to a Simple Moving Average
+(SMA), but each bar of data is weighted by the bar's Volume. VWMA places more significance
+on the days with the largest volume and the least for the days with lowest volume for the period specified.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.WildersMovingAverage.html">WildersMovingAverage</a></dt>
+      <dd><p>Wilder's Moving Average. Also called Wilder's Smoothed Moving Average, this indicator is similar to the Exponential
+Moving Average.
+Compared to other moving averages, Wilders MA responds more slowly to price changes, where an n-period Wilder MA
+gives similar values to a 2n- period EMA.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.WilliamsPercentR.html">WilliamsPercentR</a></dt>
+      <dd><p>Williams %R, or just %R, is the current closing price in relation to the high and low of
+the past N days (for a given N). The value of this indicator fluctuats between -100 and 0.
+The symbol is said to be oversold when the oscillator is below -80%,
+and overbought when the oscillator is above -20%.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.ZeroLagExponentialMovingAverage.html">ZeroLagExponentialMovingAverage</a></dt>
+      <dd><p>The ZLEMA (Zero-Lag Exponential Moving Average) is an EMA variant that attempts to adjust for lag.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.ZigZag.html">ZigZag</a></dt>
+      <dd></dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.IPeriodedIndicator.html">IPeriodedIndicator</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.ISmoothedIndicator.html">ISmoothedIndicator</a></dt>
+      <dd></dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.CandlestickPattern.ChartPattern.html">CandlestickPattern.ChartPattern</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.MovingAverageType.html">MovingAverageType</a></dt>
+      <dd><p>Defines the different types of moving averages</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.ZigZag.PivotTypeEnum.html">ZigZag.PivotTypeEnum</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="FinScript.StdLib.Indicators.ZigZag.ZigZagCalculationMode.html">ZigZag.ZigZagCalculationMode</a></dt>
+      <dd><p>Must be in NinjaTrader.NinjaScript to be exported properly</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

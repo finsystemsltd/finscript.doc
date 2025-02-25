@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class VolumeDirection | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class VolumeDirection | FinScript ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinScript.StdLib.Indicators.VolumeDirection">
+
+
+
+  <h1 id="FinScript_StdLib_Indicators_VolumeDirection" data-uid="FinScript.StdLib.Indicators.VolumeDirection" class="text-break">
+Class VolumeDirection  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/Indicators/VolumeDirection.cs#lines-26"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinScript.html">FinScript</a>.<a class="xref" href="FinScript.StdLib.html">StdLib</a>.<a class="xref" href="FinScript.StdLib.Indicators.html">Indicators</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinScript.StdLib.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UnitLocalRes(NameProp = &quot;ScriptIndicatorNameVolumeUpDown&quot;, DescriptionProp = &quot;ScriptIndicatorDescriptionVolumeUpDown&quot;)]
+public class VolumeDirection : VisualIndicatorOnBars, IScriptEnvironmentAssigner, IStateProvider&lt;ScriptCalculationState&gt;, IInstrumentAssigner, IAccountAssigner, IAccountProvider, IInstrumentChangeNotify, IAccountChangeNotify, IScriptCalculationUnit&lt;IBarSeries&gt;, IChartIndicator, IComplexChartElement, IChartRenderable, IChartScriptCalculationUnit, IChartElement, IZOrderAssigner, IChartScaleJustificationsProvider, IChartFixedScaleProvider, IChartLevelProvider, IIndicator, IScriptCalculationUnit, IScriptUnit, INameDescriptionProvider, INameProvider, IPropertyDisplayInfoProvider, ICloneable, INullableInstrumentProvider, IInstrumentProvider, IDisposable, IChartBarsTypeVisibilityProvider, IScriptUnitOnBars, IScriptUnitOnSeries, IScriptUnitOnNone, IScriptUnitOnBarsAssignable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="FinScript.Code.ScriptUnit.html">ScriptUnit</a></div>
+      <div><a class="xref" href="FinScript.Code.ScriptUnit-1.html">ScriptUnit</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Script.ScriptCalculationState.html">ScriptCalculationState</a>&gt;</div>
+      <div><a class="xref" href="FinScript.Code.ScriptCalculationUnit.html">ScriptCalculationUnit</a></div>
+      <div><a class="xref" href="FinScript.Code.ScriptCalculationUnit-1.html">ScriptCalculationUnit</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarSeries.html">IBarSeries</a>&gt;</div>
+      <div><a class="xref" href="FinScript.Code.IndicatorBase-1.html">IndicatorBase</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarSeries.html">IBarSeries</a>&gt;</div>
+      <div><a class="xref" href="FinScript.Rendering.VisualIndicator-1.html">VisualIndicator</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarSeries.html">IBarSeries</a>&gt;</div>
+      <div><a class="xref" href="FinScript.Rendering.VisualIndicatorOnBars.html">VisualIndicatorOnBars</a></div>
+      <div><span class="xref">VolumeDirection</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IScriptEnvironmentAssigner.html">IScriptEnvironmentAssigner</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IStateProvider-1.html">IStateProvider</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Script.ScriptCalculationState.html">ScriptCalculationState</a>&gt;</div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentAssigner.html">IInstrumentAssigner</a></div>
+      <div><a class="xref" href="FinScript.Code.IAccountAssigner.html">IAccountAssigner</a></div>
+      <div><a class="xref" href="FinScript.Code.IAccountProvider.html">IAccountProvider</a></div>
+      <div><a class="xref" href="FinScript.Code.IInstrumentChangeNotify.html">IInstrumentChangeNotify</a></div>
+      <div><a class="xref" href="FinScript.Code.IAccountChangeNotify.html">IAccountChangeNotify</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IScriptCalculationUnit-1.html">IScriptCalculationUnit</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Data.IBarSeries.html">IBarSeries</a>&gt;</div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IChartIndicator.html">IChartIndicator</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.Chart.IComplexChartElement.html">IComplexChartElement</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.Chart.IChartRenderable.html">IChartRenderable</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.Chart.IChartScriptCalculationUnit.html">IChartScriptCalculationUnit</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartElement.html">IChartElement</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IZOrderAssigner.html">IZOrderAssigner</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.Chart.IChartScaleJustificationsProvider.html">IChartScaleJustificationsProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.Chart.IChartFixedScaleProvider.html">IChartFixedScaleProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.Chart.IChartLevelProvider.html">IChartLevelProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IIndicator.html">IIndicator</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IScriptCalculationUnit.html">IScriptCalculationUnit</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IScriptUnit.html">IScriptUnit</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.INameDescriptionProvider.html">INameDescriptionProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.INameProvider.html">INameProvider</a></div>
+      <div><span class="xref">IPropertyDisplayInfoProvider</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.INullableInstrumentProvider.html">INullableInstrumentProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentProvider.html">IInstrumentProvider</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.Chart.IChartBarsTypeVisibilityProvider.html">IChartBarsTypeVisibilityProvider</a></div>
+      <div><a class="xref" href="FinScript.Code.IScriptUnitOnBars.html">IScriptUnitOnBars</a></div>
+      <div><a class="xref" href="FinScript.Code.IScriptUnitOnSeries.html">IScriptUnitOnSeries</a></div>
+      <div><a class="xref" href="FinScript.Code.IScriptUnitOnNone.html">IScriptUnitOnNone</a></div>
+      <div><a class="xref" href="FinScript.Code.IScriptUnitOnBarsAssignable.html">IScriptUnitOnBarsAssignable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_Clone">VisualIndicator&lt;IBarSeries&gt;.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_Levels">VisualIndicator&lt;IBarSeries&gt;.Levels</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_IsAutoScale">VisualIndicator&lt;IBarSeries&gt;.IsAutoScale</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_FixedMinScaleValue">VisualIndicator&lt;IBarSeries&gt;.FixedMinScaleValue</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_FixedMaxScaleValue">VisualIndicator&lt;IBarSeries&gt;.FixedMaxScaleValue</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_IsVisible">VisualIndicator&lt;IBarSeries&gt;.IsVisible</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_CalculateMinMax_System_Int32_System_Int32_System_Double__System_Double__">VisualIndicator&lt;IBarSeries&gt;.CalculateMinMax(int, int, out double, out double)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_ChartBars">VisualIndicator&lt;IBarSeries&gt;.ChartBars</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_ChartViewport">VisualIndicator&lt;IBarSeries&gt;.ChartViewport</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_OnChartViewportChanging_FinSysPlatform_Domain_Graphics_Chart_IChartViewport_">VisualIndicator&lt;IBarSeries&gt;.OnChartViewportChanging(IChartViewport)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_OnChartViewportChanged">VisualIndicator&lt;IBarSeries&gt;.OnChartViewportChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_ChartPanel">VisualIndicator&lt;IBarSeries&gt;.ChartPanel</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_ChartControl">VisualIndicator&lt;IBarSeries&gt;.ChartControl</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_Render_FinSysPlatform_Domain_Graphics_Chart_Canvas_IChartControlCanvas_">VisualIndicator&lt;IBarSeries&gt;.Render(IChartControlCanvas)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_ZOrder">VisualIndicator&lt;IBarSeries&gt;.ZOrder</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_OnCalculateMinMax_System_Int32_System_Int32_System_Int32_System_Int32_System_Double__System_Double__">VisualIndicator&lt;IBarSeries&gt;.OnCalculateMinMax(int, int, int, int, ref double, ref double)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_OnRender_FinSysPlatform_Domain_Graphics_Chart_Canvas_IChartControlCanvas_">VisualIndicator&lt;IBarSeries&gt;.OnRender(IChartControlCanvas)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_AddLevel_System_String_System_Drawing_Color_System_Double_System_Boolean_">VisualIndicator&lt;IBarSeries&gt;.AddLevel(string, Color, double, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_AddLevel_System_String_FinSysPlatform_Domain_Graphics_Stroke_System_Double_System_Boolean_">VisualIndicator&lt;IBarSeries&gt;.AddLevel(string, Stroke, double, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_PlacementMode">VisualIndicator&lt;IBarSeries&gt;.PlacementMode</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_ValueAxisPosition">VisualIndicator&lt;IBarSeries&gt;.ValueAxisPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_DecimalPlaces">VisualIndicator&lt;IBarSeries&gt;.DecimalPlaces</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_ChartElements">VisualIndicator&lt;IBarSeries&gt;.ChartElements</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_AttendantUnits">VisualIndicator&lt;IBarSeries&gt;.AttendantUnits</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_SuperiorUnit">VisualIndicator&lt;IBarSeries&gt;.SuperiorUnit</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_OnSuperiorUnitChanging_FinSysPlatform_Domain_Script_Chart_IChartScriptCalculationUnit_">VisualIndicator&lt;IBarSeries&gt;.OnSuperiorUnitChanging(IChartScriptCalculationUnit)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_OnSuperiorUnitChanged">VisualIndicator&lt;IBarSeries&gt;.OnSuperiorUnitChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_DisplayName">VisualIndicator&lt;IBarSeries&gt;.DisplayName</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_ZOrderChanged">VisualIndicator&lt;IBarSeries&gt;.ZOrderChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.VisualIndicator-1.html#FinScript_Rendering_VisualIndicator_1_ChartBarsTypeVisibility">VisualIndicator&lt;IBarSeries&gt;.ChartBarsTypeVisibility</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.IndicatorBase-1.html#FinScript_Code_IndicatorBase_1_EntityTypeName">IndicatorBase&lt;IBarSeries&gt;.EntityTypeName</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit-1.html#FinScript_Code_ScriptCalculationUnit_1_Dispose_System_Boolean_">ScriptCalculationUnit&lt;IBarSeries&gt;.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit-1.html#FinScript_Code_ScriptCalculationUnit_1_Input">ScriptCalculationUnit&lt;IBarSeries&gt;.Input</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit-1.html#FinScript_Code_ScriptCalculationUnit_1_SetInput__0_">ScriptCalculationUnit&lt;IBarSeries&gt;.SetInput(IBarSeries)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit-1.html#FinScript_Code_ScriptCalculationUnit_1_IsInputInitialized">ScriptCalculationUnit&lt;IBarSeries&gt;.IsInputInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit-1.html#FinScript_Code_ScriptCalculationUnit_1_Start_FinSysPlatform_NetExtension_Misc_IReadiness_">ScriptCalculationUnit&lt;IBarSeries&gt;.Start(IReadiness)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit-1.html#FinScript_Code_ScriptCalculationUnit_1_GetOrCreateIndicator__1_System_Func___0_System_Boolean__System_Action___0__">ScriptCalculationUnit&lt;IBarSeries&gt;.GetOrCreateIndicator&lt;TIndicator&gt;(Func&lt;TIndicator, bool&gt;, Action&lt;TIndicator&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit-1.html#FinScript_Code_ScriptCalculationUnit_1_GetOrCreateIndicator__1">ScriptCalculationUnit&lt;IBarSeries&gt;.GetOrCreateIndicator&lt;TIndicator&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_Dispose">ScriptCalculationUnit.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_ToString">ScriptCalculationUnit.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_CalculateMode">ScriptCalculationUnit.CalculateMode</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_IsDiscontinuousCalculation">ScriptCalculationUnit.IsDiscontinuousCalculation</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_IsLazyCalculation">ScriptCalculationUnit.IsLazyCalculation</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_Plots">ScriptCalculationUnit.Plots</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_TickSize">ScriptCalculationUnit.TickSize</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_Precision">ScriptCalculationUnit.Precision</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_TradingHours">ScriptCalculationUnit.TradingHours</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AllValueSeries">ScriptCalculationUnit.AllValueSeries</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_ValueSeriesList">ScriptCalculationUnit.ValueSeriesList</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_Instrument">ScriptCalculationUnit.Instrument</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_InstrumentNotNull">ScriptCalculationUnit.InstrumentNotNull</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_IsMyInstrument_FinSysPlatform_Domain_Market_Instrument_">ScriptCalculationUnit.IsMyInstrument(Instrument)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_Account">ScriptCalculationUnit.Account</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_MasterSource">ScriptCalculationUnit.MasterSource</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_LockForRead">ScriptCalculationUnit.LockForRead()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_Terminate">ScriptCalculationUnit.Terminate()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_IsRealTimeBar_System_Int32_">ScriptCalculationUnit.IsRealTimeBar(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_IsRealTimeBar_FinScript_Code_CalculateContext_">ScriptCalculationUnit.IsRealTimeBar(CalculateContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_IsRealTime">ScriptCalculationUnit.IsRealTime</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_EnableRealTime">ScriptCalculationUnit.EnableRealTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_RunSynchronizedToDataFlow_System_Action_">ScriptCalculationUnit.RunSynchronizedToDataFlow(Action)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_CreateSeries__1_System_String_">ScriptCalculationUnit.CreateSeries&lt;T&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddValueSeries_System_String_">ScriptCalculationUnit.AddValueSeries(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddPlot_System_String_System_Drawing_Color_FinSysPlatform_Domain_Script_Rendering_PlotStyle_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddPlot(string, Color, PlotStyle, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddPlot_System_String_FinSysPlatform_Domain_Graphics_Stroke_FinSysPlatform_Domain_Script_Rendering_PlotStyle_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddPlot(string, Stroke, PlotStyle, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddLinePlot_System_String_FinSysPlatform_Domain_Graphics_Stroke_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddLinePlot(string, Stroke, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddLinePlot_System_String_System_Drawing_Color_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddLinePlot(string, Color, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddDigitalLinePlot_System_String_FinSysPlatform_Domain_Graphics_Stroke_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddDigitalLinePlot(string, Stroke, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddDigitalLinePlot_System_String_System_Drawing_Color_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddDigitalLinePlot(string, Color, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddPointPlot_System_String_FinSysPlatform_Domain_Graphics_Stroke_FinSysPlatform_Domain_Script_Rendering_PlotPointType_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddPointPlot(string, Stroke, PlotPointType, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddPointPlot_System_String_System_Drawing_Color_FinSysPlatform_Domain_Script_Rendering_PlotPointType_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddPointPlot(string, Color, PlotPointType, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddColumnPlot_System_String_FinSysPlatform_Domain_Graphics_Stroke_System_Drawing_Color_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddColumnPlot(string, Stroke, Color, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddColumnPlot_System_String_System_Drawing_Color_System_Drawing_Color_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddColumnPlot(string, Color, Color, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddColumnPlot_System_String_FinSysPlatform_Domain_Graphics_Stroke_System_Drawing_Color_System_Drawing_Color_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddColumnPlot(string, Stroke, Color, Color, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddColumnPlot_System_String_System_Drawing_Color_System_Drawing_Color_System_Drawing_Color_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddColumnPlot(string, Color, Color, Color, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddMountainPlot_System_String_FinSysPlatform_Domain_Graphics_Stroke_System_Drawing_Color_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddMountainPlot(string, Stroke, Color, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddMountainPlot_System_String_System_Drawing_Color_System_Drawing_Color_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddMountainPlot(string, Color, Color, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddMountainPlot_System_String_FinSysPlatform_Domain_Graphics_Stroke_System_Drawing_Color_System_Drawing_Color_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddMountainPlot(string, Stroke, Color, Color, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddMountainPlot_System_String_System_Drawing_Color_System_Drawing_Color_System_Drawing_Color_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddMountainPlot(string, Color, Color, Color, int, bool, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddColorizedPlot_System_String_FinSysPlatform_Domain_Graphics_Stroke_FinSysPlatform_Domain_Script_Rendering_PlotStyle_System_Int32_System_Boolean_System_Boolean_System_Boolean_">ScriptCalculationUnit.AddColorizedPlot(string, Stroke, PlotStyle, int, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddTimer_System_Int32_System_Action_">ScriptCalculationUnit.AddTimer(int, Action)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddTimer__1_System_Int32___0_System_Action___0__">ScriptCalculationUnit.AddTimer&lt;T&gt;(int, T, Action&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_SetAccount_FinScript_Acc_Account_">ScriptCalculationUnit.SetAccount(Account)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_OnSettingAccount_FinScript_Acc_Account_">ScriptCalculationUnit.OnSettingAccount(Account)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_OnSetAccount">ScriptCalculationUnit.OnSetAccount()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_SetInstrument_FinSysPlatform_Domain_Market_Instrument_">ScriptCalculationUnit.SetInstrument(Instrument)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_OnSetInstrument">ScriptCalculationUnit.OnSetInstrument()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_GetCurrentMarketData">ScriptCalculationUnit.GetCurrentMarketData()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_GetCurrentMarketAsk">ScriptCalculationUnit.GetCurrentMarketAsk()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_GetCurrentMarketBid">ScriptCalculationUnit.GetCurrentMarketBid()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_GetCurrentMarketLast">ScriptCalculationUnit.GetCurrentMarketLast()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_GetCurrentMarketTime">ScriptCalculationUnit.GetCurrentMarketTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_SubscribeToMarketData_FinScript_Code_ScriptCalculationUnit_TopBookMarketDataEventHandler_">ScriptCalculationUnit.SubscribeToMarketData(ScriptCalculationUnit.TopBookMarketDataEventHandler)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_SubscribeToMarketData_FinSysPlatform_Domain_Market_Instrument_FinScript_Code_ScriptCalculationUnit_TopBookMarketDataEventHandler_">ScriptCalculationUnit.SubscribeToMarketData(Instrument, ScriptCalculationUnit.TopBookMarketDataEventHandler)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_SubscribeToMarketDepth_FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventHandler_">ScriptCalculationUnit.SubscribeToMarketDepth(MarketDataEventHandler)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_SubscribeToMarketDepth_FinSysPlatform_Domain_Market_Providers_MarketData_MarketDataEventHandler_FinSysPlatform_Domain_Market_Instrument_">ScriptCalculationUnit.SubscribeToMarketDepth(MarketDataEventHandler, Instrument)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_ResetCalculation">ScriptCalculationUnit.ResetCalculation()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_InvalidateCalculation_System_Int32_">ScriptCalculationUnit.InvalidateCalculation(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_ForceCalculation">ScriptCalculationUnit.ForceCalculation()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_ForceCalculation_System_Int32_">ScriptCalculationUnit.ForceCalculation(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_OnInputChanged_FinSysPlatform_Domain_Market_Data_SeriesChangedEventArgs_">ScriptCalculationUnit.OnInputChanged(SeriesChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_OnEnvironmentInitialized">ScriptCalculationUnit.OnEnvironmentInitialized()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_Parent">ScriptCalculationUnit.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_GetChildren">ScriptCalculationUnit.GetChildren()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AddChild_FinScript_Code_ScriptCalculationUnit_">ScriptCalculationUnit.AddChild(ScriptCalculationUnit)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_FindChild__2___1_System_Func___0_System_Boolean__">ScriptCalculationUnit.FindChild&lt;TChild, TSeries&gt;(TSeries, Func&lt;TChild, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_GetOrCreateChild__2___1_System_Func___0_System_Boolean__System_Action___0__">ScriptCalculationUnit.GetOrCreateChild&lt;TChild, TSeries&gt;(TSeries, Func&lt;TChild, bool&gt;, Action&lt;TChild&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_Alert_System_String_System_String_System_String_">ScriptCalculationUnit.Alert(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_AccountChanged">ScriptCalculationUnit.AccountChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_InstrumentChanged">ScriptCalculationUnit.InstrumentChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_ShiftPriceByTicks_System_Double_System_Int32_">ScriptCalculationUnit.ShiftPriceByTicks(double, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnit.html#FinScript_Code_ScriptCalculationUnit_MirrorPrice_System_Double_System_Double_System_Double_">ScriptCalculationUnit.MirrorPrice(double, double, double)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit-1.html#FinScript_Code_ScriptUnit_1_State">ScriptUnit&lt;ScriptCalculationState&gt;.State</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit-1.html#FinScript_Code_ScriptUnit_1_RequestChangeState_System_Action_System_Action__0___">ScriptUnit&lt;ScriptCalculationState&gt;.RequestChangeState(Action&lt;Action&lt;ScriptCalculationState&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit-1.html#FinScript_Code_ScriptUnit_1_RequestChangeState_System_Action_System_Action__0__System_Collections_Generic_IReadOnlyCollection__0___">ScriptUnit&lt;ScriptCalculationState&gt;.RequestChangeState(Action&lt;Action&lt;ScriptCalculationState&gt;, IReadOnlyCollection&lt;ScriptCalculationState&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit-1.html#FinScript_Code_ScriptUnit_1_StateChanged">ScriptUnit&lt;ScriptCalculationState&gt;.StateChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Environment">ScriptUnit.Environment</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_SetEnvironment_FinSysPlatform_Domain_Script_IScriptEnvironment_">ScriptUnit.SetEnvironment(IScriptEnvironment)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_InstanceId">ScriptUnit.InstanceId</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_CloneSourceInstanceId">ScriptUnit.CloneSourceInstanceId</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Id">ScriptUnit.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_DeclaredProperties">ScriptUnit.DeclaredProperties</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Description">ScriptUnit.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Name">ScriptUnit.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Version">ScriptUnit.Version</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Copyright">ScriptUnit.Copyright</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Print_System_String_">ScriptUnit.Print(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_LogInfo_System_String_">ScriptUnit.LogInfo(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_LogWarning_System_String_">ScriptUnit.LogWarning(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_LogError_System_String_">ScriptUnit.LogError(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_OnCheckIfConfiguredProperly_System_Collections_Generic_List_System_String__">ScriptUnit.OnCheckIfConfiguredProperly(List&lt;string&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_CheckIfConfiguredProperly">ScriptUnit.CheckIfConfiguredProperly()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AccountBalanceEquity_FinScript_Code_IScriptUnitOnBars_">IndicatorExtensions.AccountBalanceEquity(IScriptUnitOnBars)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AccumulationDistribution_FinScript_Code_IScriptUnitOnBars_">IndicatorExtensions.AccumulationDistribution(IScriptUnitOnBars)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AdaptivePrizeZone_FinScript_Code_IScriptUnitOnBars_System_Double_System_Int32_">IndicatorExtensions.AdaptivePrizeZone(IScriptUnitOnBars, double, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Aroon_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.Aroon(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AroonOscillator_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.AroonOscillator(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AverageDirectionalIndex_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.AverageDirectionalIndex(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AverageDirectionalIndexRating_FinScript_Code_IScriptUnitOnBars_System_Int32_System_Int32_">IndicatorExtensions.AverageDirectionalIndexRating(IScriptUnitOnBars, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AverageTrueRange_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.AverageTrueRange(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BalanceOfPower_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.BalanceOfPower(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BarRange_FinScript_Code_IScriptUnitOnBars_">IndicatorExtensions.BarRange(IScriptUnitOnBars)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BarsDown_FinScript_Code_IScriptUnitOnBars_System_Int32_System_Boolean_System_Boolean_System_Boolean_">IndicatorExtensions.BarsDown(IScriptUnitOnBars, int, bool, bool, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BarsUp_FinScript_Code_IScriptUnitOnBars_System_Int32_System_Boolean_System_Boolean_System_Boolean_">IndicatorExtensions.BarsUp(IScriptUnitOnBars, int, bool, bool, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CandlestickPattern_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.CandlestickPattern(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ChaikinMoneyFlow_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.ChaikinMoneyFlow(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ChaikinOscillator_FinScript_Code_IScriptUnitOnBars_System_Int32_System_Int32_">IndicatorExtensions.ChaikinOscillator(IScriptUnitOnBars, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ChaikinVolatility_FinScript_Code_IScriptUnitOnBars_System_Int32_System_Int32_">IndicatorExtensions.ChaikinVolatility(IScriptUnitOnBars, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CommodityChannelIndex_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.CommodityChannelIndex(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CurrentDayOhl_FinScript_Code_IScriptUnitOnBars_">IndicatorExtensions.CurrentDayOhl(IScriptUnitOnBars)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DarvasBox_FinScript_Code_IScriptUnitOnBars_">IndicatorExtensions.DarvasBox(IScriptUnitOnBars)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DirectionalMovement_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.DirectionalMovement(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DirectionalMovementIndex_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.DirectionalMovementIndex(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DonchianChannel_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.DonchianChannel(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DoubleStochastics_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.DoubleStochastics(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_EaseOfMovement_FinScript_Code_IScriptUnitOnBars_System_Int32_System_Int32_">IndicatorExtensions.EaseOfMovement(IScriptUnitOnBars, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_HorizontalLine_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.HorizontalLine(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_KeltnerChannel_FinScript_Code_IScriptUnitOnBars_System_Double_System_Int32_">IndicatorExtensions.KeltnerChannel(IScriptUnitOnBars, double, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_KeyReversalDown_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.KeyReversalDown(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_KeyReversalUp_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.KeyReversalUp(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_MesaAdaptiveMovingAverage_FinScript_Code_IScriptUnitOnBars_System_Double_System_Double_">IndicatorExtensions.MesaAdaptiveMovingAverage(IScriptUnitOnBars, double, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_MoneyFlowIndex_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.MoneyFlowIndex(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_OnBalanceVolume_FinScript_Code_IScriptUnitOnBars_">IndicatorExtensions.OnBalanceVolume(IScriptUnitOnBars)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ParabolicSar_FinScript_Code_IScriptUnitOnBars_System_Double_System_Double_System_Double_">IndicatorExtensions.ParabolicSar(IScriptUnitOnBars, double, double, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_PriorDayOhlc_FinScript_Code_IScriptUnitOnBars_">IndicatorExtensions.PriorDayOhlc(IScriptUnitOnBars)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RelativeVolatilityIndex_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.RelativeVolatilityIndex(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Stochastic_FinScript_Code_IScriptUnitOnBars_System_Int32_System_Int32_System_Int32_">IndicatorExtensions.Stochastic(IScriptUnitOnBars, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_SuperTrend_FinScript_Code_IScriptUnitOnBars_System_Int32_System_Double_System_Boolean_">IndicatorExtensions.SuperTrend(IScriptUnitOnBars, int, double, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Swing_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.Swing(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_UltimateOscillator_FinScript_Code_IScriptUnitOnBars_System_Int32_System_Int32_System_Int32_">IndicatorExtensions.UltimateOscillator(IScriptUnitOnBars, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Volume_FinScript_Code_IScriptUnitOnBars_">IndicatorExtensions.Volume(IScriptUnitOnBars)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VolumeDirection_FinScript_Code_IScriptUnitOnBars_">IndicatorExtensions.VolumeDirection(IScriptUnitOnBars)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VolumeMovingAverage_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.VolumeMovingAverage(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VolumeOscillator_FinScript_Code_IScriptUnitOnBars_System_Int32_System_Int32_">IndicatorExtensions.VolumeOscillator(IScriptUnitOnBars, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VolumeRateOfChange_FinScript_Code_IScriptUnitOnBars_System_Int32_System_Int32_">IndicatorExtensions.VolumeRateOfChange(IScriptUnitOnBars, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VolumeWeightedMovingAverage_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.VolumeWeightedMovingAverage(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_WilliamsPercentR_FinScript_Code_IScriptUnitOnBars_System_Int32_">IndicatorExtensions.WilliamsPercentR(IScriptUnitOnBars, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ZigZag_FinScript_Code_IScriptUnitOnBars_FinScript_StdLib_Indicators_ZigZag_ZigZagCalculationMode_System_Double_System_Double_System_Int32_">IndicatorExtensions.ZigZag(IScriptUnitOnBars, ZigZag.ZigZagCalculationMode, double, double, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BuySellPressure_FinScript_Code_IScriptUnitOnNone_">IndicatorExtensions.BuySellPressure(IScriptUnitOnNone)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BuySellVolume_FinScript_Code_IScriptUnitOnNone_">IndicatorExtensions.BuySellVolume(IScriptUnitOnNone)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BollingerBands_FinScript_Code_IScriptUnitOnSeries_System_Double_System_Int32_FinScript_StdLib_Indicators_MovingAverageType_">IndicatorExtensions.BollingerBands(IScriptUnitOnSeries, double, int, MovingAverageType)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ChandeMomentumOscillator_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.ChandeMomentumOscillator(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DoubleExponentialMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.DoubleExponentialMovingAverage(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DynamicMomentumIndex_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.DynamicMomentumIndex(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ExponentialMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.ExponentialMovingAverage(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_FisherTransform_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.FisherTransform(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_HullMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.HullMovingAverage(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_KaufmanAdaptiveMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Int32_System_Int32_">IndicatorExtensions.KaufmanAdaptiveMovingAverage(IScriptUnitOnSeries, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_LinearRegression_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.LinearRegression(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_LinearWeightedMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.LinearWeightedMovingAverage(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Maximum_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.Maximum(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Minimum_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.Minimum(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Momentum_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.Momentum(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_MovingAverageConvergenceDivergence_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Int32_System_Int32_">IndicatorExtensions.MovingAverageConvergenceDivergence(IScriptUnitOnSeries, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_MovingAverageEnvelopes_FinScript_Code_IScriptUnitOnSeries_FinScript_StdLib_Indicators_MovingAverageType_System_Int32_System_Double_">IndicatorExtensions.MovingAverageEnvelopes(IScriptUnitOnSeries, MovingAverageType, int, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_PercentagePriceOscillator_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Int32_System_Int32_">IndicatorExtensions.PercentagePriceOscillator(IScriptUnitOnSeries, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_PolarizedFractalEfficiency_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Int32_">IndicatorExtensions.PolarizedFractalEfficiency(IScriptUnitOnSeries, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_PriceOscillator_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Int32_System_Int32_">IndicatorExtensions.PriceOscillator(IScriptUnitOnSeries, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RSquared_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.RSquared(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RateOfChange_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.RateOfChange(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RegressionChannel_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Double_">IndicatorExtensions.RegressionChannel(IScriptUnitOnSeries, int, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RelativeSpreadStrength_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Int32_System_Int32_">IndicatorExtensions.RelativeSpreadStrength(IScriptUnitOnSeries, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RelativeStrengthIndex_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Int32_">IndicatorExtensions.RelativeStrengthIndex(IScriptUnitOnSeries, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Sessions_FinScript_Code_IScriptUnitOnSeries_System_TimeSpan_System_TimeSpan_System_TimeSpan_">IndicatorExtensions.Sessions(IScriptUnitOnSeries, TimeSpan, TimeSpan, TimeSpan)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_SimpleMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.SimpleMovingAverage(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_SmoothedMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.SmoothedMovingAverage(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_StandardDeviation_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.StandardDeviation(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_StochasticRsi_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.StochasticRsi(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Sum_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.Sum(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_T3MovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Double_">IndicatorExtensions.T3MovingAverage(IScriptUnitOnSeries, int, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_TriangularMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.TriangularMovingAverage(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_TripleExponentialAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Int32_">IndicatorExtensions.TripleExponentialAverage(IScriptUnitOnSeries, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_TripleExponentialMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.TripleExponentialMovingAverage(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_TrueStrengthIndex_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Int32_">IndicatorExtensions.TrueStrengthIndex(IScriptUnitOnSeries, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VariableMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_System_Int32_">IndicatorExtensions.VariableMovingAverage(IScriptUnitOnSeries, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_WildersMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.WildersMovingAverage(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ZeroLagExponentialMovingAverage_FinScript_Code_IScriptUnitOnSeries_System_Int32_">IndicatorExtensions.ZeroLagExponentialMovingAverage(IScriptUnitOnSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnitExtensions.html#FinScript_Code_ScriptCalculationUnitExtensions_GetOrCreateIndicatorWithoutData__1_FinScript_Code_ScriptCalculationUnit_">ScriptCalculationUnitExtensions.GetOrCreateIndicatorWithoutData&lt;TIndicator&gt;(ScriptCalculationUnit)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnitExtensions.html#FinScript_Code_ScriptCalculationUnitExtensions_GetOrCreateIndicatorWithoutData__1_FinScript_Code_ScriptCalculationUnit_System_Func___0_System_Boolean__System_Action___0__">ScriptCalculationUnitExtensions.GetOrCreateIndicatorWithoutData&lt;TIndicator&gt;(ScriptCalculationUnit, Func&lt;TIndicator, bool&gt;, Action&lt;TIndicator&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnitExtensions.html#FinScript_Code_ScriptCalculationUnitExtensions_GetOrCreateIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">ScriptCalculationUnitExtensions.GetOrCreateIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, IBarSeries)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnitExtensions.html#FinScript_Code_ScriptCalculationUnitExtensions_GetOrCreateIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Func___0_System_Boolean__System_Action___0__">ScriptCalculationUnitExtensions.GetOrCreateIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, IBarSeries, Func&lt;TIndicator, bool&gt;, Action&lt;TIndicator&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnitExtensions.html#FinScript_Code_ScriptCalculationUnitExtensions_GetOrCreateIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeriesBase_">ScriptCalculationUnitExtensions.GetOrCreateIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, ISeriesBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnitExtensions.html#FinScript_Code_ScriptCalculationUnitExtensions_GetOrCreateIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeriesBase_System_Func___0_System_Boolean__System_Action___0__">ScriptCalculationUnitExtensions.GetOrCreateIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, ISeriesBase, Func&lt;TIndicator, bool&gt;, Action&lt;TIndicator&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnitExtensions.html#FinScript_Code_ScriptCalculationUnitExtensions_GetOrCreateIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__">ScriptCalculationUnitExtensions.GetOrCreateIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, ISeries&lt;double&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnitExtensions.html#FinScript_Code_ScriptCalculationUnitExtensions_GetOrCreateIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Func___0_System_Boolean__System_Action___0__">ScriptCalculationUnitExtensions.GetOrCreateIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, ISeries&lt;double&gt;, Func&lt;TIndicator, bool&gt;, Action&lt;TIndicator&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnitExtensions.html#FinScript_Code_ScriptCalculationUnitExtensions_GetOrCreateIndicator__2_FinScript_Code_ScriptCalculationUnit___1_">ScriptCalculationUnitExtensions.GetOrCreateIndicator&lt;TIndicator, TSeries&gt;(ScriptCalculationUnit, TSeries)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AccountBalanceEquity_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IndicatorExtensions.AccountBalanceEquity(ScriptCalculationUnit, IBarSeries)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AccumulationDistribution_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IndicatorExtensions.AccumulationDistribution(ScriptCalculationUnit, IBarSeries)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AdaptivePrizeZone_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Double_System_Int32_">IndicatorExtensions.AdaptivePrizeZone(ScriptCalculationUnit, IBarSeries, double, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Aroon_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.Aroon(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AroonOscillator_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.AroonOscillator(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AverageDirectionalIndex_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.AverageDirectionalIndex(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AverageDirectionalIndexRating_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Int32_">IndicatorExtensions.AverageDirectionalIndexRating(ScriptCalculationUnit, IBarSeries, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_AverageTrueRange_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.AverageTrueRange(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BalanceOfPower_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.BalanceOfPower(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BarRange_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IndicatorExtensions.BarRange(ScriptCalculationUnit, IBarSeries)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BarsDown_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Boolean_System_Boolean_System_Boolean_">IndicatorExtensions.BarsDown(ScriptCalculationUnit, IBarSeries, int, bool, bool, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BarsUp_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Boolean_System_Boolean_System_Boolean_">IndicatorExtensions.BarsUp(ScriptCalculationUnit, IBarSeries, int, bool, bool, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_BollingerBands_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Double_System_Int32_FinScript_StdLib_Indicators_MovingAverageType_">IndicatorExtensions.BollingerBands(ScriptCalculationUnit, ISeries&lt;double&gt;, double, int, MovingAverageType)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CandlestickPattern_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.CandlestickPattern(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ChaikinMoneyFlow_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.ChaikinMoneyFlow(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ChaikinOscillator_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Int32_">IndicatorExtensions.ChaikinOscillator(ScriptCalculationUnit, IBarSeries, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ChaikinVolatility_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Int32_">IndicatorExtensions.ChaikinVolatility(ScriptCalculationUnit, IBarSeries, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ChandeMomentumOscillator_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.ChandeMomentumOscillator(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CommodityChannelIndex_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.CommodityChannelIndex(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CreateMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__FinScript_StdLib_Indicators_MovingAverageType_System_Int32_">IndicatorExtensions.CreateMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, MovingAverageType, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CreatePeriodedIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.CreatePeriodedIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CreatePeriodedIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Func___0_System_Boolean__System_Action___0__">IndicatorExtensions.CreatePeriodedIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, IBarSeries, int, Func&lt;TIndicator, bool&gt;, Action&lt;TIndicator&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CreatePeriodedIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.CreatePeriodedIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CreatePeriodedIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Func___0_System_Boolean__System_Action___0__">IndicatorExtensions.CreatePeriodedIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, ISeries&lt;double&gt;, int, Func&lt;TIndicator, bool&gt;, Action&lt;TIndicator&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CreatePeriodedIndicator__2_FinScript_Code_ScriptCalculationUnit___1_System_Int32_">IndicatorExtensions.CreatePeriodedIndicator&lt;TIndicator, TSeries&gt;(ScriptCalculationUnit, TSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CreatePeriodedIndicator__2_FinScript_Code_ScriptCalculationUnit___1_System_Int32_System_Func___0_System_Boolean__System_Action___0__">IndicatorExtensions.CreatePeriodedIndicator&lt;TIndicator, TSeries&gt;(ScriptCalculationUnit, TSeries, int, Func&lt;TIndicator, bool&gt;, Action&lt;TIndicator&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CreateSmoothedIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.CreateSmoothedIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CreateSmoothedIndicator__1_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.CreateSmoothedIndicator&lt;TIndicator&gt;(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CreateSmoothedIndicator__2_FinScript_Code_ScriptCalculationUnit___1_System_Int32_">IndicatorExtensions.CreateSmoothedIndicator&lt;TIndicator, TSeries&gt;(ScriptCalculationUnit, TSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CreateSmoothedIndicator__2_FinScript_Code_ScriptCalculationUnit___1_System_Int32_System_Func___0_System_Boolean__System_Action___0__">IndicatorExtensions.CreateSmoothedIndicator&lt;TIndicator, TSeries&gt;(ScriptCalculationUnit, TSeries, int, Func&lt;TIndicator, bool&gt;, Action&lt;TIndicator&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_CurrentDayOhl_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IndicatorExtensions.CurrentDayOhl(ScriptCalculationUnit, IBarSeries)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DarvasBox_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IndicatorExtensions.DarvasBox(ScriptCalculationUnit, IBarSeries)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DirectionalMovement_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.DirectionalMovement(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DirectionalMovementIndex_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.DirectionalMovementIndex(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DonchianChannel_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.DonchianChannel(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DoubleExponentialMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.DoubleExponentialMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DoubleStochastics_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.DoubleStochastics(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_DynamicMomentumIndex_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.DynamicMomentumIndex(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_EaseOfMovement_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Int32_">IndicatorExtensions.EaseOfMovement(ScriptCalculationUnit, IBarSeries, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ExponentialMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.ExponentialMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_FisherTransform_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.FisherTransform(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_HorizontalLine_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeriesBase_System_Int32_">IndicatorExtensions.HorizontalLine(ScriptCalculationUnit, ISeriesBase, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_HullMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.HullMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_KaufmanAdaptiveMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Int32_System_Int32_">IndicatorExtensions.KaufmanAdaptiveMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_KeltnerChannel_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Double_System_Int32_">IndicatorExtensions.KeltnerChannel(ScriptCalculationUnit, IBarSeries, double, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_KeyReversalDown_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.KeyReversalDown(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_KeyReversalUp_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.KeyReversalUp(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_LinearRegression_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.LinearRegression(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_LinearWeightedMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.LinearWeightedMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Maximum_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.Maximum(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_MesaAdaptiveMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Double_System_Double_">IndicatorExtensions.MesaAdaptiveMovingAverage(ScriptCalculationUnit, IBarSeries, double, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Minimum_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.Minimum(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Momentum_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.Momentum(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_MoneyFlowIndex_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.MoneyFlowIndex(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_MovingAverageConvergenceDivergence_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Int32_System_Int32_">IndicatorExtensions.MovingAverageConvergenceDivergence(ScriptCalculationUnit, ISeries&lt;double&gt;, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_MovingAverageEnvelopes_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__FinScript_StdLib_Indicators_MovingAverageType_System_Int32_System_Double_">IndicatorExtensions.MovingAverageEnvelopes(ScriptCalculationUnit, ISeries&lt;double&gt;, MovingAverageType, int, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_OnBalanceVolume_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IndicatorExtensions.OnBalanceVolume(ScriptCalculationUnit, IBarSeries)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ParabolicSar_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Double_System_Double_System_Double_">IndicatorExtensions.ParabolicSar(ScriptCalculationUnit, IBarSeries, double, double, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_PercentagePriceOscillator_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Int32_System_Int32_">IndicatorExtensions.PercentagePriceOscillator(ScriptCalculationUnit, ISeries&lt;double&gt;, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_PolarizedFractalEfficiency_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Int32_">IndicatorExtensions.PolarizedFractalEfficiency(ScriptCalculationUnit, ISeries&lt;double&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_PriceOscillator_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Int32_System_Int32_">IndicatorExtensions.PriceOscillator(ScriptCalculationUnit, ISeries&lt;double&gt;, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_PriorDayOhlc_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IndicatorExtensions.PriorDayOhlc(ScriptCalculationUnit, IBarSeries)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RSquared_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.RSquared(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RateOfChange_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.RateOfChange(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RegressionChannel_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Double_">IndicatorExtensions.RegressionChannel(ScriptCalculationUnit, ISeries&lt;double&gt;, int, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RelativeSpreadStrength_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Int32_System_Int32_">IndicatorExtensions.RelativeSpreadStrength(ScriptCalculationUnit, ISeries&lt;double&gt;, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RelativeStrengthIndex_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Int32_">IndicatorExtensions.RelativeStrengthIndex(ScriptCalculationUnit, ISeries&lt;double&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_RelativeVolatilityIndex_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.RelativeVolatilityIndex(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Sessions_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_TimeSpan_System_TimeSpan_System_TimeSpan_">IndicatorExtensions.Sessions(ScriptCalculationUnit, ISeries&lt;double&gt;, TimeSpan, TimeSpan, TimeSpan)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_SimpleMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.SimpleMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_SmoothedMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.SmoothedMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_StandardDeviation_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.StandardDeviation(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Stochastic_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Int32_System_Int32_">IndicatorExtensions.Stochastic(ScriptCalculationUnit, IBarSeries, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_StochasticRsi_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.StochasticRsi(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Sum_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.Sum(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_SuperTrend_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Double_System_Boolean_">IndicatorExtensions.SuperTrend(ScriptCalculationUnit, IBarSeries, int, double, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Swing_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.Swing(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_T3MovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Double_">IndicatorExtensions.T3MovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_TriangularMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.TriangularMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_TripleExponentialAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Int32_">IndicatorExtensions.TripleExponentialAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_TripleExponentialMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.TripleExponentialMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_TrueStrengthIndex_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Int32_">IndicatorExtensions.TrueStrengthIndex(ScriptCalculationUnit, ISeries&lt;double&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_UltimateOscillator_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Int32_System_Int32_">IndicatorExtensions.UltimateOscillator(ScriptCalculationUnit, IBarSeries, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VariableMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_System_Int32_">IndicatorExtensions.VariableMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_Volume_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IndicatorExtensions.Volume(ScriptCalculationUnit, IBarSeries)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VolumeDirection_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IndicatorExtensions.VolumeDirection(ScriptCalculationUnit, IBarSeries)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VolumeMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.VolumeMovingAverage(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VolumeOscillator_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Int32_">IndicatorExtensions.VolumeOscillator(ScriptCalculationUnit, IBarSeries, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VolumeRateOfChange_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_System_Int32_">IndicatorExtensions.VolumeRateOfChange(ScriptCalculationUnit, IBarSeries, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_VolumeWeightedMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.VolumeWeightedMovingAverage(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_WildersMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.WildersMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_WilliamsPercentR_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_System_Int32_">IndicatorExtensions.WilliamsPercentR(ScriptCalculationUnit, IBarSeries, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ZeroLagExponentialMovingAverage_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__System_Int32_">IndicatorExtensions.ZeroLagExponentialMovingAverage(ScriptCalculationUnit, ISeries&lt;double&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.StdLib.Indicators.IndicatorExtensions.html#FinScript_StdLib_Indicators_IndicatorExtensions_ZigZag_FinScript_Code_ScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_FinScript_StdLib_Indicators_ZigZag_ZigZagCalculationMode_System_Double_System_Double_System_Int32_">IndicatorExtensions.ZigZag(ScriptCalculationUnit, IBarSeries, ZigZag.ZigZagCalculationMode, double, double, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.ScriptCalculationUnitExtensions.html#FinScript_Code_ScriptCalculationUnitExtensions_RegisterInvalidState__1___0_System_String_">ScriptCalculationUnitExtensions.RegisterInvalidState&lt;T&gt;(T, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartElementExtensions.html#FinSysPlatform_Domain_Graphics_Chart_IChartElementExtensions_GetChartControl_FinSysPlatform_Domain_Graphics_Chart_IChartElement_">IChartElementExtensions.GetChartControl(IChartElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartElementExtensions.html#FinSysPlatform_Domain_Graphics_Chart_IChartElementExtensions_IsDependent_FinSysPlatform_Domain_Graphics_Chart_IChartElement_">IChartElementExtensions.IsDependent(IChartElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartElementExtensions.html#FinSysPlatform_Domain_Graphics_Chart_IChartElementExtensions_IsHidden_FinSysPlatform_Domain_Graphics_Chart_IChartElement_">IChartElementExtensions.IsHidden(IChartElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptCalculationUnitExtensions.html#FinScript_Code_IScriptCalculationUnitExtensions_EqualsInput_FinSysPlatform_Domain_Script_IScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeriesBase_">IScriptCalculationUnitExtensions.EqualsInput(IScriptCalculationUnit, ISeriesBase?)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptCalculationUnitExtensions.html#FinScript_Code_IScriptCalculationUnitExtensions_EqualsInputMasterSource_FinSysPlatform_Domain_Script_IScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeriesMasterSource_">IScriptCalculationUnitExtensions.EqualsInputMasterSource(IScriptCalculationUnit, ISeriesMasterSource?)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptCalculationUnitExtensions.html#FinScript_Code_IScriptCalculationUnitExtensions_FindPlotDirectPropertyInfo_FinSysPlatform_Domain_Script_IScriptCalculationUnit_FinSysPlatform_Domain_Script_Rendering_IPlot_">IScriptCalculationUnitExtensions.FindPlotDirectPropertyInfo(IScriptCalculationUnit, IPlot)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptCalculationUnitExtensions.html#FinScript_Code_IScriptCalculationUnitExtensions_FindPlotForSourceSeries_FinSysPlatform_Domain_Script_IScriptCalculationUnit_FinSysPlatform_Domain_Market_Data_ISeries_System_Double__">IScriptCalculationUnitExtensions.FindPlotForSourceSeries(IScriptCalculationUnit, ISeries&lt;double&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptUnitExtensions.html#FinScript_Code_IScriptUnitExtensions_CopyDeclaredPropertiesTo_FinSysPlatform_Domain_Script_IScriptUnit_FinSysPlatform_Domain_Script_IScriptUnit_">IScriptUnitExtensions.CopyDeclaredPropertiesTo(IScriptUnit, IScriptUnit)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptUnitExtensions.html#FinScript_Code_IScriptUnitExtensions_DeclaredPropertiesEqual_FinSysPlatform_Domain_Script_IScriptUnit_FinSysPlatform_Domain_Script_IScriptUnit_">IScriptUnitExtensions.DeclaredPropertiesEqual(IScriptUnit, IScriptUnit)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptUnitExtensions.html#FinScript_Code_IScriptUnitExtensions_SetInputFromBars_FinSysPlatform_Domain_Script_IScriptUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IScriptUnitExtensions.SetInputFromBars(IScriptUnit, IBarSeries)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinScript_StdLib_Indicators_VolumeDirection__ctor_" data-uid="FinScript.StdLib.Indicators.VolumeDirection.#ctor*"></a>
+
+  <h3 id="FinScript_StdLib_Indicators_VolumeDirection__ctor" data-uid="FinScript.StdLib.Indicators.VolumeDirection.#ctor">
+  VolumeDirection()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/Indicators/VolumeDirection.cs#lines-34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VolumeDirection()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinScript_StdLib_Indicators_VolumeDirection_DownVolume_" data-uid="FinScript.StdLib.Indicators.VolumeDirection.DownVolume*"></a>
+
+  <h3 id="FinScript_StdLib_Indicators_VolumeDirection_DownVolume" data-uid="FinScript.StdLib.Indicators.VolumeDirection.DownVolume">
+  DownVolume
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/Indicators/VolumeDirection.cs#lines-71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public ISeries&lt;double&gt; DownVolume { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinScript_StdLib_Indicators_VolumeDirection_UpVolume_" data-uid="FinScript.StdLib.Indicators.VolumeDirection.UpVolume*"></a>
+
+  <h3 id="FinScript_StdLib_Indicators_VolumeDirection_UpVolume" data-uid="FinScript.StdLib.Indicators.VolumeDirection.UpVolume">
+  UpVolume
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/Indicators/VolumeDirection.cs#lines-74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public ISeries&lt;double&gt; UpVolume { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeries-1.html">ISeries</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinScript_StdLib_Indicators_VolumeDirection_OnCalculate_" data-uid="FinScript.StdLib.Indicators.VolumeDirection.OnCalculate*"></a>
+
+  <h3 id="FinScript_StdLib_Indicators_VolumeDirection_OnCalculate_FinScript_Code_CalculateContext_" data-uid="FinScript.StdLib.Indicators.VolumeDirection.OnCalculate(FinScript.Code.CalculateContext)">
+  OnCalculate(CalculateContext)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/Indicators/VolumeDirection.cs#lines-52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnCalculate(CalculateContext ctx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctx</code> <a class="xref" href="FinScript.Code.CalculateContext.html">CalculateContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_StdLib_Indicators_VolumeDirection_OnStateChanged_" data-uid="FinScript.StdLib.Indicators.VolumeDirection.OnStateChanged*"></a>
+
+  <h3 id="FinScript_StdLib_Indicators_VolumeDirection_OnStateChanged" data-uid="FinScript.StdLib.Indicators.VolumeDirection.OnStateChanged">
+  OnStateChanged()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/Indicators/VolumeDirection.cs#lines-43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnStateChanged()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/Indicators/VolumeDirection.cs#lines-26" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

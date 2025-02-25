@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BarGridRepresenter.Item | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BarGridRepresenter.Item | FinScript ">
+      
+      <meta name="description" content="Item of collection">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item" class="text-break">
+Class BarGridRepresenter.Item  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-56"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Representers.html">Representers</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Representers.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Item of collection</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BarGridRepresenter.Item : BaseGridRepresenterIndexedItem, INotifyPropertyChanged, ITimedEntity</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NotificationObject</span></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.Representers.Grids.BaseGridRepresenterIndexedItem.html">BaseGridRepresenterIndexedItem</a></div>
+      <div><span class="xref">BarGridRepresenter.Item</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.ITimedEntity.html">ITimedEntity</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Representers.Grids.BaseGridRepresenterIndexedItem.html#FinSysPlatform_Domain_Market_Representers_Grids_BaseGridRepresenterIndexedItem_Index">BaseGridRepresenterIndexedItem.Index</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Representers.Grids.BaseGridRepresenterIndexedItem.html#FinSysPlatform_Domain_Market_Representers_Grids_BaseGridRepresenterIndexedItem_VisualIndex">BaseGridRepresenterIndexedItem.VisualIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="FinSysPlatform.Domain.Market.Representers.Grids.BaseGridRepresenterIndexedItem.html#FinSysPlatform_Domain_Market_Representers_Grids_BaseGridRepresenterIndexedItem_VisualIndexOrder">BaseGridRepresenterIndexedItem.VisualIndexOrder</a>
+    </div>
+    <div>
+      <span class="xref">NotificationObject.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">NotificationObject.OnPropertyChangedSubscribed()</span>
+    </div>
+    <div>
+      <span class="xref">NotificationObject.OnPropertyChangedUnsubscribed()</span>
+    </div>
+    <div>
+      <span class="xref">NotificationObject.IsCalculatedPropertiesEnabled</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">NotificationObject.SetProperty&lt;T&gt;(ref T, T, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">NotificationObject.SetProperty&lt;T&gt;(ref T, T, string[], string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">NotificationObject.OnPropertyChanged(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">NotificationObject.OnPropertyChanging(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">NotificationObject.RaisePropertyChanged(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item__ctor_" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item__ctor_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Timeframe_FinSysPlatform_Domain_Market_Bar_System_Int32_" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.#ctor(FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.Timeframe,FinSysPlatform.Domain.Market.Bar,System.Int32)">
+  Item(Instrument?, Timeframe, Bar, int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.html">BarGridRepresenter.Item</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Item(Instrument? instrument, Timeframe timeframe, Bar bar, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>timeframe</code> <a class="xref" href="FinSysPlatform.Domain.Market.Timeframe.html">Timeframe</a></dt>
+    <dd></dd>
+    <dt><code>bar</code> <a class="xref" href="FinSysPlatform.Domain.Market.Bar.html">Bar</a></dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_AsBar_" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.AsBar*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_AsBar" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.AsBar">
+  AsBar
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts itself to <a class="xref" href="FinSysPlatform.Domain.Market.Bar.html">Bar</a> type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Bar AsBar { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Bar.html">Bar</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_CustomTimeFormat_" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.CustomTimeFormat*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_CustomTimeFormat" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.CustomTimeFormat">
+  CustomTimeFormat
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A custom format for time, <a class="xref" href="FinSysPlatform.Domain.Market.Representers.BarTimeRepresenter.html#FinSysPlatform_Domain_Market_Representers_BarTimeRepresenter_CustomFormat">CustomFormat</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? CustomTimeFormat { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_Instrument_" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.Instrument*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_Instrument" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.Instrument">
+  Instrument
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instrument</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instrument? Instrument { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualClose_" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualClose*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualClose" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualClose">
+  VisualClose
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The close price of the bar</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Close&quot;, Order = 5)]
+[ColumnWidth(1, ColumnWidthUnit.Star)]
+[VisibleByDefault]
+public PriceRepresenter VisualClose { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Representers.PriceRepresenter.html">PriceRepresenter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualHigh_" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualHigh*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualHigh" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualHigh">
+  VisualHigh
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The highest price of the bar</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;High&quot;, Order = 3)]
+[ColumnWidth(1, ColumnWidthUnit.Star)]
+[VisibleByDefault]
+public PriceRepresenter VisualHigh { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Representers.PriceRepresenter.html">PriceRepresenter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualLow_" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualLow*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualLow" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualLow">
+  VisualLow
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The lowest price of the bar</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Low&quot;, Order = 4)]
+[ColumnWidth(1, ColumnWidthUnit.Star)]
+[VisibleByDefault]
+public PriceRepresenter VisualLow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Representers.PriceRepresenter.html">PriceRepresenter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualOpen_" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualOpen*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualOpen" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualOpen">
+  VisualOpen
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Open price of the bar</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Open&quot;, Order = 2)]
+[ColumnWidth(1, ColumnWidthUnit.Star)]
+[VisibleByDefault]
+public PriceRepresenter VisualOpen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Representers.PriceRepresenter.html">PriceRepresenter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualTime_" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualTime*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualTime" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualTime">
+  VisualTime
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Time of the bar</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Time&quot;, Order = 1)]
+[ColumnWidth(2, ColumnWidthUnit.Star)]
+[VisibleByDefault]
+public BarTimeRepresenter VisualTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Representers.BarTimeRepresenter.html">BarTimeRepresenter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualVolume_" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualVolume*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Representers_Grids_BarGridRepresenter_Item_VisualVolume" data-uid="FinSysPlatform.Domain.Market.Representers.Grids.BarGridRepresenter.Item.VisualVolume">
+  VisualVolume
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Volume of the bar</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Volume&quot;, Order = 6)]
+[ColumnWidth(1, ColumnWidthUnit.Star)]
+[VisibleByDefault]
+public QuantityRepresenter VisualVolume { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Representers.QuantityRepresenter.html">QuantityRepresenter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Representers/Grids/BarGridRepresenter.cs#lines-56" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

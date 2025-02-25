@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OrderExtensions | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OrderExtensions | FinScript ">
+      
+      <meta name="description" content="Extension methods for">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.OrderExtensions">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_OrderExtensions" data-uid="FinSysPlatform.Domain.Market.OrderExtensions" class="text-break">
+Class OrderExtensions  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-26"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public static class OrderExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">OrderExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_GetCreationTimeSafe_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetCreationTimeSafe*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_GetCreationTimeSafe_FinSysPlatform_Domain_Market_Order_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetCreationTimeSafe(FinSysPlatform.Domain.Market.Order)">
+  GetCreationTimeSafe(Order)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns either <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_CreateTime">CreateTime</a> (when available) or <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_LocalCreateTime">LocalCreateTime</a> converted to broker time zone</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DateTime GetCreationTimeSafe(this Order order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_GetExpectedFillPrice_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetExpectedFillPrice*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_GetExpectedFillPrice_FinSysPlatform_Domain_Market_Order_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetExpectedFillPrice(FinSysPlatform.Domain.Market.Order)">
+  GetExpectedFillPrice(Order)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns order price, <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_LimitPrice">LimitPrice</a> for limit or MIT order (<a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_Limit">Limit</a>, <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_MarketIfTouched">MarketIfTouched</a>)
+or <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_StopPrice">StopPrice</a> for stop order (<a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_Stop">Stop</a>)
+For <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_StopLimit">StopLimit</a> the returned price is limit price</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double GetExpectedFillPrice(this Order order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p><a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_StopLimit">StopLimit</a> or <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_LimitPrice">LimitPrice</a> or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.nan">NaN</a> if order type is not supposed to have price (for example, market order)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_GetFullDescription_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetFullDescription*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_GetFullDescription_FinSysPlatform_Domain_Market_Order_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetFullDescription(FinSysPlatform.Domain.Market.Order)">
+  GetFullDescription(Order?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Composes the string which describes the order maximally</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetFullDescription(this Order? order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_GetOrderTypeAsString_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetOrderTypeAsString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_GetOrderTypeAsString_FinSysPlatform_Domain_Market_IOrderBasicParameters_System_Boolean_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetOrderTypeAsString(FinSysPlatform.Domain.Market.IOrderBasicParameters,System.Boolean)">
+  GetOrderTypeAsString(IOrderBasicParameters, bool)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns string representation of <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_OrderType">OrderType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetOrderTypeAsString(this IOrderBasicParameters o, bool aShortForm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>o</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+    <dt><code>aShortForm</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, then order types will be represented in a short form (LMT, STP etc)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_GetParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetParameters*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_GetParameters_FinSysPlatform_Domain_Market_Order_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetParameters(FinSysPlatform.Domain.Market.Order)">
+  GetParameters(Order)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a collection of user-specified parameters of the order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static INamedParameters GetParameters(this Order order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">INamedParameters</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_GetPriceAsString_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetPriceAsString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_GetPriceAsString_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetPriceAsString(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  GetPriceAsString(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats order price
+Result depends on Order.OrderType:</p>
+<ul>
+<li><a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_StopPrice">StopPrice</a> is used for <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_Stop">Stop</a></li>
+<li><a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_LimitPrice">LimitPrice</a> is used for <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_OrderType">OrderType</a></li>
+<li><a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_StopPrice">StopPrice</a> and <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_LimitPrice">LimitPrice</a> are used for <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_StopLimit">StopLimit</a></li>
+<li>for other types it returns empty string</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetPriceAsString(this IOrderBasicParameters o)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>o</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_GetRemainingQuantityToFill_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetRemainingQuantityToFill*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_GetRemainingQuantityToFill_FinSysPlatform_Domain_Market_Order_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetRemainingQuantityToFill(FinSysPlatform.Domain.Market.Order)">
+  GetRemainingQuantityToFill(Order)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns remaining quantity to fill (a difference between <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_Quantity">Quantity</a> and <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_FilledQuantity">FilledQuantity</a>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quantity GetRemainingQuantityToFill(this Order order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_GetShortDescription_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetShortDescription*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_GetShortDescription_FinSysPlatform_Domain_Market_IOrderBasicParameters_System_Boolean_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetShortDescription(FinSysPlatform.Domain.Market.IOrderBasicParameters,System.Boolean)">
+  GetShortDescription(IOrderBasicParameters, bool)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns short description of the order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetShortDescription(this IOrderBasicParameters order, bool includeInstrument)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+    <dt><code>includeInstrument</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_GetTradeActionAsString_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetTradeActionAsString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_GetTradeActionAsString_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.GetTradeActionAsString(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  GetTradeActionAsString(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns display name of <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_TradeAction">TradeAction</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetTradeActionAsString(this IOrderBasicParameters o)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>o</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsActivePendingOrder_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsActivePendingOrder*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsActivePendingOrder_FinSysPlatform_Domain_Market_Order_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsActivePendingOrder(FinSysPlatform.Domain.Market.Order)">
+  IsActivePendingOrder(Order)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if specified order is <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsPendingOrder_FinSysPlatform_Domain_Market_IOrderBasicParameters_">IsPendingOrder(IOrderBasicParameters)</a> and it is still active (not <a class="xref" href="FinSysPlatform.Domain.Market.OrderExtensions.html#FinSysPlatform_Domain_Market_OrderExtensions_IsTerminated_FinSysPlatform_Domain_Market_IOrderLifeTimeParameters_">IsTerminated(IOrderLifeTimeParameters)</a>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsActivePendingOrder(this Order order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsBuy_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsBuy*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsBuy_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsBuy(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  IsBuy(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if specified order has <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_TradeAction">TradeAction</a> equal to <a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html#FinSysPlatform_Domain_Market_TradeAction_Buy">Buy</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsBuy(this IOrderBasicParameters order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsLimit_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsLimit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsLimit_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsLimit(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  IsLimit(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if specified order has <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_OrderType">OrderType</a> equal to <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_Limit">Limit</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsLimit(this IOrderBasicParameters order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsLimitPriceSet_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsLimitPriceSet*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsLimitPriceSet_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsLimitPriceSet(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  IsLimitPriceSet(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if the limit price(<a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_LimitPrice">LimitPrice</a>, <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html#FinSysPlatform_Domain_Market_IOrderBasicParameters_LimitPrice">LimitPrice</a>) is set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsLimitPriceSet(this IOrderBasicParameters order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsMarket_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsMarket*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsMarket_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsMarket(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  IsMarket(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if specified order has <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_OrderType">OrderType</a> equal to <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_Market">Market</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsMarket(this IOrderBasicParameters order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsMarketIfTouched_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsMarketIfTouched*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsMarketIfTouched_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsMarketIfTouched(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  IsMarketIfTouched(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if specified order has <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_OrderType">OrderType</a> equal to <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_MarketIfTouched">MarketIfTouched</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsMarketIfTouched(this IOrderBasicParameters order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsPendingOrder_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsPendingOrder*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsPendingOrder_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsPendingOrder(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  IsPendingOrder(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if specified order belongs to <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_Limit">Limit</a>,<a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_Stop">Stop</a>, <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_StopLimit">StopLimit</a>, <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_MarketIfTouched">MarketIfTouched</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsPendingOrder(this IOrderBasicParameters order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsSell_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsSell*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsSell_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsSell(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  IsSell(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if specified order has <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_TradeAction">TradeAction</a> equal to <a class="xref" href="FinSysPlatform.Domain.Market.TradeAction.html#FinSysPlatform_Domain_Market_TradeAction_Sell">Sell</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsSell(this IOrderBasicParameters order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsStop_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsStop*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsStop_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsStop(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  IsStop(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if specified order has <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_OrderType">OrderType</a> equal to <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_Stop">Stop</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsStop(this IOrderBasicParameters order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsStopLimit_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsStopLimit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsStopLimit_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsStopLimit(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  IsStopLimit(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if specified order has <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_OrderType">OrderType</a> equal to <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_StopLimit">StopLimit</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsStopLimit(this IOrderBasicParameters order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsStopPriceSet_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsStopPriceSet*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsStopPriceSet_FinSysPlatform_Domain_Market_IOrderBasicParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsStopPriceSet(FinSysPlatform.Domain.Market.IOrderBasicParameters)">
+  IsStopPriceSet(IOrderBasicParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if the stop price(<a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_StopPrice">StopPrice</a>, <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html#FinSysPlatform_Domain_Market_IOrderBasicParameters_StopPrice">StopPrice</a>) is set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsStopPriceSet(this IOrderBasicParameters order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderBasicParameters.html">IOrderBasicParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_OrderExtensions_IsTerminated_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsTerminated*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_OrderExtensions_IsTerminated_FinSysPlatform_Domain_Market_IOrderLifeTimeParameters_" data-uid="FinSysPlatform.Domain.Market.OrderExtensions.IsTerminated(FinSysPlatform.Domain.Market.IOrderLifeTimeParameters)">
+  IsTerminated(IOrderLifeTimeParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Used to determine if the an order's OrderState is considered as terminal and no longer active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsTerminated(this IOrderLifeTimeParameters order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderLifeTimeParameters.html">IOrderLifeTimeParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/OrderExtensions.cs#lines-26" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

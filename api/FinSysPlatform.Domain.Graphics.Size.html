@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct Size | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct Size | FinScript ">
+      
+      <meta name="description" content="Size - A value type which defined a size in terms of non-negative width and height">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Graphics.Size">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Graphics_Size" data-uid="FinSysPlatform.Domain.Graphics.Size" class="text-break">
+Struct Size  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Graphics.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Size - A value type which defined a size in terms of non-negative width and height</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public struct Size : IFormattable</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size__ctor_" data-uid="FinSysPlatform.Domain.Graphics.Size.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size__ctor_System_Double_System_Double_" data-uid="FinSysPlatform.Domain.Graphics.Size.#ctor(System.Double,System.Double)">
+  Size(double, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor which sets the size's initial values.  Width and Height must be non-negative</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Size(double width, double height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>double - The initial Width</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>double - THe initial Height</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_Height_" data-uid="FinSysPlatform.Domain.Graphics.Size.Height*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_Height" data-uid="FinSysPlatform.Domain.Graphics.Size.Height">
+  Height
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Height - Default is 0, must be non-negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Height { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_IsEmpty_" data-uid="FinSysPlatform.Domain.Graphics.Size.IsEmpty*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_IsEmpty" data-uid="FinSysPlatform.Domain.Graphics.Size.IsEmpty">
+  IsEmpty
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if size has zero <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html#FinSysPlatform_Domain_Graphics_Size_Width">Width</a> OR zero <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html#FinSysPlatform_Domain_Graphics_Size_Height">Height</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmpty { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_Width_" data-uid="FinSysPlatform.Domain.Graphics.Size.Width*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_Width" data-uid="FinSysPlatform.Domain.Graphics.Size.Width">
+  Width
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Width - Default is 0, must be non-negative</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Width { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_Equals_" data-uid="FinSysPlatform.Domain.Graphics.Size.Equals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_Equals_FinSysPlatform_Domain_Graphics_Size_" data-uid="FinSysPlatform.Domain.Graphics.Size.Equals(FinSysPlatform.Domain.Graphics.Size)">
+  Equals(Size)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Equals - compares this Size with the passed in object.  In this equality
+Double.NaN is equal to itself, unlike in numeric equality.
+Note that double values can acquire error when operated upon, such that
+an exact comparison between two values which
+are logically equal may fail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Size value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd><p>The Size to compare to &quot;this&quot;</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>bool - true if &quot;value&quot; is equal to &quot;this&quot;.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_Equals_" data-uid="FinSysPlatform.Domain.Graphics.Size.Equals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_Equals_FinSysPlatform_Domain_Graphics_Size_FinSysPlatform_Domain_Graphics_Size_" data-uid="FinSysPlatform.Domain.Graphics.Size.Equals(FinSysPlatform.Domain.Graphics.Size,FinSysPlatform.Domain.Graphics.Size)">
+  Equals(Size, Size)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares two Size instances for object equality.  In this equality
+Double.NaN is equal to itself, unlike in numeric equality.
+Note that double values can acquire error when operated upon, such that
+an exact comparison between two values which
+are logically equal may fail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Equals(Size size1, Size size2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd><p>The first Size to compare</p>
+</dd>
+    <dt><code>size2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd><p>The second Size to compare</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>bool - true if the two Size instances are exactly equal, false otherwise</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_Equals_" data-uid="FinSysPlatform.Domain.Graphics.Size.Equals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_Equals_System_Object_" data-uid="FinSysPlatform.Domain.Graphics.Size.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Equals - compares this Size with the passed in object.  In this equality
+Double.NaN is equal to itself, unlike in numeric equality.
+Note that double values can acquire error when operated upon, such that
+an exact comparison between two values which
+are logically equal may fail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare to &quot;this&quot;</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>bool - true if the object is an instance of Size and if it's equal to &quot;this&quot;.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_GetHashCode_" data-uid="FinSysPlatform.Domain.Graphics.Size.GetHashCode*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_GetHashCode" data-uid="FinSysPlatform.Domain.Graphics.Size.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the HashCode for this Size</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>int - the HashCode for this Size</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_ToString_" data-uid="FinSysPlatform.Domain.Graphics.Size.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_ToString" data-uid="FinSysPlatform.Domain.Graphics.Size.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a string representation of this object based on the current culture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string representation of this object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_ToString_" data-uid="FinSysPlatform.Domain.Graphics.Size.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_ToString_System_IFormatProvider_" data-uid="FinSysPlatform.Domain.Graphics.Size.ToString(System.IFormatProvider)">
+  ToString(IFormatProvider)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a string representation of this object based on the IFormatProvider
+passed in.  If the provider is null, the CurrentCulture is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString(IFormatProvider provider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string representation of this object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_op_Equality_" data-uid="FinSysPlatform.Domain.Graphics.Size.op_Equality*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_op_Equality_FinSysPlatform_Domain_Graphics_Size_FinSysPlatform_Domain_Graphics_Size_" data-uid="FinSysPlatform.Domain.Graphics.Size.op_Equality(FinSysPlatform.Domain.Graphics.Size,FinSysPlatform.Domain.Graphics.Size)">
+  operator ==(Size, Size)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares two Size instances for exact equality.
+Note that double values can acquire error when operated upon, such that
+an exact comparison between two values which are logically equal may fail.
+Furthermore, using this equality operator, Double.NaN is not equal to itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Size size1, Size size2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd><p>The first Size to compare</p>
+</dd>
+    <dt><code>size2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd><p>The second Size to compare</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>bool - true if the two Size instances are exactly equal, false otherwise</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_op_Explicit_" data-uid="FinSysPlatform.Domain.Graphics.Size.op_Explicit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_op_Explicit_FinSysPlatform_Domain_Graphics_Size__FinSysPlatform_Domain_Graphics_Point" data-uid="FinSysPlatform.Domain.Graphics.Size.op_Explicit(FinSysPlatform.Domain.Graphics.Size)~FinSysPlatform.Domain.Graphics.Point">
+  explicit operator Point(Size)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Explicit conversion to Point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator Point(Size size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd><p>Size - the Size to convert to a Point</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Point.html">Point</a></dt>
+    <dd><p>Point - A Point equal to this Size</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Graphics_Size_op_Inequality_" data-uid="FinSysPlatform.Domain.Graphics.Size.op_Inequality*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Graphics_Size_op_Inequality_FinSysPlatform_Domain_Graphics_Size_FinSysPlatform_Domain_Graphics_Size_" data-uid="FinSysPlatform.Domain.Graphics.Size.op_Inequality(FinSysPlatform.Domain.Graphics.Size,FinSysPlatform.Domain.Graphics.Size)">
+  operator !=(Size, Size)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares two Size instances for exact inequality.
+Note that double values can acquire error when operated upon, such that
+an exact comparison between two values which are logically equal may fail.
+Furthermore, using this equality operator, Double.NaN is not equal to itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Size size1, Size size2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size1</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd><p>The first Size to compare</p>
+</dd>
+    <dt><code>size2</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd><p>The second Size to compare</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>bool - true if the two Size instances are exactly unequal, false otherwise</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Graphics/Size.cs#lines-8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

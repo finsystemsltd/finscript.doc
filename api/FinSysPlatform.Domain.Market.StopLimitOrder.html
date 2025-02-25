@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class StopLimitOrder | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class StopLimitOrder | FinScript ">
+      
+      <meta name="description" content="Stop/limit (stop loss/take profit) attached to position">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.StopLimitOrder">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_StopLimitOrder" data-uid="FinSysPlatform.Domain.Market.StopLimitOrder" class="text-break">
+Class StopLimitOrder  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/StopLimitOrder.cs#lines-25"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Stop/limit (stop loss/take profit) attached to position</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StopLimitOrder : IStopLossTakeProfitSubmissionParameters</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">StopLimitOrder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IStopLossTakeProfitSubmissionParameters.html">IStopLossTakeProfitSubmissionParameters</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="FinSysPlatform_Domain_Market_StopLimitOrder_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>In general, this is a particular case of <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a>. In classic trade model, there is no built-in stop loss or take profit for position
+This must be managed by opening a couple orders linked by OCO: Stop market for SL and Limit for TP.
+For pending order, in classic model, you can create a couple of if-done orders linked by OCO.
+See details about if-done orders :/
+<a href="http://www.investorwords.com/18234/if_done_order.html">http://www.investorwords.com/18234/if_done_order.html</a>
+<a href="https://support.exante.eu/hc/en-us/articles/360034819871-Conditional-Orders-One-Cancels-the-Other-and-If-Done">https://support.exante.eu/hc/en-us/articles/360034819871-Conditional-Orders-One-Cancels-the-Other-and-If-Done</a>
+For convenience, we provide a shortcut to work with SL and TP by providing a reference from position to the order which is considered as a SL or TP
+Pay attention that this class does not have a direct reference to <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a>, only to its id. This is because such orders are available only after position
+open. When you create a pending order with SL and TP (<a class="xref" href="FinSysPlatform.Domain.Market.IOrderSubmissionParameters.html#FinSysPlatform_Domain_Market_IOrderSubmissionParameters_StopLossParameters">StopLossParameters</a> and <a class="xref" href="FinSysPlatform.Domain.Market.IOrderSubmissionParameters.html#FinSysPlatform_Domain_Market_IOrderSubmissionParameters_TakeProfitParameters">TakeProfitParameters</a>)
+a result order can have only the ids of future if-done orders, but really those order do not exist until main order is filled
+In general action chain looks this way:</p>
+<ol>
+<li>Client submits an order and sets stop loss and take profit orders via <a class="xref" href="FinSysPlatform.Domain.Market.IOrderSubmissionParameters.html">IOrderSubmissionParameters</a></li>
+<li>Broker creates 3 orders: this (main) order and 2 if-done &quot;frozen&quot; orders which do not exist yet but their <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_OrderId">OrderId</a> is already generated</li>
+<li>As soon as main order fills, &quot;frozen&quot; if-done is activated</li>
+</ol>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_StopLimitOrder__ctor_" data-uid="FinSysPlatform.Domain.Market.StopLimitOrder.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_StopLimitOrder__ctor_System_String_System_Double_" data-uid="FinSysPlatform.Domain.Market.StopLimitOrder.#ctor(System.String,System.Double)">
+  StopLimitOrder(string?, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/StopLimitOrder.cs#lines-61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="FinSysPlatform.Domain.Market.StopLimitOrder.html">StopLimitOrder</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StopLimitOrder(string? orderId, double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>orderId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_StopLimitOrder_OrderId_" data-uid="FinSysPlatform.Domain.Market.StopLimitOrder.OrderId*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_StopLimitOrder_OrderId" data-uid="FinSysPlatform.Domain.Market.StopLimitOrder.OrderId">
+  OrderId
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/StopLimitOrder.cs#lines-44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Order id, assigned by broker
+Initially, when parent order is just created/submitted but still not accepted by broker, it is null
+After broker is accepted the order (<a class="xref" href="FinSysPlatform.Domain.Market.OrderState.html#FinSysPlatform_Domain_Market_OrderState_Accepted">Accepted</a>) it will assign id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? OrderId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_StopLimitOrder_Price_" data-uid="FinSysPlatform.Domain.Market.StopLimitOrder.Price*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_StopLimitOrder_Price" data-uid="FinSysPlatform.Domain.Market.StopLimitOrder.Price">
+  Price
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/StopLimitOrder.cs#lines-34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A shortcut to price of order
+For stop loss this is <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_StopPrice">StopPrice</a>
+For take profit this is <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_LimitPrice">LimitPrice</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Price { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_StopLimitOrder_ParametersEqual_" data-uid="FinSysPlatform.Domain.Market.StopLimitOrder.ParametersEqual*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_StopLimitOrder_ParametersEqual_FinSysPlatform_Domain_Market_StopLimitOrder_" data-uid="FinSysPlatform.Domain.Market.StopLimitOrder.ParametersEqual(FinSysPlatform.Domain.Market.StopLimitOrder)">
+  ParametersEqual(StopLimitOrder)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/StopLimitOrder.cs#lines-51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares all attributes of order and returns true if all of them are equal</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ParametersEqual(StopLimitOrder other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="FinSysPlatform.Domain.Market.StopLimitOrder.html">StopLimitOrder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_StopLimitOrder_ToString_" data-uid="FinSysPlatform.Domain.Market.StopLimitOrder.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_StopLimitOrder_ToString" data-uid="FinSysPlatform.Domain.Market.StopLimitOrder.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/StopLimitOrder.cs#lines-73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that represents the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/StopLimitOrder.cs#lines-25" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

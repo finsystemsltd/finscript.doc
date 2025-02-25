@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class IBrokerageProviderExtensions | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class IBrokerageProviderExtensions | FinScript ">
+      
+      <meta name="description" content="Extension methods for">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions" class="text-break">
+Class IBrokerageProviderExtensions  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Providers.html">Providers</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.html">Brokerage</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Extension methods for <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class IBrokerageProviderExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">IBrokerageProviderExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_CancelOrder_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.CancelOrder*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_CancelOrder_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Order_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.CancelOrder(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Order)">
+  CancelOrder(IBrokerageProvider, Order)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cancels already submitted order. This is a particular case of <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_CancelOrders_FinSysPlatform_Domain_Market_Order___">CancelOrders(Order[])</a>
+See description and details in <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_CancelOrders_FinSysPlatform_Domain_Market_Order___">CancelOrders(Order[])</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static OrderOperationResult CancelOrder(this IBrokerageProvider provider, Order order)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.OrderOperationResult.html">OrderOperationResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_ChangePositionStopLoss_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.ChangePositionStopLoss*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_ChangePositionStopLoss_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Position_FinSysPlatform_Domain_Market_IStopLossTakeProfitSubmissionParameters_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.ChangePositionStopLoss(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Position,FinSysPlatform.Domain.Market.IStopLossTakeProfitSubmissionParameters)">
+  ChangePositionStopLoss(IBrokerageProvider, Position, IStopLossTakeProfitSubmissionParameters?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A short form of <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_ChangePositionStopLossTakeProfit_FinSysPlatform_Domain_Market_Position_FinSysPlatform_Domain_Market_IStopLossTakeProfitSubmissionParameters_FinSysPlatform_Domain_Market_IStopLossTakeProfitSubmissionParameters_">ChangePositionStopLossTakeProfit(Position, IStopLossTakeProfitSubmissionParameters?, IStopLossTakeProfitSubmissionParameters?)</a> for changing the Stop Loss only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PositionOperationResult ChangePositionStopLoss(this IBrokerageProvider provider, Position position, IStopLossTakeProfitSubmissionParameters? stopLoss)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>position</code> <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></dt>
+    <dd></dd>
+    <dt><code>stopLoss</code> <a class="xref" href="FinSysPlatform.Domain.Market.IStopLossTakeProfitSubmissionParameters.html">IStopLossTakeProfitSubmissionParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.PositionOperationResult.html">PositionOperationResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_ChangePositionStopLossTakeProfit_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.ChangePositionStopLossTakeProfit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_ChangePositionStopLossTakeProfit_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Position_FinSysPlatform_Domain_Market_Providers_Brokerage_ChangePositionSlTpParams_FinSysPlatform_Domain_Market_Providers_Brokerage_ChangePositionSlTpParams_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.ChangePositionStopLossTakeProfit(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Position,FinSysPlatform.Domain.Market.Providers.Brokerage.ChangePositionSlTpParams,FinSysPlatform.Domain.Market.Providers.Brokerage.ChangePositionSlTpParams)">
+  ChangePositionStopLossTakeProfit(IBrokerageProvider, Position, ChangePositionSlTpParams, ChangePositionSlTpParams)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A variation of <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_ChangePositionStopLossTakeProfit_FinSysPlatform_Domain_Market_Position_FinSysPlatform_Domain_Market_IStopLossTakeProfitSubmissionParameters_FinSysPlatform_Domain_Market_IStopLossTakeProfitSubmissionParameters_">ChangePositionStopLossTakeProfit(Position, IStopLossTakeProfitSubmissionParameters?, IStopLossTakeProfitSubmissionParameters?)</a> with parameters defined by <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.ChangePositionSlTpParams.html">ChangePositionSlTpParams</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PositionOperationResult ChangePositionStopLossTakeProfit(this IBrokerageProvider provider, Position position, ChangePositionSlTpParams stopLossParams, ChangePositionSlTpParams takeProfitParams)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>position</code> <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></dt>
+    <dd></dd>
+    <dt><code>stopLossParams</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.ChangePositionSlTpParams.html">ChangePositionSlTpParams</a></dt>
+    <dd></dd>
+    <dt><code>takeProfitParams</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.ChangePositionSlTpParams.html">ChangePositionSlTpParams</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.PositionOperationResult.html">PositionOperationResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_ChangePositionTakeProfit_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.ChangePositionTakeProfit*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_ChangePositionTakeProfit_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Position_FinSysPlatform_Domain_Market_IStopLossTakeProfitSubmissionParameters_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.ChangePositionTakeProfit(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Position,FinSysPlatform.Domain.Market.IStopLossTakeProfitSubmissionParameters)">
+  ChangePositionTakeProfit(IBrokerageProvider, Position, IStopLossTakeProfitSubmissionParameters?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A short form of <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_ChangePositionStopLossTakeProfit_FinSysPlatform_Domain_Market_Position_FinSysPlatform_Domain_Market_IStopLossTakeProfitSubmissionParameters_FinSysPlatform_Domain_Market_IStopLossTakeProfitSubmissionParameters_">ChangePositionStopLossTakeProfit(Position, IStopLossTakeProfitSubmissionParameters?, IStopLossTakeProfitSubmissionParameters?)</a> for changing the take profit only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PositionOperationResult ChangePositionTakeProfit(this IBrokerageProvider provider, Position position, IStopLossTakeProfitSubmissionParameters? takeProfit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>position</code> <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></dt>
+    <dd></dd>
+    <dt><code>takeProfit</code> <a class="xref" href="FinSysPlatform.Domain.Market.IStopLossTakeProfitSubmissionParameters.html">IStopLossTakeProfitSubmissionParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.PositionOperationResult.html">PositionOperationResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_DetachFromAllEvents_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.DetachFromAllEvents*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_DetachFromAllEvents_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_System_Object_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.DetachFromAllEvents(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,System.Object)">
+  DetachFromAllEvents(IBrokerageProvider, object)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes specified <code class="paramref">eventListener</code> from all events: <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_ExecutionsUpdatedEvent">ExecutionsUpdatedEvent</a>, <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_ExecutionsResetEvent">ExecutionsResetEvent</a> etc</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DetachFromAllEvents(this IBrokerageProvider brokerageProvider, object eventListener)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>eventListener</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_EstimateInstrumentMargin_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.EstimateInstrumentMargin*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_EstimateInstrumentMargin_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_SignedQuantity_System_Double_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.EstimateInstrumentMargin(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.SignedQuantity,System.Double)">
+  EstimateInstrumentMargin(IBrokerageProvider, Instrument, SignedQuantity, double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates approximately the margin needed to enter new position for specified instrument
+Does not perform any queries to broker server and thus provides a high speed of calculations
+Also it does not take into account current open positions.
+Pay attention that client-side calculations may differ from real margin calculations provided by broker
+To get more precise margin calculation <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_SimulateTrade_FinSysPlatform_Domain_Market_Providers_Brokerage_TradeSimulationParameters_">SimulateTrade(TradeSimulationParameters)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double EstimateInstrumentMargin(this IBrokerageProvider brokerageProvider, Instrument instrument, SignedQuantity signedQuantity, double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>signedQuantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>Negative values mean sell, positive - buy</p>
+</dd>
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetAlignedQuantity_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetAlignedQuantity*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetAlignedQuantity_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_InstrumentKey_FinSysPlatform_Domain_Market_Quantity_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetAlignedQuantity(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.InstrumentKey,FinSysPlatform.Domain.Market.Quantity)">
+  GetAlignedQuantity(IBrokerageProvider, InstrumentKey, Quantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets aligned quantity <code class="paramref">quantity</code> to <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_GetInstrumentQuantityStep_FinSysPlatform_Domain_Market_InstrumentKey_">GetInstrumentQuantityStep(InstrumentKey)</a>.
+For example, the quantity step is 10, and the specified quantity is 15, then the result will be aligned to the nearest value 10
+The method returns the same quantity if it is already aligned to the step or if the step is undefined (<a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html#FinSysPlatform_Domain_Market_Quantity_NaN">NaN</a> or <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html#FinSysPlatform_Domain_Market_Quantity_Zero">Zero</a>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quantity GetAlignedQuantity(this IBrokerageProvider provider, InstrumentKey instrumentKey, Quantity quantity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrumentKey</code> <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentKey.html">InstrumentKey</a></dt>
+    <dd></dd>
+    <dt><code>quantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd><p>Aligned quantity <code class="paramref">quantity</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Quantity.html">Quantity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetAllNettingPositions_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetAllNettingPositions*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetAllNettingPositions_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetAllNettingPositions(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider)">
+  GetAllNettingPositions(IBrokerageProvider)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns summarized position for all instruments
+<a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetNettingPosition_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_">GetNettingPosition(IBrokerageProvider, Instrument)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;KeyValuePair&lt;Instrument, AggregatedPosition&gt;&gt; GetAllNettingPositions(this IBrokerageProvider brokerageProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a>, <a class="xref" href="FinSysPlatform.Domain.Market.AggregatedPosition.html">AggregatedPosition</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentLeverage_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetInstrumentLeverage*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentLeverage_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_SignedQuantity_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetInstrumentLeverage(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.SignedQuantity)">
+  GetInstrumentLeverage(IBrokerageProvider, Instrument, SignedQuantity)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Some brokers may variate a leverage depending on instrument, trade direction or demanded quantity
+By default, if there are no special rules, <a class="xref" href="FinSysPlatform.Domain.Market.IBrokerAccountData.html#FinSysPlatform_Domain_Market_IBrokerAccountData_Leverage">Leverage</a> is returned</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double GetInstrumentLeverage(this IBrokerageProvider brokerageProvider, Instrument instrument, SignedQuantity signedQuantity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>signedQuantity</code> <a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>Negative values mean sell, positive - buy</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentMinTradeDistance_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetInstrumentMinTradeDistance*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentMinTradeDistance_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_OrderType_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetInstrumentMinTradeDistance(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.OrderType)">
+  GetInstrumentMinTradeDistance(IBrokerageProvider, Instrument, OrderType)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a minimal distance from current price to set stop or limit order
+<a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_GetInstrumentMinTradeDistancePoints_FinSysPlatform_Domain_Market_InstrumentKey_FinSysPlatform_Domain_Market_OrderType_">GetInstrumentMinTradeDistancePoints(InstrumentKey, OrderType)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double GetInstrumentMinTradeDistance(this IBrokerageProvider provider, Instrument instrument, OrderType orderType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>orderType</code> <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html">OrderType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentMinTradeDistancePoints_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetInstrumentMinTradeDistancePoints*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentMinTradeDistancePoints_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_OrderType_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetInstrumentMinTradeDistancePoints(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.OrderType)">
+  GetInstrumentMinTradeDistancePoints(IBrokerageProvider, Instrument, OrderType)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a minimal distance in points from the current price to set stop or limit order
+For example, with min stop size =0, you can set Buy Stop order at Ask price and Sell Stop order at Bid price
+But usually, providers do not allow to set orders right on the current price</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long GetInstrumentMinTradeDistancePoints(this IBrokerageProvider brokerageProvider, Instrument instrument, OrderType orderType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>orderType</code> <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html">OrderType</a></dt>
+    <dd><p>Type of order to use. Pay attention that sending <a class="xref" href="FinSysPlatform.Domain.Market.OrderType.html#FinSysPlatform_Domain_Market_OrderType_Market">Market</a> does not make sense. Market order always has distance =0</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentMinTradeDistancePoints_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_OrderType__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To convert points to price use <a class="xref" href="FinSysPlatform.Domain.Market.InstrumentDefinition.html#FinSysPlatform_Domain_Market_InstrumentDefinition_PointSize">PointSize</a></p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentPointValue_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetInstrumentPointValue*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentPointValue_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Providers_Brokerage_CalculatePointValueCurrency_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetInstrumentPointValue(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Instrument,FinSysPlatform.Domain.Market.Providers.Brokerage.CalculatePointValueCurrency)">
+  GetInstrumentPointValue(IBrokerageProvider, Instrument, CalculatePointValueCurrency)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the point cost of specified instrument denominated in</p>
+<ul>
+<li>instrument base currency (<a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.CalculatePointValueCurrency.html#FinSysPlatform_Domain_Market_Providers_Brokerage_CalculatePointValueCurrency_Instrument">Instrument</a>), <a class="xref" href="FinSysPlatform.Domain.Market.PointValue.html#FinSysPlatform_Domain_Market_PointValue_Currency">Currency</a></li>
+<li>account currency (<a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.CalculatePointValueCurrency.html#FinSysPlatform_Domain_Market_Providers_Brokerage_CalculatePointValueCurrency_Account">Account</a>), <a class="xref" href="FinSysPlatform.Domain.Market.IBrokerAccountData.html#FinSysPlatform_Domain_Market_IBrokerAccountData_Currency">Currency</a>
+If it is impossible to calculate point value (for example, currency rates are not received yet), returns <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.nan">NaN</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_GetInstrumentPointValue_FinSysPlatform_Domain_Market_InstrumentKey_System_String_">GetInstrumentPointValue(InstrumentKey, string)</a></li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double GetInstrumentPointValue(this IBrokerageProvider brokerageProvider, Instrument instrument, CalculatePointValueCurrency currency)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>currency</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.CalculatePointValueCurrency.html">CalculatePointValueCurrency</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentPointValue_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetInstrumentPointValue*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentPointValue_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_System_String_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetInstrumentPointValue(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Instrument,System.String)">
+  GetInstrumentPointValue(IBrokerageProvider, Instrument, string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the point cost of specified instrument denominated in <code class="paramref">baseCurrency</code>
+<a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetInstrumentPointValue_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_FinSysPlatform_Domain_Market_Providers_Brokerage_CalculatePointValueCurrency_">GetInstrumentPointValue(IBrokerageProvider, Instrument, CalculatePointValueCurrency)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double GetInstrumentPointValue(this IBrokerageProvider brokerageProvider, Instrument instrument, string baseCurrency)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>baseCurrency</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetNettingPosition_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetNettingPosition*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetNettingPosition_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetNettingPosition(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Instrument)">
+  GetNettingPosition(IBrokerageProvider, Instrument)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the summarized position for specified instrument
+If the account trading mode is netting, then only one position for instrument is possible and in this case summarized position is equal to this sole position
+But for hedging accounts, there may be many positions for instrument</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AggregatedPosition GetNettingPosition(this IBrokerageProvider brokerageProvider, Instrument instrument)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.AggregatedPosition.html">AggregatedPosition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetNettingPositionQuantity_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetNettingPositionQuantity*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetNettingPositionQuantity_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.GetNettingPositionQuantity(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Instrument)">
+  GetNettingPositionQuantity(IBrokerageProvider, Instrument)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the summarized position quantity for specified instrument, negative result means short position (<a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html#FinSysPlatform_Domain_Market_MarketPosition_Sell">Sell</a>),
+0 means flat position (<a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html#FinSysPlatform_Domain_Market_MarketPosition_Flat">Flat</a>) and positive value means long position (<a class="xref" href="FinSysPlatform.Domain.Market.MarketPosition.html#FinSysPlatform_Domain_Market_MarketPosition_Buy">Buy</a>)
+If the account trading mode is netting, then only one position for instrument is possible and in this case summarized position is equal to this sole position
+But for hedging accounts, there may be many positions for instrument
+<a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetNettingPosition_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_">GetNettingPosition(IBrokerageProvider, Instrument)</a> for getting the detailed information about summarized position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedQuantity GetNettingPositionQuantity(this IBrokerageProvider brokerageProvider, Instrument instrument)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.SignedQuantity.html">SignedQuantity</a></dt>
+    <dd><p>Negative value for short result position, positive value for long result position and zero for flat position</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetNettingPositionQuantity_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method is a bit faster than <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_GetNettingPosition_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_">GetNettingPosition(IBrokerageProvider, Instrument)</a> because it calculates only result quantity, without price</p>
+</div>
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_ModifyOrder_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.ModifyOrder*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_ModifyOrder_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Order_FinSysPlatform_Domain_Market_IOrderModificationParameters_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.ModifyOrder(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Order,FinSysPlatform.Domain.Market.IOrderModificationParameters)">
+  ModifyOrder(IBrokerageProvider, Order, IOrderModificationParameters)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Modifies (or replaces, depending on broker) specified order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static OrderOperationResult ModifyOrder(this IBrokerageProvider provider, Order order, IOrderModificationParameters parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderModificationParameters.html">IOrderModificationParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.OrderOperationResult.html">OrderOperationResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_SetOrderDescription_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.SetOrderDescription*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_SetOrderDescription_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Order_System_String_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.SetOrderDescription(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Order,System.String)">
+  SetOrderDescription(IBrokerageProvider, Order, string?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A variation of <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_SetOrderInfo_FinSysPlatform_Domain_Market_Order_System_String_System_String_FinSysPlatform_Domain_Market_InitiatorType_System_String_System_String_">SetOrderInfo(Order, string?, string?, InitiatorType, string?, string?)</a> to change <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_Description">Description</a> only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetOrderDescription(this IBrokerageProvider brokerageProvider, Order order, string? description)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></dt>
+    <dd><p>Order to update</p>
+</dd>
+    <dt><code>description</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>New order description (<a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_Description">Description</a>)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_SetOrderGroupName_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.SetOrderGroupName*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_SetOrderGroupName_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Order_System_String_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.SetOrderGroupName(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Order,System.String)">
+  SetOrderGroupName(IBrokerageProvider, Order, string?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A variation of <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_SetOrderInfo_FinSysPlatform_Domain_Market_Order_System_String_System_String_FinSysPlatform_Domain_Market_InitiatorType_System_String_System_String_">SetOrderInfo(Order, string?, string?, InitiatorType, string?, string?)</a> to change <a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_GroupName">GroupName</a> only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetOrderGroupName(this IBrokerageProvider brokerageProvider, Order order, string? groupName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>order</code> <a class="xref" href="FinSysPlatform.Domain.Market.Order.html">Order</a></dt>
+    <dd><p>Order to update</p>
+</dd>
+    <dt><code>groupName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>New order group name (<a class="xref" href="FinSysPlatform.Domain.Market.Order.html#FinSysPlatform_Domain_Market_Order_GroupName">GroupName</a>)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_SubmitOrder_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.SubmitOrder*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProviderExtensions_SubmitOrder_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_IOrderSubmissionParameters_FinSysPlatform_Domain_Market_Providers_Brokerage_OrderSubmissionContext_" data-uid="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProviderExtensions.SubmitOrder(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.IOrderSubmissionParameters,FinSysPlatform.Domain.Market.Providers.Brokerage.OrderSubmissionContext)">
+  SubmitOrder(IBrokerageProvider, IOrderSubmissionParameters, OrderSubmissionContext?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Submits order to broker. See details <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html#FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_SubmitOrders_System_Collections_Generic_IReadOnlyList_FinSysPlatform_Domain_Market_IOrderSubmissionParameters__FinSysPlatform_Domain_Market_Providers_Brokerage_OrderSubmissionContext_">SubmitOrders(IReadOnlyList&lt;IOrderSubmissionParameters&gt;, OrderSubmissionContext?)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static OrderOperationResult SubmitOrder(this IBrokerageProvider provider, IOrderSubmissionParameters submissionParameters, OrderSubmissionContext? submissionContext = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>submissionParameters</code> <a class="xref" href="FinSysPlatform.Domain.Market.IOrderSubmissionParameters.html">IOrderSubmissionParameters</a></dt>
+    <dd></dd>
+    <dt><code>submissionContext</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.OrderSubmissionContext.html">OrderSubmissionContext</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.OrderOperationResult.html">OrderOperationResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Providers/Brokerage/IBrokerageProviderExtensions.cs#lines-16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TradeHistoryBuilder | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TradeHistoryBuilder | FinScript ">
+      
+      <meta name="description" content="Builds trades (entry, exit, realized profit/loss) from the collection of">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder">
+
+
+
+  <h1 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder" class="text-break">
+Class TradeHistoryBuilder  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-29"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Market.html">Market</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.html">Misc</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Market.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Builds trades (entry, exit, realized profit/loss) from the collection of <a class="xref" href="FinSysPlatform.Domain.Market.Execution.html">Execution</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TradeHistoryBuilder : IInstrumentProvider, IBrokerageProviderProvider</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TradeHistoryBuilder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IInstrumentProvider.html">IInstrumentProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.IBrokerageProviderProvider.html">IBrokerageProviderProvider</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Currently, builder uses FIFO rules to calculate profit/loss</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder__ctor_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.#ctor*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder__ctor_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_System_Collections_Generic_IEnumerable_FinSysPlatform_Domain_Market_Execution__" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.#ctor(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Instrument,System.Collections.Generic.IEnumerable{FinSysPlatform.Domain.Market.Execution})">
+  TradeHistoryBuilder(IBrokerageProvider, Instrument, IEnumerable&lt;Execution&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance of trade history builder
+<a class="xref" href="FinSysPlatform.Domain.Market.PositionAccountingType.html">PositionAccountingType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TradeHistoryBuilder(IBrokerageProvider account, Instrument instrument, IEnumerable&lt;Execution&gt; executions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>account</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>executions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Execution.html">Execution</a>&gt;</dt>
+    <dd><p>The list of execution to be used to build trade history.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder__ctor_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_System_Collections_Generic_IEnumerable_FinSysPlatform_Domain_Market_Execution___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>List <code class="paramref">executions</code> will be automatically filtered to keep only executions of specified account <code class="paramref">account</code> and specified instrument <code class="paramref">instrument</code></p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_BrokerageProvider_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.BrokerageProvider*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_BrokerageProvider" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.BrokerageProvider">
+  BrokerageProvider
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference to <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IBrokerageProvider BrokerageProvider { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Commissions_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Commissions*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Commissions" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Commissions">
+  Commissions
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-629"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total sum of commissions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Commissions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_CurrentPosition_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.CurrentPosition*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_CurrentPosition" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.CurrentPosition">
+  CurrentPosition
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-639"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A current position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Position CurrentPosition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Deals_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Deals*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Deals" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Deals">
+  Deals
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-614"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A collection of trades which was formed from executions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Deal&gt; Deals { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Deal.html">Deal</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Exits_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Exits*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Exits" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Exits">
+  Exits
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-619"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exits</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;TradeHistoryBuilder.BuilderTrade&gt; Exits { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.html">TradeHistoryBuilder</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.BuilderTrade.html">BuilderTrade</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Fees_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Fees*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Fees" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Fees">
+  Fees
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-634"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total sum of fees, including entry and exit fees</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Fees { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Instrument_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Instrument*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Instrument" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Instrument">
+  Instrument
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-391"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instrument. This property must always return not-nullable value
+If the provider may return null then consider using <a class="xref" href="FinSysPlatform.Domain.Market.INullableInstrumentProvider.html">INullableInstrumentProvider</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instrument Instrument { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_TotalProfitLoss_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.TotalProfitLoss*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_TotalProfitLoss" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.TotalProfitLoss">
+  TotalProfitLoss
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-624"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total profit/loss without commissions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalProfitLoss { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_AddMerged_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.AddMerged*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_AddMerged_System_Collections_Generic_IEnumerable_FinSysPlatform_Domain_Market_Execution__" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.AddMerged(System.Collections.Generic.IEnumerable{FinSysPlatform.Domain.Market.Execution})">
+  AddMerged(IEnumerable&lt;Execution&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-517"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a collection of executions (wrapping them into <a class="xref" href="FinSysPlatform.Domain.Market.Deal.html">Deal</a>), skipping those of them that already present in <a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.html#FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Deals">Deals</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddMerged(IEnumerable&lt;Execution&gt; aExecutions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aExecutions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Execution.html">Execution</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_AddNew_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.AddNew*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_AddNew_FinSysPlatform_Domain_Market_Execution_FinSysPlatform_Domain_Market_Deal__FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_BuilderTrade__" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.AddNew(FinSysPlatform.Domain.Market.Execution,FinSysPlatform.Domain.Market.Deal@,FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.BuilderTrade@)">
+  AddNew(Execution, out Deal, out BuilderTrade?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-543"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Wraps a specified <code class="paramref">execution</code> into <a class="xref" href="FinSysPlatform.Domain.Market.Deal.html">Deal</a> and adds it to <a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.html#FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Deals">Deals</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddNew(Execution execution, out Deal resultDeal, out TradeHistoryBuilder.BuilderTrade? resultExit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>execution</code> <a class="xref" href="FinSysPlatform.Domain.Market.Execution.html">Execution</a></dt>
+    <dd></dd>
+    <dt><code>resultDeal</code> <a class="xref" href="FinSysPlatform.Domain.Market.Deal.html">Deal</a></dt>
+    <dd><p>Input execution automatically spawns <a class="xref" href="FinSysPlatform.Domain.Market.Deal.html">Deal</a>  which then is added to <a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.html#FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Deals">Deals</a></p>
+</dd>
+    <dt><code>resultExit</code> <a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.html">TradeHistoryBuilder</a>.<a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.BuilderTrade.html">BuilderTrade</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Clear_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Clear*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Clear" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Clear">
+  Clear()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-594"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears input executions and calculated results</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_CreateWithRestoredHistory_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.CreateWithRestoredHistory*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_CreateWithRestoredHistory_FinSysPlatform_Domain_Market_Providers_Brokerage_IBrokerageProvider_FinSysPlatform_Domain_Market_Instrument_System_Collections_Generic_IEnumerable_FinSysPlatform_Domain_Market_Execution__FinSysPlatform_Domain_Market_Position_FinSysPlatform_Domain_Market_Execution__" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.CreateWithRestoredHistory(FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider,FinSysPlatform.Domain.Market.Instrument,System.Collections.Generic.IEnumerable{FinSysPlatform.Domain.Market.Execution},FinSysPlatform.Domain.Market.Position,FinSysPlatform.Domain.Market.Execution@)">
+  CreateWithRestoredHistory(IBrokerageProvider, Instrument, IEnumerable&lt;Execution&gt;, Position, out Execution?)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates <a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.html">TradeHistoryBuilder</a> with restored initial execution
+Often the execution history is not full and contains only last executions. Without knowing the start execution it is impossible to build
+the whole trade chain, but, knowing the final result (result position) it is possible to emulate initial execution to make the whole chain
+produce at the finish the current position. Emulated execution (if it was generated) always has index 0 and parameters:
+<a class="xref" href="FinSysPlatform.Domain.Market.Execution.html#FinSysPlatform_Domain_Market_Execution_Time">Time</a> = <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime.minvalue">MinValue</a>
+<a class="xref" href="FinSysPlatform.Domain.Market.Execution.html#FinSysPlatform_Domain_Market_Execution_Price">Price</a> = 0
+<a class="xref" href="FinSysPlatform.Domain.Market.Execution.html#FinSysPlatform_Domain_Market_Execution_ExecutionId">ExecutionId</a> = Restored
+<a class="xref" href="FinSysPlatform.Domain.Market.Execution.html#FinSysPlatform_Domain_Market_Execution_Description">Description</a> = Restored
+<a class="xref" href="FinSysPlatform.Domain.Market.Execution.html#FinSysPlatform_Domain_Market_Execution_Exchange">Exchange</a> = null</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TradeHistoryBuilder CreateWithRestoredHistory(IBrokerageProvider brokerageProvider, Instrument instrument, IEnumerable&lt;Execution&gt; executions, Position currentPosition, out Execution? emulatedExecution)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brokerageProvider</code> <a class="xref" href="FinSysPlatform.Domain.Market.Providers.Brokerage.IBrokerageProvider.html">IBrokerageProvider</a></dt>
+    <dd></dd>
+    <dt><code>instrument</code> <a class="xref" href="FinSysPlatform.Domain.Market.Instrument.html">Instrument</a></dt>
+    <dd></dd>
+    <dt><code>executions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Market.Execution.html">Execution</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>currentPosition</code> <a class="xref" href="FinSysPlatform.Domain.Market.Position.html">Position</a></dt>
+    <dd></dd>
+    <dt><code>emulatedExecution</code> <a class="xref" href="FinSysPlatform.Domain.Market.Execution.html">Execution</a></dt>
+    <dd><p>Emulated execution. Can be null, if no correction needed</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.html">TradeHistoryBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Test_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Test*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Test_FinSysPlatform_Domain_Market_Execution_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Test(FinSysPlatform.Domain.Market.Execution)">
+  Test(Execution)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-556"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tests specified strategy as if it is added to builder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Deal Test(Execution execution)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>execution</code> <a class="xref" href="FinSysPlatform.Domain.Market.Execution.html">Execution</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Market.Deal.html">Deal</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_ToString_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.ToString*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_ToString" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-604"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that represents the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Update_" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Update*"></a>
+
+  <h3 id="FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Update" data-uid="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.Update">
+  Update()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-566"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Refreshes the list of trades <a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.html#FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_Deals">Deals</a> from <a class="xref" href="FinSysPlatform.Domain.Market.Misc.TradeHistoryBuilder.html#FinSysPlatform_Domain_Market_Misc_TradeHistoryBuilder_BrokerageProvider">BrokerageProvider</a> if it is needed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Market/Misc/TradeHistoryBuilder.cs#lines-29" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

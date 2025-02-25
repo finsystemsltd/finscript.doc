@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum Condition | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum Condition | FinScript ">
+      
+      <meta name="description" content="Possible conditions for comparison of two series or values">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinSysPlatform.Domain.Script.Condition">
+
+
+
+
+  <h1 id="FinSysPlatform_Domain_Script_Condition" data-uid="FinSysPlatform.Domain.Script.Condition" class="text-break">
+Enum Condition  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Script/Condition.cs#lines-12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinSysPlatform.html">FinSysPlatform</a>.<a class="xref" href="FinSysPlatform.Domain.html">Domain</a>.<a class="xref" href="FinSysPlatform.Domain.Script.html">Script</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinSysPlatform.Domain.Script.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Possible conditions for comparison of two series or values</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum Condition</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.ConditionExtensions.html#FinSysPlatform_Domain_Script_ConditionExtensions_GetIsSeriesNeeded_FinSysPlatform_Domain_Script_Condition_">ConditionExtensions.GetIsSeriesNeeded(Condition)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Script.ConditionExtensions.html#FinSysPlatform_Domain_Script_ConditionExtensions_GetParameterCount_FinSysPlatform_Domain_Script_Condition_">ConditionExtensions.GetParameterCount(Condition)</a>
+  </div>
+  </dd></dl>
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="FinSysPlatform_Domain_Script_Condition_CrossesAbove"><code>[ConditionInfo(true, ConditionParameterCount.One)]
+CrossesAbove = 5</code></dt>
+  <dd><p>Series of 2 points crosses some level up: the previous data is below or equal to the level, the next data is above the level
+Input data: a) series of 2 values, b) some value (level) to compare</p>
+<p>The condition is met when 2 points of the series crosses the specified level from below to above</p>
+</dd>
+  
+    <dt id="FinSysPlatform_Domain_Script_Condition_CrossesBelow"><code>[ConditionInfo(true, ConditionParameterCount.One)]
+CrossesBelow = 6</code></dt>
+  <dd><p>Series of 2 points crosses some level down: the previous data is above or equal to the level, the next data is below the level
+Input data: a) series of 2 values, b) some value (level) to compare</p>
+<p>The condition is met when 2 points of the series crosses the specified level from above to below</p>
+</dd>
+  
+    <dt id="FinSysPlatform_Domain_Script_Condition_FallsFromAbove"><code>[ConditionInfo(true, ConditionParameterCount.One)]
+FallsFromAbove = 8</code></dt>
+  <dd><p>Series  falls from the peak that is above some value
+Input data: a) series of values of 3 items length, b) some value (level) to compare</p>
+<p>The condition contains of 2 conditions: a) the series falls from the peak b) the detected peak is above the specified level
+To calculate the condition, we need 3 points of the series (the current point, the previous point that is supposed to be a peak, and pre-previous point to detect a peak) and some level
+You can also simplify the condition and remove part b) by setting the level to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.minvalue">MinValue</a> value</p>
+</dd>
+  
+    <dt id="FinSysPlatform_Domain_Script_Condition_IsAbove"><code>[ConditionInfo(false, ConditionParameterCount.One)]
+IsAbove = 0</code></dt>
+  
+  <dd><p>Series' value is above another value or series</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Script_Condition_IsAboveOrExactlyAt"><code>[ConditionInfo(false, ConditionParameterCount.One)]
+IsAboveOrExactlyAt = 2</code></dt>
+  
+  <dd><p>Series' value is above or exactly at another value or series</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Script_Condition_IsBelow"><code>[ConditionInfo(false, ConditionParameterCount.One)]
+IsBelow = 1</code></dt>
+  
+  <dd><p>Series' value is below another value or series</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Script_Condition_IsBelowOrExactlyAt"><code>[ConditionInfo(false, ConditionParameterCount.One)]
+IsBelowOrExactlyAt = 3</code></dt>
+  
+  <dd><p>Series' value is below or exactly at another value or series</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Script_Condition_IsBetween"><code>[ConditionInfo(false, ConditionParameterCount.Two)]
+IsBetween = 9</code></dt>
+  
+  <dd><p>Series' value is between two user-specified values
+Input data: a) a value to compare, b) min value, c) max value</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Script_Condition_IsEmpty"><code>[ConditionInfo(false, ConditionParameterCount.Zero)]
+IsEmpty = 12</code></dt>
+  
+  <dd><p>Series' value exists (not empty)
+<a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesBase.html#FinSysPlatform_Domain_Market_Data_ISeriesBase_IsValidValueAt_System_Int32_">IsValidValueAt(int)</a></p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Script_Condition_IsExactlyAt"><code>[ConditionInfo(false, ConditionParameterCount.One)]
+IsExactlyAt = 4</code></dt>
+  
+  <dd><p>Series' value is equal to some value</p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Script_Condition_IsFalling"><code>[ConditionInfo(true, ConditionParameterCount.Zero)]
+IsFalling = 11</code></dt>
+  <dd><p>Series is falling
+Input data: series of values of 3 items length</p>
+<p>To calculate the condition, we need 3 points of the series (the current point, the previous point and pre-previous point), all points should descend from left to right</p>
+</dd>
+  
+    <dt id="FinSysPlatform_Domain_Script_Condition_IsNotEmpty"><code>[ConditionInfo(false, ConditionParameterCount.Zero)]
+IsNotEmpty = 13</code></dt>
+  
+  <dd><p>Series' value exists (not empty)
+<a class="xref" href="FinSysPlatform.Domain.Market.Data.ISeriesBase.html#FinSysPlatform_Domain_Market_Data_ISeriesBase_IsValidValueAt_System_Int32_">IsValidValueAt(int)</a></p>
+</dd>
+    <dt id="FinSysPlatform_Domain_Script_Condition_IsRising"><code>[ConditionInfo(true, ConditionParameterCount.Zero)]
+IsRising = 10</code></dt>
+  <dd><p>Series is rising
+Input data: series of values of 3 items length</p>
+<p>To calculate the condition, we need 3 points of the series (the current point, the previous point and pre-previous point), all points should ascend from left to right</p>
+</dd>
+  
+    <dt id="FinSysPlatform_Domain_Script_Condition_RisesFromBelow"><code>[ConditionInfo(true, ConditionParameterCount.One)]
+RisesFromBelow = 7</code></dt>
+  <dd><p>Series' value rises from the valley that is below some value
+Input data: a) series of values of 3 items length, b) some value (level) to compare</p>
+<p>The condition contains of 2 conditions: a) the series raises from the valley b) the detected valley is below the specified level
+To calculate the condition, we need 3 points of the series (the current point, the previous point that is supposed to be a valley, and pre-previous point to detect a valley) and some level
+You can also simplify the condition and remove part b) by setting the level to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.maxvalue">MaxValue</a> value</p>
+</dd>
+  
+  </dl>
+
+
+  <h2 id="FinSysPlatform_Domain_Script_Condition_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Each enum value has to have an explicitly defined number to for out of the app scopes tasks: exchanges, storage, etc.</p>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinSysPlatform.Domain.Script/Condition.cs#lines-12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

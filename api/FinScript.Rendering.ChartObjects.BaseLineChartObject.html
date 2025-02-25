@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BaseLineChartObject | FinScript </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BaseLineChartObject | FinScript ">
+      
+      <meta name="description" content="Draws text with relative screen coordinates, defined in range [0..1]">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FinScript">
+            FinScript
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject">
+
+
+
+  <h1 id="FinScript_Rendering_ChartObjects_BaseLineChartObject" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject" class="text-break">
+Class BaseLineChartObject  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FinScript.html">FinScript</a>.<a class="xref" href="FinScript.Rendering.html">Rendering</a>.<a class="xref" href="FinScript.Rendering.ChartObjects.html">ChartObjects</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FinScript.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Draws text with relative screen coordinates, defined in range [0..1]</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public abstract class BaseLineChartObject : ChartObject, IScriptUnit, INameDescriptionProvider, INameProvider, IPropertyDisplayInfoProvider, ICloneable, IScriptEnvironmentAssigner, IChartElement, IChartRenderable, IZOrderAssigner, IChartHitTestable, IStrokeProvider, ILabelProvider</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="FinScript.Code.ScriptUnit.html">ScriptUnit</a></div>
+      <div><a class="xref" href="FinScript.Rendering.ChartObjects.ChartObject.html">ChartObject</a></div>
+      <div><span class="xref">BaseLineChartObject</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IScriptUnit.html">IScriptUnit</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.INameDescriptionProvider.html">INameDescriptionProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Market.INameProvider.html">INameProvider</a></div>
+      <div><span class="xref">IPropertyDisplayInfoProvider</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.IScriptEnvironmentAssigner.html">IScriptEnvironmentAssigner</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartElement.html">IChartElement</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.Chart.IChartRenderable.html">IChartRenderable</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IZOrderAssigner.html">IZOrderAssigner</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Script.Chart.IChartHitTestable.html">IChartHitTestable</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.Drawing.IStrokeProvider.html">IStrokeProvider</a></div>
+      <div><a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.Drawing.ILabelProvider.html">ILabelProvider</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="FinScript.Rendering.ChartObjects.HorizontalLineChartObject.html">HorizontalLineChartObject</a></div>
+      <div><a class="xref" href="FinScript.Rendering.ChartObjects.LineChartObject.html">LineChartObject</a></div>
+      <div><a class="xref" href="FinScript.Rendering.ChartObjects.VerticalLineChartObject.html">VerticalLineChartObject</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="FinScript.Rendering.ChartObjects.ChartObject.html#FinScript_Rendering_ChartObjects_ChartObject_BatchUpdate_System_Action_">ChartObject.BatchUpdate(Action)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.ChartObjects.ChartObject.html#FinScript_Rendering_ChartObjects_ChartObject_Invalidate">ChartObject.Invalidate()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.ChartObjects.ChartObject.html#FinScript_Rendering_ChartObjects_ChartObject_SetVisualProperty__1___0____0_System_Boolean_">ChartObject.SetVisualProperty&lt;T&gt;(ref T, T, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.ChartObjects.ChartObject.html#FinScript_Rendering_ChartObjects_ChartObject_IsAutoScale">ChartObject.IsAutoScale</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.ChartObjects.ChartObject.html#FinScript_Rendering_ChartObjects_ChartObject_IsVisible">ChartObject.IsVisible</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.ChartObjects.ChartObject.html#FinScript_Rendering_ChartObjects_ChartObject_ZOrder">ChartObject.ZOrder</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.ChartObjects.ChartObject.html#FinScript_Rendering_ChartObjects_ChartObject_ChartViewport">ChartObject.ChartViewport</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.ChartObjects.ChartObject.html#FinScript_Rendering_ChartObjects_ChartObject_CalculateMinMax_System_Int32_System_Int32_System_Double__System_Double__">ChartObject.CalculateMinMax(int, int, out double, out double)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.ChartObjects.ChartObject.html#FinScript_Rendering_ChartObjects_ChartObject_IsInViewPortArea_FinSysPlatform_Domain_Graphics_Rect_">ChartObject.IsInViewPortArea(Rect)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Rendering.ChartObjects.ChartObject.html#FinScript_Rendering_ChartObjects_ChartObject_ToolTip">ChartObject.ToolTip</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Environment">ScriptUnit.Environment</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_OnEnvironmentInitialized">ScriptUnit.OnEnvironmentInitialized()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_SetEnvironment_FinSysPlatform_Domain_Script_IScriptEnvironment_">ScriptUnit.SetEnvironment(IScriptEnvironment)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_InstanceId">ScriptUnit.InstanceId</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_CloneSourceInstanceId">ScriptUnit.CloneSourceInstanceId</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Id">ScriptUnit.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_DeclaredProperties">ScriptUnit.DeclaredProperties</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_DisplayName">ScriptUnit.DisplayName</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Description">ScriptUnit.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Name">ScriptUnit.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Version">ScriptUnit.Version</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Copyright">ScriptUnit.Copyright</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_EntityTypeName">ScriptUnit.EntityTypeName</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Clone">ScriptUnit.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_Print_System_String_">ScriptUnit.Print(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_LogInfo_System_String_">ScriptUnit.LogInfo(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_LogWarning_System_String_">ScriptUnit.LogWarning(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_LogError_System_String_">ScriptUnit.LogError(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_OnCheckIfConfiguredProperly_System_Collections_Generic_List_System_String__">ScriptUnit.OnCheckIfConfiguredProperly(List&lt;string&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_CheckIfConfiguredProperly">ScriptUnit.CheckIfConfiguredProperly()</a>
+    </div>
+    <div>
+      <a class="xref" href="FinScript.Code.ScriptUnit.html#FinScript_Code_ScriptUnit_ToString">ScriptUnit.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartElementExtensions.html#FinSysPlatform_Domain_Graphics_Chart_IChartElementExtensions_GetChartControl_FinSysPlatform_Domain_Graphics_Chart_IChartElement_">IChartElementExtensions.GetChartControl(IChartElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartElementExtensions.html#FinSysPlatform_Domain_Graphics_Chart_IChartElementExtensions_IsDependent_FinSysPlatform_Domain_Graphics_Chart_IChartElement_">IChartElementExtensions.IsDependent(IChartElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.IChartElementExtensions.html#FinSysPlatform_Domain_Graphics_Chart_IChartElementExtensions_IsHidden_FinSysPlatform_Domain_Graphics_Chart_IChartElement_">IChartElementExtensions.IsHidden(IChartElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptUnitExtensions.html#FinScript_Code_IScriptUnitExtensions_CopyDeclaredPropertiesTo_FinSysPlatform_Domain_Script_IScriptUnit_FinSysPlatform_Domain_Script_IScriptUnit_">IScriptUnitExtensions.CopyDeclaredPropertiesTo(IScriptUnit, IScriptUnit)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptUnitExtensions.html#FinScript_Code_IScriptUnitExtensions_DeclaredPropertiesEqual_FinSysPlatform_Domain_Script_IScriptUnit_FinSysPlatform_Domain_Script_IScriptUnit_">IScriptUnitExtensions.DeclaredPropertiesEqual(IScriptUnit, IScriptUnit)</a>
+  </div>
+  <div>
+      <a class="xref" href="FinScript.Code.IScriptUnitExtensions.html#FinScript_Code_IScriptUnitExtensions_SetInputFromBars_FinSysPlatform_Domain_Script_IScriptUnit_FinSysPlatform_Domain_Market_Data_IBarSeries_">IScriptUnitExtensions.SetInputFromBars(IScriptUnit, IBarSeries)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject__ctor_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.#ctor*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject__ctor_System_String_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.#ctor(System.String)">
+  BaseLineChartObject(string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseLineChartObject(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject_LabelAngle_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.LabelAngle*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject_LabelAngle" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.LabelAngle">
+  LabelAngle
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the angle to rotate the label. 0 means horizontal text, 90 means vertical text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double LabelAngle { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject_LabelPosition_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.LabelPosition*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject_LabelPosition" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.LabelPosition">
+  LabelPosition
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.Drawing.LabelPosition.html">LabelPosition</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LabelPosition LabelPosition { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.Drawing.LabelPosition.html">LabelPosition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject_LabelText_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.LabelText*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject_LabelText" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.LabelText">
+  LabelText
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Value to show on chart</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? LabelText { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject_ShowLabel_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.ShowLabel*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject_ShowLabel" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.ShowLabel">
+  ShowLabel
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True if label is visible</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowLabel { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject_Stroke_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.Stroke*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject_Stroke" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.Stroke">
+  Stroke
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stroke which describes color, width and pattern of graphical object which can be drawn by pencil (in other words, any line)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Stroke Stroke { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Stroke.html">Stroke</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject_GetLabelPosition_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.GetLabelPosition*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject_GetLabelPosition_FinSysPlatform_Domain_Graphics_Size_FinSysPlatform_Domain_Graphics_Point__FinSysPlatform_Domain_Graphics_HorizontalOrigin__FinSysPlatform_Domain_Graphics_VerticalOrigin__" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.GetLabelPosition(FinSysPlatform.Domain.Graphics.Size,FinSysPlatform.Domain.Graphics.Point@,FinSysPlatform.Domain.Graphics.HorizontalOrigin@,FinSysPlatform.Domain.Graphics.VerticalOrigin@)">
+  GetLabelPosition(Size, out Point, out HorizontalOrigin, out VerticalOrigin)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void GetLabelPosition(Size size, out Point p, out HorizontalOrigin ho, out VerticalOrigin vo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd></dd>
+    <dt><code>p</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>ho</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.HorizontalOrigin.html">HorizontalOrigin</a></dt>
+    <dd></dd>
+    <dt><code>vo</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.VerticalOrigin.html">VerticalOrigin</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject_GetPoint1_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.GetPoint1*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject_GetPoint1_FinSysPlatform_Domain_Graphics_Size_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.GetPoint1(FinSysPlatform.Domain.Graphics.Size)">
+  GetPoint1(Size)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Point GetPoint1(Size size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject_GetPoint2_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.GetPoint2*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject_GetPoint2_FinSysPlatform_Domain_Graphics_Size_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.GetPoint2(FinSysPlatform.Domain.Graphics.Size)">
+  GetPoint2(Size)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Point GetPoint2(Size size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Size.html">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Graphics.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject_HitTest_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.HitTest*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject_HitTest_FinSysPlatform_Domain_Graphics_Point_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.HitTest(FinSysPlatform.Domain.Graphics.Point)">
+  HitTest(Point)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If mouse cursor hits the shape of chart element, this method returns result, otherwise null</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override sealed ChartHitTestInfo? HitTest(Point point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FinSysPlatform.Domain.Script.Chart.ChartHitTestInfo.html">ChartHitTestInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject_HitTest_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.HitTest*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject_HitTest_System_Double_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.HitTest(System.Double)">
+  HitTest(double)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If vertical line positioned in <code class="paramref">xCoordinate</code> crosses the shape of chart element, this method returns collection with all intersections</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override sealed IReadOnlyCollection&lt;ChartHitTestInfo&gt; HitTest(double xCoordinate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xCoordinate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="FinSysPlatform.Domain.Script.Chart.ChartHitTestInfo.html">ChartHitTestInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FinScript_Rendering_ChartObjects_BaseLineChartObject_Render_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.Render*"></a>
+
+  <h3 id="FinScript_Rendering_ChartObjects_BaseLineChartObject_Render_FinSysPlatform_Domain_Graphics_Chart_Canvas_IChartControlCanvas_" data-uid="FinScript.Rendering.ChartObjects.BaseLineChartObject.Render(FinSysPlatform.Domain.Graphics.Chart.Canvas.IChartControlCanvas)">
+  Render(IChartControlCanvas)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws directly on chart canvas</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override sealed void Render(IChartControlCanvas chartControlCanvas)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>chartControlCanvas</code> <a class="xref" href="FinSysPlatform.Domain.Graphics.Chart.Canvas.IChartControlCanvas.html">IChartControlCanvas</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Rendering/ChartObjects/BaseLineChartObject.cs#lines-17" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
