@@ -217,7 +217,7 @@ For inheritors, comparing bar times should not make sense. For simplicity, each 
 
   <h3 id="FinScript_StdLib_BarsTypes_Base_NoTimeBasedGeneratedBarsBuilder_1__ctor_FinSysPlatform_Domain_Market_Data_IBarStorageWritable__0_FinSysPlatform_Domain_Market_TradingHours_" data-uid="FinScript.StdLib.BarsTypes.Base.NoTimeBasedGeneratedBarsBuilder`1.#ctor(FinSysPlatform.Domain.Market.Data.IBarStorageWritable,`0,FinSysPlatform.Domain.Market.TradingHours)">
   NoTimeBasedGeneratedBarsBuilder(IBarStorageWritable, T, TradingHours?)
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-201"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates new instance of BarsBuilder</p>
@@ -260,7 +260,7 @@ For inheritors, comparing bar times should not make sense. For simplicity, each 
 
   <h3 id="FinScript_StdLib_BarsTypes_Base_NoTimeBasedGeneratedBarsBuilder_1_AddBarAutoTime_System_Double_System_Double_FinSysPlatform_Domain_Market_Quantity__" data-uid="FinScript.StdLib.BarsTypes.Base.NoTimeBasedGeneratedBarsBuilder`1.AddBarAutoTime(System.Double,System.Double,FinSysPlatform.Domain.Market.Quantity@)">
   AddBarAutoTime(double, double, in Quantity)
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Same to <see cref="m:AddBarSafe(ref DateTime,double,double,double,double,in Quantity)"></see> but calculates high and low from open and close</p>
@@ -296,10 +296,11 @@ For inheritors, comparing bar times should not make sense. For simplicity, each 
 
   <h3 id="FinScript_StdLib_BarsTypes_Base_NoTimeBasedGeneratedBarsBuilder_1_AddBarAutoTime_System_Double_System_Double_System_Double_System_Double_FinSysPlatform_Domain_Market_Quantity__" data-uid="FinScript.StdLib.BarsTypes.Base.NoTimeBasedGeneratedBarsBuilder`1.AddBarAutoTime(System.Double,System.Double,System.Double,System.Double,FinSysPlatform.Domain.Market.Quantity@)">
   AddBarAutoTime(double, double, double, double, in Quantity)
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a new bar. Before adding. it checks if a time of new bar is greater than the last bar time</p>
+  <div class="markdown level1 summary"><p>Adds a new bar with time of the last bar in <a class="xref" href="FinSysPlatform.Domain.Market.Data.BarsBuilder.html#FinSysPlatform_Domain_Market_Data_BarsBuilder_BarStorage">BarStorage</a>.
+Before adding, it checks that the new time should be greater than the last bar time in <a class="xref" href="FinSysPlatform.Domain.Market.Data.BarsBuilder.html#FinSysPlatform_Domain_Market_Data_BarsBuilder_BarStorage">BarStorage</a> at least by 1 tick</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -420,7 +421,7 @@ chance to use time in a builder's logic</p>
 
   <h3 id="FinScript_StdLib_BarsTypes_Base_NoTimeBasedGeneratedBarsBuilder_1_ResetLastBarAutoTime_System_Double_System_Double_FinSysPlatform_Domain_Market_Quantity__" data-uid="FinScript.StdLib.BarsTypes.Base.NoTimeBasedGeneratedBarsBuilder`1.ResetLastBarAutoTime(System.Double,System.Double,FinSysPlatform.Domain.Market.Quantity@)">
   ResetLastBarAutoTime(double, double, in Quantity)
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-189"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Exchange the last bar with new values, including open. High and low are calculated from open and close</p>
@@ -456,7 +457,7 @@ chance to use time in a builder's logic</p>
 
   <h3 id="FinScript_StdLib_BarsTypes_Base_NoTimeBasedGeneratedBarsBuilder_1_UpdateLastBarAutoTime_System_Double_FinSysPlatform_Domain_Market_Quantity__" data-uid="FinScript.StdLib.BarsTypes.Base.NoTimeBasedGeneratedBarsBuilder`1.UpdateLastBarAutoTime(System.Double,FinSysPlatform.Domain.Market.Quantity@)">
   UpdateLastBarAutoTime(double, in Quantity)
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Updates last bar with new close price. Pay attention that high and low ofd the last bar may be also modified if new close is out of high-low ranges</p>
@@ -490,7 +491,7 @@ chance to use time in a builder's logic</p>
 
   <h3 id="FinScript_StdLib_BarsTypes_Base_NoTimeBasedGeneratedBarsBuilder_1_UpdateLastBarAutoTime_System_Double_System_Double_System_Double_FinSysPlatform_Domain_Market_Quantity__" data-uid="FinScript.StdLib.BarsTypes.Base.NoTimeBasedGeneratedBarsBuilder`1.UpdateLastBarAutoTime(System.Double,System.Double,System.Double,FinSysPlatform.Domain.Market.Quantity@)">
   UpdateLastBarAutoTime(double, double, double, in Quantity)
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.StdLib/BarsTypes/Base/GeneratedBarsType.cs#lines-156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Updates last bar with new incoming values. Pay attention that incoming data is summed up with previous data: new high will be max of incoming high and previous high,

@@ -816,7 +816,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "FinScript.Code.ScriptUnit<TState>",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/FinScript.Code.ScriptUnit-1.yml\" sourcestartlinenumber=\"1\">Script unit parameterized by state (<xref href=\"FinScript.Code.ScriptUnit%601.State\" data-throw-if-not-resolved=\"false\"></xref>)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1684,48 +1684,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "FinScript.Data",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/FinScript.EntryPoint.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/FinScript.EntryPoint.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "FinScript.EntryPoint",
-      "Summary": "<p sourcefile=\"api/FinScript.EntryPoint.yml\" sourcestartlinenumber=\"1\">Empty class to allow other project to anchor of this project\nAny other project can link itself explicitly by using <xref href=\"FinScript.EntryPoint\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/FinScript.Misc.ScriptWeakReferencedEvent-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/FinScript.Misc.ScriptWeakReferencedEvent-1.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "FinScript.Misc.ScriptWeakReferencedEvent<TEventArgs>",
-      "Summary": "<p sourcefile=\"api/FinScript.Misc.ScriptWeakReferencedEvent-1.yml\" sourcestartlinenumber=\"1\">Extended WeakReferencedEvent{T} which automatically handles exceptions and records them to log file\nCopy/paste from common by Roman advice</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/FinScript.Misc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/FinScript.Misc.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "FinScript.Misc",
       "Summary": null
     },
     {
@@ -5944,20 +5902,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FinScript.StdLib.EntryPoint.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/FinScript.StdLib.EntryPoint.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "FinScript.StdLib.EntryPoint",
-      "Summary": "<p sourcefile=\"api/FinScript.StdLib.EntryPoint.yml\" sourcestartlinenumber=\"1\">Empty class to allow other project to anchor of this project\nAny other project can link itself explicitly by using <xref href=\"FinScript.StdLib.EntryPoint\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/FinScript.StdLib.Indicators.AccountBalanceEquity.yml",
       "output": {
         ".html": {
@@ -8492,20 +8436,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FinSysPlatform.Domain.Graphics.EntryPoint.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/FinSysPlatform.Domain.Graphics.EntryPoint.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "FinSysPlatform.Domain.Graphics.EntryPoint",
-      "Summary": "<p sourcefile=\"api/FinSysPlatform.Domain.Graphics.EntryPoint.yml\" sourcestartlinenumber=\"1\">Empty class to allow other project to anchor of this project\nAny other project can link itself explicitly by using <xref href=\"FinSysPlatform.Domain.Graphics.EntryPoint\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/FinSysPlatform.Domain.Graphics.Fill.yml",
       "output": {
         ".html": {
@@ -9609,20 +9539,6 @@
       "IsMRef": true,
       "Title": "FinSysPlatform.Domain.Market.EntryExecutionPart",
       "Summary": "<p sourcefile=\"api/FinSysPlatform.Domain.Market.EntryExecutionPart.yml\" sourcestartlinenumber=\"1\">An execution part to describe entry of the trade <xref href=\"FinSysPlatform.Domain.Market.Trade\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/FinSysPlatform.Domain.Market.EntryPoint.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/FinSysPlatform.Domain.Market.EntryPoint.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "FinSysPlatform.Domain.Market.EntryPoint",
-      "Summary": "<p sourcefile=\"api/FinSysPlatform.Domain.Market.EntryPoint.yml\" sourcestartlinenumber=\"1\">Empty class to allow other project to anchor of this project\nAny other project can link itself explicitly by using <xref href=\"FinSysPlatform.Domain.Market.EntryPoint\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -14075,20 +13991,6 @@
       "IsMRef": true,
       "Title": "FinSysPlatform.Domain.Script.ConditionParameterCount",
       "Summary": "<p sourcefile=\"api/FinSysPlatform.Domain.Script.ConditionParameterCount.yml\" sourcestartlinenumber=\"1\">How many parameters <xref href=\"FinSysPlatform.Domain.Script.Condition\" data-throw-if-not-resolved=\"false\"></xref> requires</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/FinSysPlatform.Domain.Script.EntryPoint.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/FinSysPlatform.Domain.Script.EntryPoint.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "FinSysPlatform.Domain.Script.EntryPoint",
-      "Summary": "<p sourcefile=\"api/FinSysPlatform.Domain.Script.EntryPoint.yml\" sourcestartlinenumber=\"1\">Empty class to allow other project to anchor of this project\nAny other project can link itself explicitly by using <xref href=\"FinSysPlatform.Domain.Script.EntryPoint\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",

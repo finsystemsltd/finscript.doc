@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ScriptUnit&lt;TState&gt; | FinScript ">
       
-      
+      <meta name="description" content="Script unit parameterized by state ()">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="FinScript_Code_ScriptUnit_1" data-uid="FinScript.Code.ScriptUnit`1" class="text-break">
-Class ScriptUnit&lt;TState&gt;  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-517"><i class="bi bi-code-slash"></i></a>
+Class ScriptUnit&lt;TState&gt;  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-521"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class ScriptUnit&lt;TState&gt;  <a class="header-action link-secondary" title="V
   <dl><dt>Assembly</dt><dd>FinScript.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Script unit parameterized by state (<a class="xref" href="FinScript.Code.ScriptUnit-1.html#FinScript_Code_ScriptUnit_1_State">State</a>)</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -253,7 +254,7 @@ Class ScriptUnit&lt;TState&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="FinScript_Code_ScriptUnit_1_State" data-uid="FinScript.Code.ScriptUnit`1.State">
   State
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-528"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-532"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Represents the current progression of the object as it advances from setup, processing data, to termination.  These
@@ -290,7 +291,7 @@ states can be used for setting up or declaring various resources and properties.
 
   <h3 id="FinScript_Code_ScriptUnit_1_OnStateChanged" data-uid="FinScript.Code.ScriptUnit`1.OnStateChanged">
   OnStateChanged()
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-586"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-590"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -316,7 +317,7 @@ states can be used for setting up or declaring various resources and properties.
 
   <h3 id="FinScript_Code_ScriptUnit_1_RequestChangeState_System_Action_System_Action__0__System_Collections_Generic_IReadOnlyCollection__0___" data-uid="FinScript.Code.ScriptUnit`1.RequestChangeState(System.Action{System.Action{`0},System.Collections.Generic.IReadOnlyCollection{`0}})">
   RequestChangeState(Action&lt;Action&lt;TState&gt;, IReadOnlyCollection&lt;TState&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-570"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-574"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Locks current state (<a class="xref" href="FinScript.Code.ScriptUnit-1.html#FinScript_Code_ScriptUnit_1_State">State</a>) for parallel modification
@@ -349,11 +350,11 @@ This method is only way to change state of the unit</p>
 
   <h3 id="FinScript_Code_ScriptUnit_1_RequestChangeState_System_Action_System_Action__0___" data-uid="FinScript.Code.ScriptUnit`1.RequestChangeState(System.Action{System.Action{`0}})">
   RequestChangeState(Action&lt;Action&lt;TState&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-559"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-563"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Locks current state (<a class="xref" href="FinScript.Code.ScriptUnit-1.html#FinScript_Code_ScriptUnit_1_State">State</a>) for parallel modification
-This method is only way to change state of the unit
+  <div class="markdown level1 summary"><p>Locks current state (<a class="xref" href="FinScript.Code.ScriptUnit-1.html#FinScript_Code_ScriptUnit_1_State">State</a>) for parallel modification.
+This method is the only way to change state of the unit.
 <a class="xref" href="FinScript.Code.ScriptUnit-1.html#FinScript_Code_ScriptUnit_1_RequestChangeState_System_Action_System_Action__0__System_Collections_Generic_IReadOnlyCollection__0___">RequestChangeState(Action&lt;Action&lt;TState&gt;, IReadOnlyCollection&lt;TState&gt;&gt;)</a> with extended notation to get the reference to state change history</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -386,7 +387,7 @@ This method is only way to change state of the unit
 
   <h3 id="FinScript_Code_ScriptUnit_1_StateChanged" data-uid="FinScript.Code.ScriptUnit`1.StateChanged">
   StateChanged
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-597"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/fintechnology/finalgo-charts/src/development/src/FinScript.Core/Code/ScriptUnit.cs#lines-601"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
