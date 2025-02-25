@@ -1,2 +1,0 @@
-
-FinScript documentation
